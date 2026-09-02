@@ -1,0 +1,57 @@
+name: Pályázatfigyelő – hírfigyelő
+
+on:
+  schedule:
+    # A GitHub Actions cron mindig UTC-ben fut. 05:30 és 11:30 UTC ≈ magyar idő
+    # szerint kb. 06:30/07:30 (téli/nyári időszámítás) és 12:30/13:30 — vagyis
+    # nagyjából "reggel" és "kora délután", évszaktól függő ±1 órás csúszással
+    # (a cron nem követi automatikusan a DST-váltást).
+    - cron: "30 5 * * *"
+    - cron: "30 11 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: palyazatfigyelo-watch
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Node.js telepítése
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Figyelő futtatása
+        env:
+          PF_REPO_URL: https://github.com/${{ github.repository }}
+        run: node scripts/watch.mjs
+
+      - name: Eredmény kiolvasása
+        id: result
+        run: |
+          should_commit=$(jq -r '.shouldCommit' data/changes.json)
+          echo "should_commit=$should_commit" >> "$GITHUB_OUTPUT"
+
+      - name: Változások commitolása
+        if: steps.result.outputs.should_commit == 'true'
+        run: |
+          git config user.name "palyazatfigyelo-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/state.json data/changes.json
+          git commit -m "chore: figyelő frissítés"
+          git push
+
+      - name: Telegram értesítés
+        if: steps.result.outputs.should_commit == 'true'
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: node scripts/notify-telegram.mjs

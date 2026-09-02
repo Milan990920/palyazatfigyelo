@@ -1,0 +1,19 @@
+{
+  "name": "Pályázatfigyelő",
+  "short_name": "Pályázatfigyelő",
+  "description": "Lakossági felújítási és energetikai pályázatok nyomon követése, jogosultság-ellenőrzés, kalkulátor és ügyfélkezelés.",
+  "start_url": "palyazatfigyelo.html",
+  "scope": ".",
+  "id": "palyazatfigyelo",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#0D5C5C",
+  "background_color": "#EBEFEE",
+  "lang": "hu",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

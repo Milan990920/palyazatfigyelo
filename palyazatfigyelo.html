@@ -1,0 +1,788 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pályázatfigyelő</title>
+<meta name="description" content="Lakossági felújítási és energetikai pályázatok (KEHOP Plusz, Otthoni Energiatároló Program, vidéki otthonfelújítás) nyomon követése, jogosultság-ellenőrzés, kalkulátor és ügyfélkezelés.">
+
+<!-- PWA -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0D5C5C">
+
+<!-- iOS / apple specifikus meta tagek: enélkül kezdőképernyőről nem standalone-ként indul -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Pályázatfigyelő">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="icons/icon-512.png">
+
+<style>
+  :root{
+    --teal:#0D5C5C;
+    --teal-dark:#083F3F;
+    --teal-light:#E4F0EF;
+    --bg:#EBEFEE;
+    --card:#FFFFFF;
+    --ink:#17251F;
+    --muted:#5B6B65;
+    --line:#D9E2DF;
+    --amber:#B8681B;
+    --amber-bg:#FBEEE0;
+    --red:#A6332B;
+    --red-bg:#FBE7E5;
+    --green:#256B4D;
+    --green-bg:#E4F2EA;
+    --radius:14px;
+    --shadow:0 1px 2px rgba(15,40,35,.06), 0 4px 14px rgba(15,40,35,.06);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    min-height:100vh;
+    padding-bottom:calc(72px + env(safe-area-inset-bottom));
+  }
+  header.appbar{
+    position:sticky; top:0; z-index:20;
+    background:var(--teal);
+    color:#fff;
+    padding:calc(14px + env(safe-area-inset-top)) 18px 14px;
+    box-shadow:var(--shadow);
+  }
+  header.appbar h1{
+    margin:0; font-size:19px; font-weight:700; letter-spacing:.2px;
+    display:flex; align-items:center; gap:8px;
+  }
+  header.appbar h1 .logo{
+    width:26px;height:26px;border-radius:8px;background:#fff;color:var(--teal);
+    display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;
+    flex:none;
+  }
+  header.appbar p{margin:2px 0 0;font-size:12.5px;opacity:.85;}
+
+  main{max-width:720px;margin:0 auto;padding:16px 14px 24px;}
+  section.tab{display:none;}
+  section.tab.active{display:block;animation:fade .15s ease-out;}
+  @keyframes fade{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:none;}}
+
+  h2.tab-title{font-size:16px;margin:2px 0 12px;color:var(--teal-dark);}
+
+  nav.tabbar{
+    position:fixed; bottom:0; left:0; right:0; z-index:30;
+    background:#fff; border-top:1px solid var(--line);
+    display:flex;
+    padding-bottom:env(safe-area-inset-bottom);
+    box-shadow:0 -2px 10px rgba(15,40,35,.06);
+  }
+  nav.tabbar button{
+    flex:1; background:none; border:none; cursor:pointer;
+    display:flex; flex-direction:column; align-items:center; gap:3px;
+    padding:9px 2px 8px; color:var(--muted); font-size:11px; font-family:inherit;
+  }
+  nav.tabbar button .ico{font-size:19px;line-height:1;}
+  nav.tabbar button.active{color:var(--teal);font-weight:700;}
+  nav.tabbar button.active .ico{transform:translateY(-1px);}
+
+  /* Status bar (figyelő) */
+  .watchbar{
+    display:flex; align-items:center; gap:10px;
+    background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+    padding:11px 13px; margin-bottom:14px; box-shadow:var(--shadow); cursor:pointer;
+  }
+  .watchbar .dot{width:10px;height:10px;border-radius:50%;flex:none;background:var(--muted);}
+  .watchbar.ok .dot{background:var(--green);}
+  .watchbar.alert .dot{background:var(--red);}
+  .watchbar.warn .dot{background:var(--amber);}
+  .watchbar .txt{flex:1;min-width:0;}
+  .watchbar .txt b{display:block;font-size:13px;}
+  .watchbar .txt span{font-size:12px;color:var(--muted);}
+  .watchbar .badge-new{
+    background:var(--red); color:#fff; font-size:10.5px; font-weight:700;
+    padding:2px 7px; border-radius:20px; flex:none;
+  }
+
+  /* Cards */
+  .card{
+    background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+    padding:14px; margin-bottom:12px; box-shadow:var(--shadow);
+  }
+  .card h3{margin:0 0 4px; font-size:15px; color:var(--teal-dark);}
+  .card .meta-row{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 6px;}
+  .pill{
+    font-size:11px; font-weight:600; padding:3px 9px; border-radius:20px;
+    background:var(--teal-light); color:var(--teal-dark);
+  }
+  .pill.status-aktív{background:var(--green-bg);color:var(--green);}
+  .pill.status-tervezett{background:var(--amber-bg);color:var(--amber);}
+  .pill.status-lezárt{background:var(--red-bg);color:var(--red);}
+  .pill.changed{background:var(--red-bg);color:var(--red);}
+  .summary{font-size:13px;color:var(--ink);line-height:1.45;margin:6px 0;}
+  .kv{font-size:12.5px;color:var(--muted);margin:2px 0;}
+  .kv b{color:var(--ink);font-weight:600;}
+  details{margin-top:8px;}
+  details summary{cursor:pointer;font-size:12.5px;color:var(--teal);font-weight:600;list-style:none;}
+  details summary::-webkit-details-marker{display:none;}
+  details summary::before{content:"▸ ";}
+  details[open] summary::before{content:"▾ ";}
+  details ul{margin:8px 0 0;padding-left:18px;font-size:12.5px;color:var(--ink);}
+  details ul li{margin-bottom:4px;}
+  .card .link{
+    display:inline-block;margin-top:9px;font-size:12.5px;font-weight:700;color:#fff;
+    background:var(--teal);padding:7px 12px;border-radius:9px;text-decoration:none;
+  }
+
+  /* Forms / inputs */
+  label{display:block;font-size:12.5px;font-weight:600;color:var(--ink);margin:10px 0 4px;}
+  input[type=text],input[type=number],input[type=tel],input[type=email],select,textarea{
+    width:100%;padding:10px 11px;border:1px solid var(--line);border-radius:10px;
+    font-size:14px;font-family:inherit;background:#fff;color:var(--ink);
+  }
+  textarea{min-height:64px;resize:vertical;}
+  .radiorow{display:flex;gap:8px;margin-top:4px;flex-wrap:wrap;}
+  .radiorow button{
+    flex:1;min-width:70px;padding:9px 6px;border-radius:10px;border:1px solid var(--line);
+    background:#fff;font-size:12.5px;font-weight:600;color:var(--muted);cursor:pointer;font-family:inherit;
+  }
+  .radiorow button.sel{background:var(--teal);border-color:var(--teal);color:#fff;}
+  .btn{
+    display:inline-block;background:var(--teal);color:#fff;border:none;border-radius:10px;
+    padding:10px 16px;font-size:13.5px;font-weight:700;cursor:pointer;font-family:inherit;
+  }
+  .btn.secondary{background:#fff;color:var(--teal);border:1px solid var(--teal);}
+  .btn.danger{background:var(--red);}
+  .btn-row{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap;}
+
+  .q-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:13px;margin-bottom:10px;box-shadow:var(--shadow);}
+  .q-card p{margin:0 0 6px;font-size:13.5px;font-weight:600;}
+  .elig-result{border-radius:var(--radius);padding:13px;margin-bottom:12px;border:1px solid var(--line);}
+  .elig-result.good{background:var(--green-bg);border-color:var(--green);}
+  .elig-result.bad{background:var(--red-bg);border-color:var(--red);}
+  .elig-result.unknown{background:var(--amber-bg);border-color:var(--amber);}
+  .elig-result h4{margin:0 0 4px;font-size:14px;}
+  .elig-result p{margin:0;font-size:12.5px;color:var(--muted);}
+
+  .checklist label.chk{display:flex;align-items:center;gap:8px;font-weight:500;font-size:13px;margin:6px 0;}
+  .checklist input[type=checkbox]{width:17px;height:17px;accent-color:var(--teal);flex:none;}
+
+  .calc-result{
+    margin-top:14px;background:var(--teal);color:#fff;border-radius:var(--radius);padding:16px;
+  }
+  .calc-result .amount{font-size:26px;font-weight:800;}
+  .calc-result .label{font-size:12px;opacity:.85;margin-bottom:2px;}
+  .calc-result .note{font-size:11.5px;opacity:.8;margin-top:8px;}
+
+  .client-card .top-row{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;}
+  .client-card .name{font-size:15px;font-weight:700;}
+  .empty{color:var(--muted);font-size:13px;text-align:center;padding:26px 10px;}
+  .disclaimer{font-size:11.5px;color:var(--muted);text-align:center;margin-top:18px;line-height:1.5;}
+  select.status-select{margin-top:8px;}
+
+  ::selection{background:var(--teal-light);}
+</style>
+</head>
+<body>
+
+<header class="appbar">
+  <h1><span class="logo">P</span> Pályázatfigyelő</h1>
+  <p>Lakossági felújítási és energetikai pályázatok egy helyen</p>
+</header>
+
+<main>
+
+  <!-- 1. PÁLYÁZATOK -->
+  <section id="tab-palyazatok" class="tab active">
+    <h2 class="tab-title">Aktuális pályázatok</h2>
+    <div id="watchbar" class="watchbar">
+      <span class="dot"></span>
+      <span class="txt"><b>Figyelő betöltése…</b><span>—</span></span>
+    </div>
+    <div id="programList"></div>
+  </section>
+
+  <!-- 2. JOGOSULTSÁG -->
+  <section id="tab-jogosultsag" class="tab">
+    <h2 class="tab-title">Jogosultság-ellenőrzés</h2>
+    <p class="kv" style="margin-bottom:10px;">Válaszolj az alábbi kérdésekre, és megmutatjuk, mely programoknak felelhetsz meg. A válaszok csak a saját eszközödön, helyben tárolódnak.</p>
+    <div id="questionList"></div>
+    <h2 class="tab-title" style="margin-top:18px;">Eredmény</h2>
+    <div id="eligResults"></div>
+  </section>
+
+  <!-- 3. KALKULÁTOR -->
+  <section id="tab-kalkulator" class="tab">
+    <h2 class="tab-title">Támogatás-kalkulátor</h2>
+    <p class="kv" style="margin-bottom:6px;">Tájékoztató jellegű becslés a várható támogatás összegéről — nem helyettesíti a hivatalos elbírálást.</p>
+    <label for="calcProgram">Program</label>
+    <select id="calcProgram"></select>
+    <label for="calcCost">Tervezett bruttó projektköltség (Ft)</label>
+    <input type="number" id="calcCost" min="0" step="10000" placeholder="pl. 8000000">
+    <div class="btn-row"><button class="btn" id="calcBtn">Becslés kiszámítása</button></div>
+    <div id="calcResult"></div>
+  </section>
+
+  <!-- 4. ÜGYFELEK -->
+  <section id="tab-ugyfelek" class="tab">
+    <h2 class="tab-title">Ügyfelek</h2>
+    <details id="newClientBox">
+      <summary style="font-size:13.5px;">+ Új ügyfél / projekt hozzáadása</summary>
+      <div class="card" style="margin-top:8px;">
+        <label for="cName">Név</label>
+        <input type="text" id="cName" placeholder="Kovács Anna">
+        <label for="cContact">Elérhetőség</label>
+        <input type="text" id="cContact" placeholder="telefon vagy e-mail">
+        <label for="cProgram">Érintett program</label>
+        <select id="cProgram"></select>
+        <label for="cNote">Megjegyzés</label>
+        <textarea id="cNote" placeholder="pl. napelemes rendszer cseréje, 6 kW"></textarea>
+        <div class="btn-row"><button class="btn" id="addClientBtn">Ügyfél mentése</button></div>
+      </div>
+    </details>
+    <div id="clientList" style="margin-top:12px;"></div>
+  </section>
+
+  <!-- 5. FORRÁSOK -->
+  <section id="tab-forrasok" class="tab">
+    <h2 class="tab-title">Hivatalos és figyelt források</h2>
+    <div id="sourceWatchbar" class="watchbar"><span class="dot"></span><span class="txt"><b>Figyelő betöltése…</b><span>—</span></span></div>
+    <div id="sourceList"></div>
+    <p class="disclaimer">Az adatok tájékoztató jellegűek, a mindenkori hivatalos feltételeket a fenti forrásokon ellenőrizd. A figyelő a forrásoldalak szöveges tartalmának változását észleli, nem a hivatalos állásfoglalást helyettesíti.</p>
+  </section>
+
+</main>
+
+<nav class="tabbar">
+  <button data-tab="palyazatok" class="active"><span class="ico">📋</span>Pályázatok</button>
+  <button data-tab="jogosultsag"><span class="ico">✅</span>Jogosultság</button>
+  <button data-tab="kalkulator"><span class="ico">🧮</span>Kalkulátor</button>
+  <button data-tab="ugyfelek"><span class="ico">👥</span>Ügyfelek</button>
+  <button data-tab="forrasok"><span class="ico">🔗</span>Források</button>
+</nav>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ============================================================
+     1. TÁROLÁS — localStorage-alapú, async wrapper.
+     A hívó kód sGet/sSet-et await-tel hívja, mintha külső storage
+     lenne; privát böngészőmódban / letiltott localStorage esetén
+     memóriabeli fallback-re esik vissza, nem dob hibát.
+     ============================================================ */
+  const memoryStore = {};
+  async function sGet(key, fallback){
+    try{
+      const raw = window.localStorage.getItem(key);
+      if(raw === null || raw === undefined) return fallback;
+      return JSON.parse(raw);
+    }catch(err){
+      return Object.prototype.hasOwnProperty.call(memoryStore, key) ? memoryStore[key] : fallback;
+    }
+  }
+  async function sSet(key, value){
+    try{
+      window.localStorage.setItem(key, JSON.stringify(value));
+    }catch(err){
+      memoryStore[key] = value;
+    }
+    return value;
+  }
+
+  const KEY_CHECKS = "pf:checks";     // { [clientId]: { [docIndex]: bool } }
+  const KEY_PROJECTS = "pf:projects"; // [{ id, name, contact, programId, status, note, createdAt }]
+  const KEY_ANSWERS = "pf:answers";   // { [questionId]: "yes"|"no"|"unknown" }
+  const KEY_WEEKLY = "pf:weekly";     // { lastSeenRunAt: ISO|null }
+
+  /* ============================================================
+     2. ADATOK — programs.json / sources.json fetch, beágyazott
+     fallback offline / fetch-hiba esetén.
+     ============================================================ */
+  const FALLBACK_PROGRAMS = [
+    {
+      id:"kehop-plusz", name:"KEHOP Plusz – Lakossági energiahatékonysági felhívás", shortName:"KEHOP Plusz",
+      category:"Energiahatékonyság", targetGroup:"Magánszemély ingatlantulajdonosok",
+      subsidyType:"Vissza nem térítendő támogatás", maxAmount:"Legfeljebb 11 millió Ft",
+      ownContribution:"min. 30%", deadline:"Folyamatos, forráskimerülésig", status:"aktív",
+      summary:"Napelem, hőszivattyú, nyílászáró-csere és hőszigetelés támogatása lakóépületekben.",
+      eligibility:["Tulajdonos vagy résztulajdonos","Életvitelszerű lakhatás","Nincs köztartozás"],
+      requiredDocs:["Tulajdoni lap","Energetikai tanúsítvány","Kivitelezői árajánlat"],
+      applyUrl:"https://www.palyazat.gov.hu/palyazatok", watchUrl:"https://www.palyazat.gov.hu/palyazatok", lastChanged:null
+    },
+    {
+      id:"energiatarolo", name:"Otthoni Energiatároló Program", shortName:"Energiatároló Program",
+      category:"Energiatárolás", targetGroup:"Meglévő napelemes háztartások",
+      subsidyType:"Vissza nem térítendő támogatás", maxAmount:"Legfeljebb 3,5 millió Ft",
+      ownContribution:"min. 50%", deadline:"Sávos, keretkimerülésig", status:"aktív",
+      summary:"Akkumulátoros energiatároló telepítésének támogatása meglévő napelem mellé.",
+      eligibility:["Van engedélyezett napelemes rendszer","Engedélyes kivitelező telepít"],
+      requiredDocs:["Kiserőmű engedély","Kivitelezői ajánlat"],
+      applyUrl:"https://kormany.hu/energiaugyi-miniszterium/hirek", watchUrl:"https://kormany.hu/energiaugyi-miniszterium/hirek", lastChanged:null
+    },
+    {
+      id:"videki-otthonfelujitas", name:"Vidéki otthonfelújítási program", shortName:"Vidéki otthonfelújítás",
+      category:"Otthonteremtés, felújítás", targetGroup:"Kistelepülésen otthont vásárlók",
+      subsidyType:"Vissza nem térítendő támogatás", maxAmount:"Legfeljebb 15 millió Ft",
+      ownContribution:"egyedi elbírálás", deadline:"Folyamatos", status:"aktív",
+      summary:"Kistelepülésen ingatlan vásárlásához és felújításához nyújtott támogatás.",
+      eligibility:["5000 fő alatti település","Beköltözési szándék"],
+      requiredDocs:["Adásvételi szerződés / tulajdoni lap","Felújítási árajánlat"],
+      applyUrl:"https://www.otthonstartprogram.hu/", watchUrl:"https://www.otthonstartprogram.hu/", lastChanged:null
+    }
+  ];
+  const FALLBACK_SOURCES = [
+    {id:"palyazat-gov-felhivasok", name:"Pályázat.gov.hu – Aktuális felhívások", url:"https://www.palyazat.gov.hu/palyazatok", category:"Hivatalos pályázati portál", description:"Hivatalos felhívás-kereső."},
+    {id:"energiaugyi-miniszterium-hirek", name:"Energiaügyi Minisztérium – Hírek", url:"https://kormany.hu/energiaugyi-miniszterium/hirek", category:"Minisztériumi hírfolyam", description:"Tárcaközlemények."},
+    {id:"otthon-start-program", name:"Otthon Start Program", url:"https://www.otthonstartprogram.hu/", category:"Programoldal", description:"Hivatalos tájékoztató oldal."}
+  ];
+
+  let PROGRAMS = [];
+  let SOURCES = [];
+  let CHANGES = null;
+
+  async function loadJSON(path, fallback){
+    try{
+      const res = await fetch(path, {cache:"no-store"});
+      if(!res.ok) throw new Error("HTTP "+res.status);
+      return await res.json();
+    }catch(err){
+      return fallback;
+    }
+  }
+
+  /* ============================================================
+     3. TAB VÁLTÁS
+     ============================================================ */
+  document.querySelectorAll("nav.tabbar button").forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+      const tab = btn.dataset.tab;
+      document.querySelectorAll("nav.tabbar button").forEach(b=>b.classList.toggle("active", b===btn));
+      document.querySelectorAll("section.tab").forEach(s=>s.classList.toggle("active", s.id==="tab-"+tab));
+      if(tab==="jogosultsag") renderEligibility();
+    });
+  });
+
+  /* ============================================================
+     4. FIGYELŐ SÁV (data/changes.json)
+     ============================================================ */
+  function fmtDateTime(iso){
+    if(!iso) return "—";
+    try{
+      const d = new Date(iso);
+      return d.toLocaleString("hu-HU", {year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit"});
+    }catch(e){ return iso; }
+  }
+
+  function changedUrlsSet(){
+    const set = new Set();
+    if(CHANGES && Array.isArray(CHANGES.results)){
+      CHANGES.results.forEach(r=>{ if(r.changed) set.add(r.url); });
+    }
+    return set;
+  }
+
+  async function renderWatchbars(){
+    const els = [document.getElementById("watchbar"), document.getElementById("sourceWatchbar")];
+    if(!CHANGES){
+      els.forEach(el=>{
+        el.className = "watchbar";
+        el.querySelector(".txt b").textContent = "A figyelő még nem futott le";
+        el.querySelector(".txt span").textContent = "A GitHub Action első futása után itt látszik az állapot.";
+      });
+      return;
+    }
+    const results = Array.isArray(CHANGES.results) ? CHANGES.results : [];
+    const changedCount = results.filter(r=>r.changed).length;
+    const keywordCount = results.filter(r=>r.keywordHit).length;
+    const errorCount = results.filter(r=>r.status==="error").length;
+    const staleCount = results.filter(r=>(r.consecutiveFailures||0) >= 3).length;
+
+    const weekly = await sGet(KEY_WEEKLY, {lastSeenRunAt:null});
+    const isNew = CHANGES.runAt && CHANGES.runAt !== weekly.lastSeenRunAt && (changedCount>0);
+
+    let cls = "ok", title, sub;
+    if(keywordCount>0){
+      cls="alert";
+      title = keywordCount+" forrásnál kulcsszavas találat (pl. határidő, felfüggesztés)";
+    } else if(changedCount>0){
+      cls="warn";
+      title = changedCount+" forrás tartalma változott";
+    } else {
+      title = "Nincs új változás egyik figyelt forrásnál sem";
+    }
+    sub = "Utolsó ellenőrzés: "+fmtDateTime(CHANGES.runAt);
+    if(errorCount>0) sub += " · "+errorCount+" forrás nem volt elérhető";
+    if(staleCount>0) sub += " · "+staleCount+" forrás 3+ próbálkozás óta nem elérhető, ellenőrizd";
+
+    els.forEach(el=>{
+      el.className = "watchbar "+cls;
+      el.querySelector(".txt b").textContent = title;
+      el.querySelector(".txt span").textContent = sub;
+      const existingBadge = el.querySelector(".badge-new");
+      if(existingBadge) existingBadge.remove();
+      if(isNew){
+        const b = document.createElement("span");
+        b.className = "badge-new";
+        b.textContent = "ÚJ";
+        el.appendChild(b);
+      }
+      el.onclick = async ()=>{
+        if(CHANGES.runAt) await sSet(KEY_WEEKLY, {lastSeenRunAt: CHANGES.runAt});
+        renderWatchbars();
+      };
+    });
+  }
+
+  /* ============================================================
+     5. PÁLYÁZATOK TAB
+     ============================================================ */
+  function renderPrograms(){
+    const wrap = document.getElementById("programList");
+    wrap.innerHTML = "";
+    const changed = changedUrlsSet();
+    if(PROGRAMS.length===0){
+      wrap.innerHTML = '<p class="empty">Nincs betölthető pályázati adat.</p>';
+      return;
+    }
+    PROGRAMS.forEach(p=>{
+      const isChanged = p.watchUrl && changed.has(p.watchUrl);
+      const el = document.createElement("div");
+      el.className = "card";
+      el.innerHTML = `
+        <h3>${escapeHtml(p.name)}</h3>
+        <div class="meta-row">
+          <span class="pill status-${escapeHtml(p.status||"")}">${escapeHtml(p.status||"")}</span>
+          <span class="pill">${escapeHtml(p.category||"")}</span>
+          ${isChanged ? '<span class="pill changed">⚡ változás észlelve</span>' : ""}
+        </div>
+        <p class="summary">${escapeHtml(p.summary||"")}</p>
+        <p class="kv"><b>Célcsoport:</b> ${escapeHtml(p.targetGroup||"—")}</p>
+        <p class="kv"><b>Támogatás:</b> ${escapeHtml(p.maxAmount||"—")} · <b>önerő:</b> ${escapeHtml(p.ownContribution||"—")}</p>
+        <p class="kv"><b>Benyújtás:</b> ${escapeHtml(p.deadline||"—")}</p>
+        <details>
+          <summary>Jogosultsági feltételek és szükséges dokumentumok</summary>
+          <ul>${(p.eligibility||[]).map(e=>`<li>${escapeHtml(e)}</li>`).join("")}</ul>
+          <ul>${(p.requiredDocs||[]).map(e=>`<li>📄 ${escapeHtml(e)}</li>`).join("")}</ul>
+        </details>
+        ${p.applyUrl ? `<a class="link" href="${escapeAttr(p.applyUrl)}" target="_blank" rel="noopener">Hivatalos oldal megnyitása ↗</a>` : ""}
+      `;
+      wrap.appendChild(el);
+    });
+  }
+
+  /* ============================================================
+     6. JOGOSULTSÁG TAB
+     ============================================================ */
+  const QUESTIONS = [
+    {id:"owner", text:"Ön tulajdonosa vagy résztulajdonosa a felújítandó / megvásárolandó ingatlannak?"},
+    {id:"resident", text:"Az ingatlan lakófunkciójú, és Ön életvitelszerűen ott lakik (vagy oda költözik)?"},
+    {id:"no_debt", text:"Nincs Önnek vagy háztartásának köztartozása?"},
+    {id:"small_settlement", text:"Az ingatlan 5000 fő alatti településen található?"},
+    {id:"has_solar", text:"Van már működő, engedélyezett napelemes rendszere?"}
+  ];
+  // Melyik program mely kérdésekre vár "yes" választ a valószínű jogosultsághoz
+  const PROGRAM_REQUIREMENTS = {
+    "kehop-plusz": ["owner","resident","no_debt"],
+    "energiatarolo": ["has_solar","no_debt"],
+    "videki-otthonfelujitas": ["small_settlement","resident","no_debt"]
+  };
+
+  let answersCache = null;
+
+  async function renderQuestions(){
+    answersCache = await sGet(KEY_ANSWERS, {});
+    const wrap = document.getElementById("questionList");
+    wrap.innerHTML = "";
+    QUESTIONS.forEach(q=>{
+      const cur = answersCache[q.id] || "unknown";
+      const el = document.createElement("div");
+      el.className = "q-card";
+      el.innerHTML = `
+        <p>${escapeHtml(q.text)}</p>
+        <div class="radiorow" data-q="${q.id}">
+          <button data-v="yes" class="${cur==='yes'?'sel':''}">Igen</button>
+          <button data-v="no" class="${cur==='no'?'sel':''}">Nem</button>
+          <button data-v="unknown" class="${cur==='unknown'?'sel':''}">Nem tudom</button>
+        </div>
+      `;
+      wrap.appendChild(el);
+    });
+    wrap.querySelectorAll(".radiorow button").forEach(btn=>{
+      btn.addEventListener("click", async ()=>{
+        const row = btn.closest(".radiorow");
+        const qid = row.dataset.q;
+        answersCache[qid] = btn.dataset.v;
+        row.querySelectorAll("button").forEach(b=>b.classList.toggle("sel", b===btn));
+        await sSet(KEY_ANSWERS, answersCache);
+        renderEligibilityResults();
+      });
+    });
+  }
+
+  function renderEligibilityResults(){
+    const wrap = document.getElementById("eligResults");
+    wrap.innerHTML = "";
+    if(!answersCache) return;
+    PROGRAMS.forEach(p=>{
+      const req = PROGRAM_REQUIREMENTS[p.id] || [];
+      let good=0, bad=0, unknown=0;
+      req.forEach(qid=>{
+        const a = answersCache[qid];
+        if(a==="yes") good++;
+        else if(a==="no") bad++;
+        else unknown++;
+      });
+      let cls, title;
+      if(req.length===0 || (good===0 && bad===0 && unknown===0)){
+        cls="unknown"; title="Nincs elég információ";
+      } else if(bad>0){
+        cls="bad"; title="Valószínűleg nem felel meg";
+      } else if(unknown>0){
+        cls="unknown"; title="Töltsd ki a hiányzó válaszokat";
+      } else {
+        cls="good"; title="Valószínűleg jogosult";
+      }
+      const el = document.createElement("div");
+      el.className = "elig-result "+cls;
+      el.innerHTML = `<h4>${escapeHtml(p.shortName||p.name)} — ${title}</h4><p>${escapeHtml(p.summary||"")}</p>`;
+      wrap.appendChild(el);
+    });
+  }
+
+  async function renderEligibility(){
+    await renderQuestions();
+    renderEligibilityResults();
+  }
+
+  /* ============================================================
+     7. KALKULÁTOR TAB
+     ============================================================ */
+  // Egyszerűsített, tájékoztató jellegű intenzitás- és plafonértékek programonként.
+  const CALC_RULES = {
+    "kehop-plusz": {intensity:0.70, cap:11000000},
+    "energiatarolo": {intensity:0.50, cap:3500000},
+    "videki-otthonfelujitas": {intensity:1.00, cap:15000000}
+  };
+
+  function populateProgramSelects(){
+    const selects = [document.getElementById("calcProgram"), document.getElementById("cProgram")];
+    selects.forEach(sel=>{
+      sel.innerHTML = "";
+      PROGRAMS.forEach(p=>{
+        const opt = document.createElement("option");
+        opt.value = p.id;
+        opt.textContent = p.shortName || p.name;
+        sel.appendChild(opt);
+      });
+    });
+  }
+
+  document.getElementById("calcBtn").addEventListener("click", ()=>{
+    const progId = document.getElementById("calcProgram").value;
+    const cost = parseFloat(document.getElementById("calcCost").value);
+    const resultEl = document.getElementById("calcResult");
+    const prog = PROGRAMS.find(p=>p.id===progId);
+    if(!prog || !cost || cost<=0){
+      resultEl.innerHTML = '<p class="empty">Adj meg egy érvényes projektköltséget a becsléshez.</p>';
+      return;
+    }
+    const rule = CALC_RULES[progId] || {intensity:0.5, cap:5000000};
+    const raw = cost * rule.intensity;
+    const grant = Math.min(raw, rule.cap);
+    resultEl.innerHTML = `
+      <div class="calc-result">
+        <div class="label">Becsült támogatás — ${escapeHtml(prog.shortName||prog.name)}</div>
+        <div class="amount">${Math.round(grant).toLocaleString("hu-HU")} Ft</div>
+        <div class="note">Számítás: projektköltség × ${Math.round(rule.intensity*100)}%, legfeljebb ${rule.cap.toLocaleString("hu-HU")} Ft. A tényleges összeg a felhívás aktuális feltételeitől függ — ez csak tájékoztató becslés.</div>
+      </div>
+    `;
+  });
+
+  /* ============================================================
+     8. ÜGYFELEK TAB
+     ============================================================ */
+  const STATUSES = ["érdeklődő","előkészítés alatt","benyújtva","elbírálás alatt","jóváhagyva","elutasítva"];
+
+  function uid(){ return "c"+Date.now().toString(36)+Math.random().toString(36).slice(2,7); }
+
+  async function renderClients(){
+    const projects = await sGet(KEY_PROJECTS, []);
+    const checks = await sGet(KEY_CHECKS, {});
+    const wrap = document.getElementById("clientList");
+    wrap.innerHTML = "";
+    if(projects.length===0){
+      wrap.innerHTML = '<p class="empty">Még nincs felvett ügyfél. Az adatok kizárólag ezen az eszközön, helyben tárolódnak.</p>';
+      return;
+    }
+    projects.slice().reverse().forEach(c=>{
+      const prog = PROGRAMS.find(p=>p.id===c.programId);
+      const docs = prog ? (prog.requiredDocs||[]) : [];
+      const clientChecks = checks[c.id] || {};
+      const doneCount = docs.filter((_,i)=>clientChecks[i]).length;
+      const el = document.createElement("div");
+      el.className = "card client-card";
+      el.innerHTML = `
+        <div class="top-row">
+          <div>
+            <div class="name">${escapeHtml(c.name)}</div>
+            <div class="kv">${escapeHtml(c.contact||"")}</div>
+          </div>
+          <button class="btn danger" data-del="${c.id}" style="padding:6px 10px;font-size:11.5px;">Törlés</button>
+        </div>
+        <p class="kv" style="margin-top:8px;"><b>Program:</b> ${escapeHtml(prog ? (prog.shortName||prog.name) : "—")}</p>
+        ${c.note ? `<p class="summary">${escapeHtml(c.note)}</p>` : ""}
+        <label style="margin-top:10px;">Állapot</label>
+        <select class="status-select" data-status="${c.id}">
+          ${STATUSES.map(s=>`<option value="${escapeAttr(s)}" ${s===c.status?"selected":""}>${escapeHtml(s)}</option>`).join("")}
+        </select>
+        ${docs.length ? `
+          <details ${doneCount>0 && doneCount<docs.length ? "open":""}>
+            <summary>Dokumentum-checklist (${doneCount}/${docs.length})</summary>
+            <div class="checklist">
+              ${docs.map((d,i)=>`
+                <label class="chk">
+                  <input type="checkbox" data-check="${c.id}" data-idx="${i}" ${clientChecks[i]?"checked":""}>
+                  ${escapeHtml(d)}
+                </label>
+              `).join("")}
+            </div>
+          </details>
+        ` : ""}
+      `;
+      wrap.appendChild(el);
+    });
+
+    wrap.querySelectorAll("[data-del]").forEach(btn=>{
+      btn.addEventListener("click", async ()=>{
+        if(!confirm("Biztosan törlöd ezt az ügyfelet? A művelet nem vonható vissza.")) return;
+        const id = btn.dataset.del;
+        const list = (await sGet(KEY_PROJECTS, [])).filter(c=>c.id!==id);
+        await sSet(KEY_PROJECTS, list);
+        const allChecks = await sGet(KEY_CHECKS, {});
+        delete allChecks[id];
+        await sSet(KEY_CHECKS, allChecks);
+        renderClients();
+      });
+    });
+    wrap.querySelectorAll("[data-status]").forEach(sel=>{
+      sel.addEventListener("change", async ()=>{
+        const id = sel.dataset.status;
+        const list = await sGet(KEY_PROJECTS, []);
+        const item = list.find(c=>c.id===id);
+        if(item){ item.status = sel.value; await sSet(KEY_PROJECTS, list); }
+      });
+    });
+    wrap.querySelectorAll("[data-check]").forEach(cb=>{
+      cb.addEventListener("change", async ()=>{
+        const id = cb.dataset.check;
+        const idx = cb.dataset.idx;
+        const allChecks = await sGet(KEY_CHECKS, {});
+        if(!allChecks[id]) allChecks[id] = {};
+        allChecks[id][idx] = cb.checked;
+        await sSet(KEY_CHECKS, allChecks);
+      });
+    });
+  }
+
+  document.getElementById("addClientBtn").addEventListener("click", async ()=>{
+    const name = document.getElementById("cName").value.trim();
+    if(!name){ alert("Add meg az ügyfél nevét."); return; }
+    const newClient = {
+      id: uid(),
+      name,
+      contact: document.getElementById("cContact").value.trim(),
+      programId: document.getElementById("cProgram").value,
+      status: STATUSES[0],
+      note: document.getElementById("cNote").value.trim(),
+      createdAt: new Date().toISOString()
+    };
+    const list = await sGet(KEY_PROJECTS, []);
+    list.push(newClient);
+    await sSet(KEY_PROJECTS, list);
+    document.getElementById("cName").value = "";
+    document.getElementById("cContact").value = "";
+    document.getElementById("cNote").value = "";
+    document.getElementById("newClientBox").open = false;
+    renderClients();
+  });
+
+  /* ============================================================
+     9. FORRÁSOK TAB
+     ============================================================ */
+  function renderSources(){
+    const wrap = document.getElementById("sourceList");
+    wrap.innerHTML = "";
+    if(SOURCES.length===0){
+      wrap.innerHTML = '<p class="empty">Nincs betölthető forrás.</p>';
+      return;
+    }
+    const statusById = {};
+    if(CHANGES && Array.isArray(CHANGES.results)){
+      CHANGES.results.forEach(r=>{ statusById[r.id] = r; });
+    }
+    SOURCES.forEach(s=>{
+      const st = statusById[s.id];
+      let badge = "";
+      if(st){
+        if(st.status==="error") badge = '<span class="pill" style="background:var(--red-bg);color:var(--red);">nem elérhető</span>';
+        else if(st.keywordHit) badge = '<span class="pill changed">⚡ kulcsszavas találat</span>';
+        else if(st.changed) badge = '<span class="pill changed">változás</span>';
+      }
+      const el = document.createElement("div");
+      el.className = "card";
+      el.innerHTML = `
+        <h3>${escapeHtml(s.name)}</h3>
+        <div class="meta-row"><span class="pill">${escapeHtml(s.category||"")}</span>${badge}</div>
+        <p class="summary">${escapeHtml(s.description||"")}</p>
+        <a class="link" href="${escapeAttr(s.url)}" target="_blank" rel="noopener">Megnyitás ↗</a>
+      `;
+      wrap.appendChild(el);
+    });
+  }
+
+  /* ============================================================
+     10. SEGÉDFÜGGVÉNYEK
+     ============================================================ */
+  function escapeHtml(str){
+    return String(str==null?"":str).replace(/[&<>"']/g, c=>({
+      "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+    }[c]));
+  }
+  function escapeAttr(str){ return escapeHtml(str); }
+
+  /* ============================================================
+     11. INDÍTÁS
+     ============================================================ */
+  async function init(){
+    const [programs, sources, changes] = await Promise.all([
+      loadJSON("data/programs.json", FALLBACK_PROGRAMS),
+      loadJSON("data/sources.json", FALLBACK_SOURCES),
+      loadJSON("data/changes.json", null)
+    ]);
+    PROGRAMS = programs;
+    SOURCES = sources;
+    CHANGES = changes;
+
+    renderPrograms();
+    renderSources();
+    populateProgramSelects();
+    renderClients();
+    await renderWatchbars();
+  }
+
+  init();
+
+  // Service worker regisztráció (csak https / localhost, támogatott böngészőben)
+  if("serviceWorker" in navigator){
+    window.addEventListener("load", ()=>{
+      navigator.serviceWorker.register("sw.js").catch(()=>{ /* néma hiba: SW nélkül is működik az app */ });
+    });
+  }
+})();
+</script>
+</body>
+</html>

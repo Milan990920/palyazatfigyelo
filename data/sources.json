@@ -1,0 +1,44 @@
+[
+  {
+    "id": "palyazat-gov-felhivasok",
+    "name": "Pályázat.gov.hu – Aktuális felhívások",
+    "url": "https://www.palyazat.gov.hu/palyazatok",
+    "category": "Hivatalos pályázati portál",
+    "description": "A Széchenyi Terv Plusz és a hazai finanszírozású programok hivatalos felhívás-keresője. Itt jelennek meg a KEHOP Plusz lakossági energetikai felhívások módosításai, felfüggesztései, új fordulói."
+  },
+  {
+    "id": "energiaugyi-miniszterium-hirek",
+    "name": "Energiaügyi Minisztérium – Hírek",
+    "url": "https://kormany.hu/energiaugyi-miniszterium/hirek",
+    "category": "Minisztériumi hírfolyam",
+    "description": "A tárca hivatalos közleményei, köztük az Otthoni Energiatároló Program keretösszegével, benyújtási határidejével kapcsolatos bejelentések."
+  },
+  {
+    "id": "otthon-start-program",
+    "name": "Otthon Start Program – hivatalos oldal",
+    "url": "https://www.otthonstartprogram.hu/",
+    "category": "Programoldal",
+    "description": "A vidéki otthonfelújítási és otthonteremtési támogatás hivatalos tájékoztató oldala: feltételek, igénylés menete, gyakran ismételt kérdések."
+  },
+  {
+    "id": "mfb-pontok",
+    "name": "MFB Pontok",
+    "url": "https://www.mfbpontok.hu/",
+    "category": "Ügyintézési hálózat",
+    "description": "Az MFB Pontok hálózatán keresztül nyújthatók be egyes lakossági energetikai és felújítási pályázatok; itt jelennek meg az ügyintézési tudnivalók változásai."
+  },
+  {
+    "id": "magyar-kozlony",
+    "name": "Magyar Közlöny – jogszabálykereső",
+    "url": "https://magyarkozlony.hu/",
+    "category": "Jogszabályfigyelés",
+    "description": "A programokat szabályozó kormányrendeletek hatályba lépése, módosítása itt jelenik meg elsőként – innen tudható meg elsőként egy felhívás visszavonása vagy újranyitása."
+  },
+  {
+    "id": "energiaklub-hirek",
+    "name": "Energiaklub – Hírek",
+    "url": "https://energiaklub.hu/hirek",
+    "category": "Független szakmai figyelő",
+    "description": "Civil szakpolitikai műhely, amely rendszeresen elemzi és jelzi a lakossági energetikai támogatási programok változásait, problémáit."
+  }
+]
