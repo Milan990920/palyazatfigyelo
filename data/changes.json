@@ -1,17 +1,17 @@
 {
-  "runAt": "2026-09-02T11:51:29.889Z",
+  "runAt": "2026-09-02T11:58:09.877Z",
   "results": [
     {
       "id": "palyazat-gov-felhivasok",
       "name": "Pályázat.gov.hu – Aktuális felhívások",
-      "url": "https://www.palyazat.gov.hu/palyazatok",
+      "url": "https://www.palyazat.gov.hu/",
       "status": "error",
       "changed": false,
       "keywordHit": false,
       "matchedKeywords": [],
       "error": "fetch failed",
-      "consecutiveFailures": 1,
-      "checkedAt": "2026-09-02T11:51:11.465Z"
+      "consecutiveFailures": 2,
+      "checkedAt": "2026-09-02T11:57:48.171Z"
     },
     {
       "id": "energiaugyi-miniszterium-hirek",
@@ -23,7 +23,7 @@
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-02T11:51:13.231Z"
+      "checkedAt": "2026-09-02T11:57:50.603Z"
     },
     {
       "id": "otthon-start-program",
@@ -35,31 +35,31 @@
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-02T11:51:17.039Z"
+      "checkedAt": "2026-09-02T11:57:54.643Z"
     },
     {
       "id": "mfb-pontok",
       "name": "MFB Pontok",
-      "url": "https://www.mfbpontok.hu/",
+      "url": "https://mfbpontok.hu/",
+      "status": "error",
+      "changed": false,
+      "keywordHit": false,
+      "matchedKeywords": [],
+      "error": "fetch failed",
+      "consecutiveFailures": 2,
+      "checkedAt": "2026-09-02T11:57:58.130Z"
+    },
+    {
+      "id": "magyar-kozlony",
+      "name": "Magyar Közlöny – jogszabálykereső",
+      "url": "https://magyarkozlony.hu/",
       "status": "error",
       "changed": false,
       "keywordHit": false,
       "matchedKeywords": [],
       "error": "fetch failed",
       "consecutiveFailures": 1,
-      "checkedAt": "2026-09-02T11:51:27.419Z"
-    },
-    {
-      "id": "magyar-kozlony",
-      "name": "Magyar Közlöny – jogszabálykereső",
-      "url": "https://magyarkozlony.hu/",
-      "status": "ok",
-      "changed": false,
-      "keywordHit": false,
-      "matchedKeywords": [],
-      "error": null,
-      "consecutiveFailures": 0,
-      "checkedAt": "2026-09-02T11:51:27.739Z"
+      "checkedAt": "2026-09-02T11:57:58.507Z"
     },
     {
       "id": "energiaklub-hirek",
@@ -71,14 +71,14 @@
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-02T11:51:28.837Z"
+      "checkedAt": "2026-09-02T11:58:08.619Z"
     }
   ],
   "summary": {
     "total": 6,
     "changedCount": 0,
     "keywordHitCount": 0,
-    "errorCount": 2,
+    "errorCount": 3,
     "staleCount": 0
   },
   "staleAlerts": [],
