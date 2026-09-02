@@ -1,0 +1,85 @@
+[
+  {
+    "id": "kehop-plusz",
+    "name": "KEHOP Plusz – Lakossági energiahatékonysági felhívás",
+    "shortName": "KEHOP Plusz",
+    "category": "Energiahatékonyság",
+    "targetGroup": "Magánszemély ingatlantulajdonosok (lakóingatlan)",
+    "subsidyType": "Vissza nem térítendő támogatás",
+    "maxAmount": "Legfeljebb 11 millió Ft, intenzitástól függően",
+    "ownContribution": "A projekt költségének min. 30%-a",
+    "deadline": "Folyamatos benyújtás, forráskimerülésig",
+    "status": "aktív",
+    "summary": "Az uniós forrásból (Környezeti és Energiahatékonysági Operatív Program Plusz) finanszírozott felhívás napelemes rendszer, hőszivattyú, nyílászáró-csere és hőszigetelés támogatására lakóépületekben.",
+    "eligibility": [
+      "A pályázó a felújítandó ingatlan tulajdonosa vagy résztulajdonosa",
+      "Az ingatlan lakófunkciójú és életvitelszerűen lakott",
+      "Nincs köztartozása a pályázónak",
+      "A fejlesztés energiamegtakarítást eredményez (tanúsítvánnyal igazolva)"
+    ],
+    "requiredDocs": [
+      "Tulajdoni lap (30 napnál nem régebbi)",
+      "Energetikai tanúsítvány (felújítás előtti állapot)",
+      "Kivitelezői árajánlat(ok)",
+      "Nyilatkozat köztartozásmentességről",
+      "Nyilatkozat életvitelszerű lakhatásról"
+    ],
+    "applyUrl": "https://www.palyazat.gov.hu/palyazatok",
+    "watchUrl": "https://www.palyazat.gov.hu/palyazatok",
+    "lastChanged": null
+  },
+  {
+    "id": "energiatarolo",
+    "name": "Otthoni Energiatároló Program",
+    "shortName": "Energiatároló Program",
+    "category": "Energiatárolás",
+    "targetGroup": "Meglévő napelemes rendszerrel rendelkező háztartások",
+    "subsidyType": "Vissza nem térítendő támogatás",
+    "maxAmount": "Legfeljebb 3,5 millió Ft / rendszer",
+    "ownContribution": "A projekt költségének min. 50%-a",
+    "deadline": "Sávos benyújtás, keretösszeg kimerüléséig",
+    "status": "aktív",
+    "summary": "Meglévő háztartási méretű kiserőmű (napelem) mellé telepített akkumulátoros energiatároló rendszer beszerzésének és telepítésének támogatása, a hálózati visszatáplálás csökkentése érdekében.",
+    "eligibility": [
+      "A háztartásban már üzemel engedélyezett napelemes rendszer",
+      "A tárolót engedéllyel rendelkező kivitelező telepíti",
+      "A pályázó a felhasználási hely tulajdonosa vagy a tulajdonos hozzájáruló nyilatkozatával rendelkezik"
+    ],
+    "requiredDocs": [
+      "Hálózati csatlakozási / kiserőmű üzemeltetői engedély másolata",
+      "Kivitelezői ajánlat az energiatároló rendszerre",
+      "Tulajdonosi hozzájáruló nyilatkozat (ha nem a pályázó a tulajdonos)",
+      "Legutóbbi villanyszámla"
+    ],
+    "applyUrl": "https://kormany.hu/energiaugyi-miniszterium/hirek",
+    "watchUrl": "https://kormany.hu/energiaugyi-miniszterium/hirek",
+    "lastChanged": null
+  },
+  {
+    "id": "videki-otthonfelujitas",
+    "name": "Vidéki otthonfelújítási program (Otthon Start kapcsolódó támogatás)",
+    "shortName": "Vidéki otthonfelújítás",
+    "category": "Otthonteremtés, felújítás",
+    "targetGroup": "5000 fő alatti településen otthont vásárló/felújító családok",
+    "subsidyType": "Vissza nem térítendő támogatás",
+    "maxAmount": "Legfeljebb 15 millió Ft",
+    "ownContribution": "Egyedi elbírálás szerint, jellemzően nem szükséges önerő a támogatási plafonig",
+    "deadline": "Folyamatos benyújtás",
+    "status": "aktív",
+    "summary": "Kisebb településen található, felújítandó állapotú ingatlan megvásárlásához és felújításához nyújtott támogatás, a vidéki lakosságmegtartás és otthonteremtés céljából.",
+    "eligibility": [
+      "A megvásárolt/felújítandó ingatlan 5000 fő alatti településen található",
+      "A pályázó életvitelszerűen a településre költözik vagy ott él",
+      "A felújítás a jogszabályban meghatározott munkanemeket érinti"
+    ],
+    "requiredDocs": [
+      "Adásvételi szerződés vagy tulajdoni lap",
+      "Felújítási tervdokumentáció / kivitelezői árajánlat",
+      "Lakcímkártya vagy nyilatkozat a beköltözési szándékról",
+      "Nyilatkozat köztartozásmentességről"
+    ],
+    "applyUrl": "https://www.otthonstartprogram.hu/",
+    "watchUrl": "https://www.otthonstartprogram.hu/",
+    "lastChanged": null
+  }
+]
