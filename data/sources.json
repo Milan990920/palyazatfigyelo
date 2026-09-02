@@ -2,7 +2,7 @@
   {
     "id": "palyazat-gov-felhivasok",
     "name": "Pályázat.gov.hu – Aktuális felhívások",
-    "url": "https://www.palyazat.gov.hu/palyazatok",
+    "url": "https://www.palyazat.gov.hu/",
     "category": "Hivatalos pályázati portál",
     "description": "A Széchenyi Terv Plusz és a hazai finanszírozású programok hivatalos felhívás-keresője. Itt jelennek meg a KEHOP Plusz lakossági energetikai felhívások módosításai, felfüggesztései, új fordulói."
   },
@@ -23,7 +23,7 @@
   {
     "id": "mfb-pontok",
     "name": "MFB Pontok",
-    "url": "https://www.mfbpontok.hu/",
+    "url": "https://mfbpontok.hu/",
     "category": "Ügyintézési hálózat",
     "description": "Az MFB Pontok hálózatán keresztül nyújthatók be egyes lakossági energetikai és felújítási pályázatok; itt jelennek meg az ügyintézési tudnivalók változásai."
   },
