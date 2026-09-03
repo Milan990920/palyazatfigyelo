@@ -1,5 +1,5 @@
 {
-  "runAt": "2026-09-02T15:11:29.308Z",
+  "runAt": "2026-09-03T09:57:27.001Z",
   "results": [
     {
       "id": "palyazat-gov-felhivasok",
@@ -10,20 +10,20 @@
       "keywordHit": false,
       "matchedKeywords": [],
       "error": "fetch failed",
-      "consecutiveFailures": 4,
-      "checkedAt": "2026-09-02T15:11:14.588Z"
+      "consecutiveFailures": 5,
+      "checkedAt": "2026-09-03T09:57:15.039Z"
     },
     {
       "id": "energiaugyi-miniszterium-hirek",
       "name": "Energiaügyi Minisztérium – Hírek",
       "url": "https://kormany.hu/energiaugyi-miniszterium/hirek",
       "status": "ok",
-      "changed": false,
+      "changed": true,
       "keywordHit": false,
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-02T15:11:16.420Z"
+      "checkedAt": "2026-09-03T09:57:16.702Z"
     },
     {
       "id": "otthon-start-program",
@@ -35,7 +35,7 @@
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-02T15:11:20.215Z"
+      "checkedAt": "2026-09-03T09:57:19.876Z"
     },
     {
       "id": "mfb-pontok",
@@ -46,8 +46,8 @@
       "keywordHit": false,
       "matchedKeywords": [],
       "error": "fetch failed",
-      "consecutiveFailures": 4,
-      "checkedAt": "2026-09-02T15:11:27.320Z"
+      "consecutiveFailures": 5,
+      "checkedAt": "2026-09-03T09:57:24.201Z"
     },
     {
       "id": "magyar-kozlony",
@@ -59,7 +59,7 @@
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-02T15:11:27.582Z"
+      "checkedAt": "2026-09-03T09:57:24.623Z"
     },
     {
       "id": "energiaklub-hirek",
@@ -71,12 +71,12 @@
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-02T15:11:28.665Z"
+      "checkedAt": "2026-09-03T09:57:26.311Z"
     }
   ],
   "summary": {
     "total": 6,
-    "changedCount": 1,
+    "changedCount": 2,
     "keywordHitCount": 0,
     "errorCount": 2,
     "staleCount": 2
@@ -86,13 +86,13 @@
       "id": "palyazat-gov-felhivasok",
       "name": "Pályázat.gov.hu – Aktuális felhívások",
       "url": "https://www.palyazat.gov.hu/",
-      "consecutiveFailures": 4
+      "consecutiveFailures": 5
     },
     {
       "id": "mfb-pontok",
       "name": "MFB Pontok",
       "url": "https://mfbpontok.hu/",
-      "consecutiveFailures": 4
+      "consecutiveFailures": 5
     }
   ],
   "shouldCommit": true
