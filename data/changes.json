@@ -1,5 +1,5 @@
 {
-  "runAt": "2026-09-06T09:32:29.208Z",
+  "runAt": "2026-09-06T14:17:47.513Z",
   "results": [
     {
       "id": "palyazat-gov-felhivasok",
@@ -10,8 +10,8 @@
       "keywordHit": false,
       "matchedKeywords": [],
       "error": "fetch failed",
-      "consecutiveFailures": 11,
-      "checkedAt": "2026-09-06T09:32:16.051Z"
+      "consecutiveFailures": 12,
+      "checkedAt": "2026-09-06T14:17:32.611Z"
     },
     {
       "id": "energiaugyi-miniszterium-hirek",
@@ -23,7 +23,7 @@
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-06T09:32:17.698Z"
+      "checkedAt": "2026-09-06T14:17:34.934Z"
     },
     {
       "id": "otthon-start-program",
@@ -35,7 +35,7 @@
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-06T09:32:21.194Z"
+      "checkedAt": "2026-09-06T14:17:39.191Z"
     },
     {
       "id": "mfb-pontok",
@@ -46,8 +46,8 @@
       "keywordHit": false,
       "matchedKeywords": [],
       "error": "fetch failed",
-      "consecutiveFailures": 11,
-      "checkedAt": "2026-09-06T09:32:26.220Z"
+      "consecutiveFailures": 12,
+      "checkedAt": "2026-09-06T14:17:44.282Z"
     },
     {
       "id": "magyar-kozlony",
@@ -59,7 +59,7 @@
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-06T09:32:27.042Z"
+      "checkedAt": "2026-09-06T14:17:44.708Z"
     },
     {
       "id": "energiaklub-hirek",
@@ -71,7 +71,7 @@
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-06T09:32:28.449Z"
+      "checkedAt": "2026-09-06T14:17:46.199Z"
     }
   ],
   "summary": {
@@ -86,13 +86,13 @@
       "id": "palyazat-gov-felhivasok",
       "name": "Pályázat.gov.hu – Aktuális felhívások",
       "url": "https://www.palyazat.gov.hu/",
-      "consecutiveFailures": 11
+      "consecutiveFailures": 12
     },
     {
       "id": "mfb-pontok",
       "name": "MFB Pontok",
       "url": "https://mfbpontok.hu/",
-      "consecutiveFailures": 11
+      "consecutiveFailures": 12
     }
   ],
   "shouldCommit": true
