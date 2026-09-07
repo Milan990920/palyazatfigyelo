@@ -1,5 +1,5 @@
 {
-  "runAt": "2026-09-07T10:31:50.309Z",
+  "runAt": "2026-09-07T16:35:11.813Z",
   "results": [
     {
       "id": "palyazat-gov-felhivasok",
@@ -10,8 +10,8 @@
       "keywordHit": false,
       "matchedKeywords": [],
       "error": "fetch failed (indoka: ECONNREFUSED)",
-      "consecutiveFailures": 16,
-      "checkedAt": "2026-09-07T10:31:38.336Z"
+      "consecutiveFailures": 17,
+      "checkedAt": "2026-09-07T16:34:53.590Z"
     },
     {
       "id": "energiaugyi-miniszterium-hirek",
@@ -23,7 +23,7 @@
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-07T10:31:40.179Z"
+      "checkedAt": "2026-09-07T16:34:56.650Z"
     },
     {
       "id": "otthon-start-program",
@@ -35,7 +35,7 @@
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-07T10:31:44.055Z"
+      "checkedAt": "2026-09-07T16:35:01.282Z"
     },
     {
       "id": "mfb-pontok",
@@ -47,7 +47,7 @@
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-07T10:31:47.296Z"
+      "checkedAt": "2026-09-07T16:35:08.446Z"
     },
     {
       "id": "magyar-kozlony",
@@ -59,7 +59,7 @@
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-07T10:31:48.580Z"
+      "checkedAt": "2026-09-07T16:35:09.873Z"
     },
     {
       "id": "energiaklub-hirek",
@@ -71,7 +71,7 @@
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-07T10:31:49.672Z"
+      "checkedAt": "2026-09-07T16:35:10.974Z"
     }
   ],
   "summary": {
@@ -86,7 +86,7 @@
       "id": "palyazat-gov-felhivasok",
       "name": "Pályázat.gov.hu – Aktuális felhívások",
       "url": "https://www.palyazat.gov.hu/",
-      "consecutiveFailures": 16
+      "consecutiveFailures": 17
     }
   ],
   "shouldCommit": true
