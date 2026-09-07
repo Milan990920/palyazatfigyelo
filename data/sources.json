@@ -23,23 +23,9 @@
   {
     "id": "mfb-pontok",
     "name": "MFB Pontok",
-    "url": "https://mfbpontok.hu/",
-    "category": "Ügyintézési hálózat",
-    "description": "Az MFB Pontok hálózatán keresztül nyújthatók be egyes lakossági energetikai és felújítási pályázatok; itt jelennek meg az ügyintézési tudnivalók változásai."
-  },
-  {
-    "id": "test-mfb-1",
-    "name": "TESZT: mfb.hu",
     "url": "https://www.mfb.hu/",
-    "category": "teszt",
-    "description": "Ideiglenes teszt-bejegyzés a helyes MFB URL megtalálásához."
-  },
-  {
-    "id": "test-mfb-2",
-    "name": "TESZT: mfbpont.hu",
-    "url": "https://www.mfbpont.hu/",
-    "category": "teszt",
-    "description": "Ideiglenes teszt-bejegyzés a helyes MFB URL megtalálásához."
+    "category": "Ügyintézési hálózat",
+    "description": "A Magyar Fejlesztési Bank hivatalos oldala, amely az MFB Pontok hálózatáról is tájékoztat; itt jelennek meg az ügyintézési tudnivalók változásai. (A korábbi mfbpontok.hu cím megszűnt, DNS-szinten nem elérhető.)"
   },
   {
     "id": "magyar-kozlony",
