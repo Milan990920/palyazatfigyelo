@@ -140,7 +140,8 @@ async function checkSource(source, prevState) {
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
   } catch (err) {
     result.status = "error";
-    result.error = err && err.message ? err.message : String(err);
+    const causeMsg = err && err.cause ? ` (indoka: ${err.cause.code || err.cause.message || err.cause})` : "";
+    result.error = (err && err.message ? err.message : String(err)) + causeMsg;
     result.consecutiveFailures += 1;
     return result;
   }
