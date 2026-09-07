@@ -28,6 +28,20 @@
     "description": "Az MFB Pontok hálózatán keresztül nyújthatók be egyes lakossági energetikai és felújítási pályázatok; itt jelennek meg az ügyintézési tudnivalók változásai."
   },
   {
+    "id": "test-mfb-1",
+    "name": "TESZT: mfb.hu",
+    "url": "https://www.mfb.hu/",
+    "category": "teszt",
+    "description": "Ideiglenes teszt-bejegyzés a helyes MFB URL megtalálásához."
+  },
+  {
+    "id": "test-mfb-2",
+    "name": "TESZT: mfbpont.hu",
+    "url": "https://www.mfbpont.hu/",
+    "category": "teszt",
+    "description": "Ideiglenes teszt-bejegyzés a helyes MFB URL megtalálásához."
+  },
+  {
     "id": "magyar-kozlony",
     "name": "Magyar Közlöny – jogszabálykereső",
     "url": "https://magyarkozlony.hu/",
