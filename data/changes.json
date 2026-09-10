@@ -1,17 +1,17 @@
 {
-  "runAt": "2026-09-10T11:16:08.643Z",
+  "runAt": "2026-09-10T15:05:12.333Z",
   "results": [
     {
       "id": "allamkincstar-videki-otthonfelujitas",
       "name": "Magyar Államkincstár – Vidéki Otthonfelújítási Program",
       "url": "https://www.allamkincstar.gov.hu/",
-      "status": "error",
+      "status": "ok",
       "changed": false,
       "keywordHit": false,
       "matchedKeywords": [],
-      "error": "fetch failed (indoka: UND_ERR_CONNECT_TIMEOUT)",
-      "consecutiveFailures": 1,
-      "checkedAt": "2026-09-10T11:15:34.974Z"
+      "error": null,
+      "consecutiveFailures": 0,
+      "checkedAt": "2026-09-10T15:04:46.623Z"
     },
     {
       "id": "energiaugyi-miniszterium-hirek",
@@ -23,7 +23,7 @@
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-10T11:15:45.526Z"
+      "checkedAt": "2026-09-10T15:04:55.619Z"
     },
     {
       "id": "otthon-start-program",
@@ -35,19 +35,19 @@
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-10T11:15:49.968Z"
+      "checkedAt": "2026-09-10T15:05:00.348Z"
     },
     {
       "id": "mfb-pontok",
       "name": "MFB Pontok Plusz",
       "url": "https://www.mfb.hu/mfb-pontok-plusz",
       "status": "ok",
-      "changed": true,
+      "changed": false,
       "keywordHit": false,
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-10T11:15:54.216Z"
+      "checkedAt": "2026-09-10T15:05:06.876Z"
     },
     {
       "id": "mehi-hirek",
@@ -59,19 +59,19 @@
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-10T11:15:55.631Z"
+      "checkedAt": "2026-09-10T15:05:08.177Z"
     },
     {
       "id": "magyar-kozlony",
       "name": "Magyar Közlöny – jogszabálykereső",
       "url": "https://magyarkozlony.hu/",
-      "status": "error",
-      "changed": false,
+      "status": "ok",
+      "changed": true,
       "keywordHit": false,
       "matchedKeywords": [],
-      "error": "fetch failed (indoka: UND_ERR_CONNECT_TIMEOUT)",
-      "consecutiveFailures": 1,
-      "checkedAt": "2026-09-10T11:15:57.320Z"
+      "error": null,
+      "consecutiveFailures": 0,
+      "checkedAt": "2026-09-10T15:05:09.593Z"
     },
     {
       "id": "energiaklub-hirek",
@@ -83,14 +83,14 @@
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-10T11:16:07.804Z"
+      "checkedAt": "2026-09-10T15:05:10.864Z"
     }
   ],
   "summary": {
     "total": 7,
     "changedCount": 1,
     "keywordHitCount": 0,
-    "errorCount": 2,
+    "errorCount": 0,
     "staleCount": 0
   },
   "staleAlerts": [],
