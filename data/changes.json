@@ -1,5 +1,5 @@
 {
-  "runAt": "2026-09-09T15:13:09.384Z",
+  "runAt": "2026-09-10T09:53:27.573Z",
   "results": [
     {
       "id": "palyazat-gov-felhivasok",
@@ -10,8 +10,8 @@
       "keywordHit": false,
       "matchedKeywords": [],
       "error": "fetch failed (indoka: ECONNREFUSED)",
-      "consecutiveFailures": 21,
-      "checkedAt": "2026-09-09T15:12:59.523Z"
+      "consecutiveFailures": 22,
+      "checkedAt": "2026-09-10T09:52:59.566Z"
     },
     {
       "id": "energiaugyi-miniszterium-hirek",
@@ -23,43 +23,43 @@
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-09T15:13:00.973Z"
+      "checkedAt": "2026-09-10T09:53:01.008Z"
     },
     {
       "id": "otthon-start-program",
       "name": "Otthon Start Program – hivatalos oldal",
       "url": "https://www.otthonstartprogram.hu/",
-      "status": "ok",
+      "status": "error",
       "changed": false,
       "keywordHit": false,
       "matchedKeywords": [],
-      "error": null,
-      "consecutiveFailures": 0,
-      "checkedAt": "2026-09-09T15:13:04.572Z"
+      "error": "This operation was aborted",
+      "consecutiveFailures": 1,
+      "checkedAt": "2026-09-10T09:53:04.820Z"
     },
     {
       "id": "mfb-pontok",
       "name": "MFB Pontok",
       "url": "https://www.mfb.hu/",
       "status": "ok",
-      "changed": false,
+      "changed": true,
       "keywordHit": false,
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-09T15:13:06.690Z"
+      "checkedAt": "2026-09-10T09:53:24.820Z"
     },
     {
       "id": "magyar-kozlony",
       "name": "Magyar Közlöny – jogszabálykereső",
       "url": "https://magyarkozlony.hu/",
       "status": "ok",
-      "changed": false,
+      "changed": true,
       "keywordHit": false,
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-09T15:13:07.662Z"
+      "checkedAt": "2026-09-10T09:53:25.927Z"
     },
     {
       "id": "energiaklub-hirek",
@@ -71,14 +71,14 @@
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-09T15:13:08.659Z"
+      "checkedAt": "2026-09-10T09:53:26.959Z"
     }
   ],
   "summary": {
     "total": 6,
-    "changedCount": 0,
+    "changedCount": 2,
     "keywordHitCount": 0,
-    "errorCount": 1,
+    "errorCount": 2,
     "staleCount": 1
   },
   "staleAlerts": [
@@ -86,7 +86,7 @@
       "id": "palyazat-gov-felhivasok",
       "name": "Pályázat.gov.hu – Aktuális felhívások",
       "url": "https://www.palyazat.gov.hu/",
-      "consecutiveFailures": 21
+      "consecutiveFailures": 22
     }
   ],
   "shouldCommit": true
