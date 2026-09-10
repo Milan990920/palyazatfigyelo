@@ -1,17 +1,17 @@
 {
-  "runAt": "2026-09-10T11:13:23.051Z",
+  "runAt": "2026-09-10T11:16:08.643Z",
   "results": [
     {
-      "id": "palyazat-gov-felhivasok",
-      "name": "Pályázat.gov.hu – Aktuális felhívások",
-      "url": "https://www.palyazat.gov.hu/",
+      "id": "allamkincstar-videki-otthonfelujitas",
+      "name": "Magyar Államkincstár – Vidéki Otthonfelújítási Program",
+      "url": "https://www.allamkincstar.gov.hu/",
       "status": "error",
       "changed": false,
       "keywordHit": false,
       "matchedKeywords": [],
-      "error": "fetch failed (indoka: ECONNREFUSED)",
-      "consecutiveFailures": 23,
-      "checkedAt": "2026-09-10T11:12:57.250Z"
+      "error": "fetch failed (indoka: UND_ERR_CONNECT_TIMEOUT)",
+      "consecutiveFailures": 1,
+      "checkedAt": "2026-09-10T11:15:34.974Z"
     },
     {
       "id": "energiaugyi-miniszterium-hirek",
@@ -23,7 +23,7 @@
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-10T11:12:59.041Z"
+      "checkedAt": "2026-09-10T11:15:45.526Z"
     },
     {
       "id": "otthon-start-program",
@@ -35,31 +35,43 @@
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-10T11:13:03.307Z"
+      "checkedAt": "2026-09-10T11:15:49.968Z"
     },
     {
       "id": "mfb-pontok",
-      "name": "MFB Pontok",
-      "url": "https://www.mfb.hu/",
+      "name": "MFB Pontok Plusz",
+      "url": "https://www.mfb.hu/mfb-pontok-plusz",
+      "status": "ok",
+      "changed": true,
+      "keywordHit": false,
+      "matchedKeywords": [],
+      "error": null,
+      "consecutiveFailures": 0,
+      "checkedAt": "2026-09-10T11:15:54.216Z"
+    },
+    {
+      "id": "mehi-hirek",
+      "name": "MEHI – Magyar Energiahatékonysági Intézet",
+      "url": "https://mehi.hu/",
       "status": "ok",
       "changed": false,
       "keywordHit": false,
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-10T11:13:07.921Z"
+      "checkedAt": "2026-09-10T11:15:55.631Z"
     },
     {
       "id": "magyar-kozlony",
       "name": "Magyar Közlöny – jogszabálykereső",
       "url": "https://magyarkozlony.hu/",
-      "status": "ok",
+      "status": "error",
       "changed": false,
       "keywordHit": false,
       "matchedKeywords": [],
-      "error": null,
-      "consecutiveFailures": 0,
-      "checkedAt": "2026-09-10T11:13:09.219Z"
+      "error": "fetch failed (indoka: UND_ERR_CONNECT_TIMEOUT)",
+      "consecutiveFailures": 1,
+      "checkedAt": "2026-09-10T11:15:57.320Z"
     },
     {
       "id": "energiaklub-hirek",
@@ -71,83 +83,16 @@
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-10T11:13:10.395Z"
-    },
-    {
-      "id": "test-mak",
-      "name": "TESZT: Magyar Államkincstár",
-      "url": "https://www.allamkincstar.gov.hu/",
-      "status": "ok",
-      "changed": false,
-      "keywordHit": false,
-      "matchedKeywords": [],
-      "error": null,
-      "consecutiveFailures": 0,
-      "checkedAt": "2026-09-10T11:13:11.110Z"
-    },
-    {
-      "id": "test-neu",
-      "name": "TESZT: Nemzeti Energetikai Ügynökség",
-      "url": "https://neu.hu/",
-      "status": "error",
-      "changed": false,
-      "keywordHit": false,
-      "matchedKeywords": [],
-      "error": "fetch failed (indoka: CERT_HAS_EXPIRED)",
-      "consecutiveFailures": 1,
-      "checkedAt": "2026-09-10T11:13:19.078Z"
-    },
-    {
-      "id": "test-mfb-plusz",
-      "name": "TESZT: MFB Pontok Plusz",
-      "url": "https://www.mfb.hu/mfb-pontok-plusz",
-      "status": "ok",
-      "changed": false,
-      "keywordHit": false,
-      "matchedKeywords": [],
-      "error": null,
-      "consecutiveFailures": 0,
-      "checkedAt": "2026-09-10T11:13:19.792Z"
-    },
-    {
-      "id": "test-mernokkamara",
-      "name": "TESZT: Magyar Mérnöki Kamara",
-      "url": "https://mernokkamara.hu/",
-      "status": "error",
-      "changed": false,
-      "keywordHit": false,
-      "matchedKeywords": [],
-      "error": "fetch failed (indoka: CERT_HAS_EXPIRED)",
-      "consecutiveFailures": 1,
-      "checkedAt": "2026-09-10T11:13:20.947Z"
-    },
-    {
-      "id": "test-mehi",
-      "name": "TESZT: MEHI",
-      "url": "https://mehi.hu/",
-      "status": "ok",
-      "changed": false,
-      "keywordHit": false,
-      "matchedKeywords": [],
-      "error": null,
-      "consecutiveFailures": 0,
-      "checkedAt": "2026-09-10T11:13:21.573Z"
+      "checkedAt": "2026-09-10T11:16:07.804Z"
     }
   ],
   "summary": {
-    "total": 11,
-    "changedCount": 0,
+    "total": 7,
+    "changedCount": 1,
     "keywordHitCount": 0,
-    "errorCount": 3,
-    "staleCount": 1
+    "errorCount": 2,
+    "staleCount": 0
   },
-  "staleAlerts": [
-    {
-      "id": "palyazat-gov-felhivasok",
-      "name": "Pályázat.gov.hu – Aktuális felhívások",
-      "url": "https://www.palyazat.gov.hu/",
-      "consecutiveFailures": 23
-    }
-  ],
+  "staleAlerts": [],
   "shouldCommit": true
 }
