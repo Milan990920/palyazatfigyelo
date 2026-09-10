@@ -40,5 +40,40 @@
     "url": "https://energiaklub.hu/hirek",
     "category": "Független szakmai figyelő",
     "description": "Civil szakpolitikai műhely, amely rendszeresen elemzi és jelzi a lakossági energetikai támogatási programok változásait, problémáit."
+  },
+  {
+    "id": "test-mak",
+    "name": "TESZT: Magyar Államkincstár",
+    "url": "https://www.allamkincstar.gov.hu/",
+    "category": "teszt",
+    "description": "Ideiglenes teszt."
+  },
+  {
+    "id": "test-neu",
+    "name": "TESZT: Nemzeti Energetikai Ügynökség",
+    "url": "https://neu.hu/",
+    "category": "teszt",
+    "description": "Ideiglenes teszt."
+  },
+  {
+    "id": "test-mfb-plusz",
+    "name": "TESZT: MFB Pontok Plusz",
+    "url": "https://www.mfb.hu/mfb-pontok-plusz",
+    "category": "teszt",
+    "description": "Ideiglenes teszt."
+  },
+  {
+    "id": "test-mernokkamara",
+    "name": "TESZT: Magyar Mérnöki Kamara",
+    "url": "https://mernokkamara.hu/",
+    "category": "teszt",
+    "description": "Ideiglenes teszt."
+  },
+  {
+    "id": "test-mehi",
+    "name": "TESZT: MEHI",
+    "url": "https://mehi.hu/",
+    "category": "teszt",
+    "description": "Ideiglenes teszt."
   }
 ]
