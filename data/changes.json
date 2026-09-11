@@ -1,17 +1,21 @@
 {
-  "runAt": "2026-09-11T09:52:04.007Z",
+  "runAt": "2026-09-11T15:07:58.368Z",
   "results": [
     {
       "id": "allamkincstar-videki-otthonfelujitas",
       "name": "Magyar Államkincstár – Vidéki Otthonfelújítási Program",
       "url": "https://www.allamkincstar.gov.hu/",
       "status": "ok",
-      "changed": false,
-      "keywordHit": false,
-      "matchedKeywords": [],
+      "changed": true,
+      "keywordHit": true,
+      "matchedKeywords": [
+        "benyújtás",
+        "felhívás",
+        "határidő"
+      ],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-11T09:51:39.800Z"
+      "checkedAt": "2026-09-11T15:07:36.898Z"
     },
     {
       "id": "energiaugyi-miniszterium-hirek",
@@ -23,7 +27,7 @@
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-11T09:51:48.896Z"
+      "checkedAt": "2026-09-11T15:07:44.595Z"
     },
     {
       "id": "otthon-start-program",
@@ -35,19 +39,19 @@
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-11T09:51:53.756Z"
+      "checkedAt": "2026-09-11T15:07:48.411Z"
     },
     {
       "id": "mfb-pontok",
       "name": "MFB Pontok Plusz",
       "url": "https://www.mfb.hu/mfb-pontok-plusz",
       "status": "ok",
-      "changed": true,
+      "changed": false,
       "keywordHit": false,
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-11T09:51:59.063Z"
+      "checkedAt": "2026-09-11T15:07:53.564Z"
     },
     {
       "id": "mehi-hirek",
@@ -59,37 +63,37 @@
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-11T09:52:00.495Z"
+      "checkedAt": "2026-09-11T15:07:54.983Z"
     },
     {
       "id": "magyar-kozlony",
       "name": "Magyar Közlöny – jogszabálykereső",
       "url": "https://magyarkozlony.hu/",
       "status": "ok",
-      "changed": false,
+      "changed": true,
       "keywordHit": false,
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-11T09:52:01.873Z"
+      "checkedAt": "2026-09-11T15:07:56.298Z"
     },
     {
       "id": "energiaklub-hirek",
       "name": "Energiaklub – Hírek",
       "url": "https://energiaklub.hu/hirek",
       "status": "ok",
-      "changed": true,
+      "changed": false,
       "keywordHit": false,
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-11T09:52:03.188Z"
+      "checkedAt": "2026-09-11T15:07:57.641Z"
     }
   ],
   "summary": {
     "total": 7,
     "changedCount": 2,
-    "keywordHitCount": 0,
+    "keywordHitCount": 1,
     "errorCount": 0,
     "staleCount": 0
   },
