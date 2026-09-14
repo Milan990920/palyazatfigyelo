@@ -1,5 +1,5 @@
 {
-  "runAt": "2026-09-13T10:24:16.085Z",
+  "runAt": "2026-09-14T10:49:07.365Z",
   "results": [
     {
       "id": "allamkincstar-videki-otthonfelujitas",
@@ -11,7 +11,7 @@
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-13T10:23:56.374Z"
+      "checkedAt": "2026-09-14T10:48:41.388Z"
     },
     {
       "id": "energiaugyi-miniszterium-hirek",
@@ -23,7 +23,7 @@
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-13T10:24:04.117Z"
+      "checkedAt": "2026-09-14T10:48:48.596Z"
     },
     {
       "id": "otthon-start-program",
@@ -35,7 +35,7 @@
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-13T10:24:08.011Z"
+      "checkedAt": "2026-09-14T10:48:53.216Z"
     },
     {
       "id": "mfb-pontok",
@@ -47,7 +47,7 @@
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-13T10:24:11.281Z"
+      "checkedAt": "2026-09-14T10:49:01.743Z"
     },
     {
       "id": "mehi-hirek",
@@ -59,7 +59,7 @@
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-13T10:24:12.352Z"
+      "checkedAt": "2026-09-14T10:49:03.307Z"
     },
     {
       "id": "magyar-kozlony",
@@ -71,7 +71,7 @@
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-13T10:24:14.438Z"
+      "checkedAt": "2026-09-14T10:49:04.913Z"
     },
     {
       "id": "energiaklub-hirek",
@@ -83,7 +83,7 @@
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-13T10:24:15.490Z"
+      "checkedAt": "2026-09-14T10:49:06.089Z"
     }
   ],
   "summary": {
