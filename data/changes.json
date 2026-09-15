@@ -1,5 +1,5 @@
 {
-  "runAt": "2026-09-15T10:12:24.331Z",
+  "runAt": "2026-09-15T15:38:18.340Z",
   "results": [
     {
       "id": "allamkincstar-videki-otthonfelujitas",
@@ -11,7 +11,7 @@
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-15T10:12:03.571Z"
+      "checkedAt": "2026-09-15T15:37:59.469Z"
     },
     {
       "id": "energiaugyi-miniszterium-hirek",
@@ -23,7 +23,7 @@
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-15T10:12:12.021Z"
+      "checkedAt": "2026-09-15T15:38:06.499Z"
     },
     {
       "id": "otthon-start-program",
@@ -35,19 +35,19 @@
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-15T10:12:16.084Z"
+      "checkedAt": "2026-09-15T15:38:10.377Z"
     },
     {
       "id": "mfb-pontok",
       "name": "MFB Pontok Plusz",
       "url": "https://www.mfb.hu/mfb-pontok-plusz",
       "status": "ok",
-      "changed": true,
+      "changed": false,
       "keywordHit": false,
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-15T10:12:19.638Z"
+      "checkedAt": "2026-09-15T15:38:14.521Z"
     },
     {
       "id": "mehi-hirek",
@@ -59,7 +59,7 @@
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-15T10:12:20.881Z"
+      "checkedAt": "2026-09-15T15:38:15.586Z"
     },
     {
       "id": "magyar-kozlony",
@@ -71,7 +71,7 @@
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-15T10:12:22.020Z"
+      "checkedAt": "2026-09-15T15:38:16.663Z"
     },
     {
       "id": "energiaklub-hirek",
@@ -83,12 +83,12 @@
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-15T10:12:23.230Z"
+      "checkedAt": "2026-09-15T15:38:17.728Z"
     }
   ],
   "summary": {
     "total": 7,
-    "changedCount": 2,
+    "changedCount": 1,
     "keywordHitCount": 0,
     "errorCount": 0,
     "staleCount": 0
