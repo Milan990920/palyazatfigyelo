@@ -1,21 +1,17 @@
 {
-  "runAt": "2026-09-14T17:00:18.098Z",
+  "runAt": "2026-09-15T10:12:24.331Z",
   "results": [
     {
       "id": "allamkincstar-videki-otthonfelujitas",
       "name": "Magyar Államkincstár – Vidéki Otthonfelújítási Program",
       "url": "https://www.allamkincstar.gov.hu/",
       "status": "ok",
-      "changed": true,
-      "keywordHit": true,
-      "matchedKeywords": [
-        "benyújtás",
-        "felhívás",
-        "határidő"
-      ],
+      "changed": false,
+      "keywordHit": false,
+      "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-14T16:59:53.287Z"
+      "checkedAt": "2026-09-15T10:12:03.571Z"
     },
     {
       "id": "energiaugyi-miniszterium-hirek",
@@ -27,7 +23,7 @@
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-14T17:00:02.254Z"
+      "checkedAt": "2026-09-15T10:12:12.021Z"
     },
     {
       "id": "otthon-start-program",
@@ -39,19 +35,19 @@
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-14T17:00:06.470Z"
+      "checkedAt": "2026-09-15T10:12:16.084Z"
     },
     {
       "id": "mfb-pontok",
       "name": "MFB Pontok Plusz",
       "url": "https://www.mfb.hu/mfb-pontok-plusz",
       "status": "ok",
-      "changed": false,
+      "changed": true,
       "keywordHit": false,
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-14T17:00:13.723Z"
+      "checkedAt": "2026-09-15T10:12:19.638Z"
     },
     {
       "id": "mehi-hirek",
@@ -63,7 +59,7 @@
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-14T17:00:14.804Z"
+      "checkedAt": "2026-09-15T10:12:20.881Z"
     },
     {
       "id": "magyar-kozlony",
@@ -75,7 +71,7 @@
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-14T17:00:15.976Z"
+      "checkedAt": "2026-09-15T10:12:22.020Z"
     },
     {
       "id": "energiaklub-hirek",
@@ -87,13 +83,13 @@
       "matchedKeywords": [],
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-14T17:00:17.020Z"
+      "checkedAt": "2026-09-15T10:12:23.230Z"
     }
   ],
   "summary": {
     "total": 7,
     "changedCount": 2,
-    "keywordHitCount": 1,
+    "keywordHitCount": 0,
     "errorCount": 0,
     "staleCount": 0
   },
