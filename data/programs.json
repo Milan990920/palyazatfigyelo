@@ -26,6 +26,7 @@
     ],
     "applyUrl": "https://www.palyazat.gov.hu/",
     "watchUrl": "https://kormany.hu/energiaugyi-miniszterium/hirek",
+    "aliases": ["KEHOP Plusz", "KEHOP Plusz-4.1.7", "KEHOP-Plusz", "kehop plusz"],
     "lastChanged": null
   },
   {
@@ -53,6 +54,7 @@
     ],
     "applyUrl": "https://kormany.hu/energiaugyi-miniszterium/hirek",
     "watchUrl": "https://kormany.hu/energiaugyi-miniszterium/hirek",
+    "aliases": ["Otthoni Energiatároló Program", "Otthoni Energiatároló", "OETP", "energiatároló program", "energiatároló pályázat"],
     "lastChanged": null
   },
   {
@@ -80,6 +82,7 @@
     ],
     "applyUrl": "https://www.allamkincstar.gov.hu/",
     "watchUrl": "https://www.allamkincstar.gov.hu/",
+    "aliases": ["Vidéki otthonfelújítási program", "vidéki otthonfelújítás", "otthonfelújítási program", "Otthon Start", "Otthon Start Program"],
     "lastChanged": null
   }
 ]
