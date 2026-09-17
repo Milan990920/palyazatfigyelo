@@ -3,7 +3,7 @@
 //  - statikus fájlok (HTML/CSS/JS/ikonok): cache-first, hogy offline is induljon az app
 //  - data/*.json: network-first, hogy a frissített pályázati/forrás-adatok átjöjjenek;
 //    ha nincs hálózat, a legutóbb cache-elt válasz szolgál ki.
-const CACHE_VERSION = "pf-v1";
+const CACHE_VERSION = "pf-v2";
 const STATIC_CACHE = CACHE_VERSION + "-static";
 const DATA_CACHE = CACHE_VERSION + "-data";
 

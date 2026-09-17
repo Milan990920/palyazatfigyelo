@@ -4,11 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Pályázatfigyelő</title>
-<meta name="description" content="Lakossági felújítási és energetikai pályázatok (KEHOP Plusz, Otthoni Energiatároló Program, vidéki otthonfelújítás) nyomon követése, jogosultság-ellenőrzés, kalkulátor és ügyfélkezelés.">
+<meta name="description" content="Lakossági felújítási és energetikai pályázatok (KEHOP Plusz, Otthoni Energiatároló Program, vidéki otthonfelújítás) nyomon követése, jogosultság-ellenőrzés, kalkulátor, ügyfélkezelés és hírfigyelés.">
 
 <!-- PWA -->
 <link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#0D5C5C">
+<meta name="theme-color" content="#0D5C5C" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121615" media="(prefers-color-scheme: dark)">
 
 <!-- iOS / apple specifikus meta tagek: enélkül kezdőképernyőről nem standalone-ként indul -->
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -20,215 +21,372 @@
 <link rel="icon" type="image/png" sizes="512x512" href="icons/icon-512.png">
 
 <style>
+  /* ============================================================
+     DESIGN TOKENS
+     ============================================================ */
   :root{
     --teal:#0D5C5C;
     --teal-dark:#083F3F;
     --teal-light:#E4F0EF;
-    --bg:#EBEFEE;
-    --card:#FFFFFF;
-    --ink:#17251F;
-    --muted:#5B6B65;
-    --line:#D9E2DF;
-    --amber:#B8681B;
-    --amber-bg:#FBEEE0;
-    --red:#A6332B;
-    --red-bg:#FBE7E5;
-    --green:#256B4D;
-    --green-bg:#E4F2EA;
-    --radius:14px;
-    --shadow:0 1px 2px rgba(15,40,35,.06), 0 4px 14px rgba(15,40,35,.06);
+    --on-teal:#FFFFFF;
+
+    /* 9-lépéses hideg szürke skála */
+    --gray-50:#F7F9F9;
+    --gray-100:#EEF2F1;
+    --gray-200:#E1E7E6;
+    --gray-300:#CBD5D3;
+    --gray-400:#A9B6B3;
+    --gray-500:#84928F;
+    --gray-600:#647370;
+    --gray-700:#4A5654;
+    --gray-800:#333D3B;
+    --gray-900:#1D2423;
+
+    --bg:var(--gray-50);
+    --surface:#FFFFFF;
+    --surface-2:var(--gray-100);
+    --ink:var(--gray-900);
+    --muted:var(--gray-600);
+    --line:var(--gray-200);
+    --overlay:rgba(20,28,26,.42);
+
+    --status-open-fg:#1F7A46;       --status-open-bg:#E3F5EA;
+    --status-suspended-fg:#8A5A00;  --status-suspended-bg:#FCEFD6;
+    --status-closed-fg:#B3261E;     --status-closed-bg:#FBE7E5;
+    --status-announced-fg:#1D5FC2;  --status-announced-bg:#E5EEFC;
+
+    --tier-official-fg:#1D5FC2;   --tier-official-bg:#E5EEFC;
+    --tier-press-fg:#6B4EA6;      --tier-press-bg:#EFE8FB;
+    --tier-aggregator-fg:#647370; --tier-aggregator-bg:#EEF2F1;
+
+    --radius-sm:8px; --radius-md:12px; --radius-lg:16px;
+    --shadow-sm:0 1px 2px rgba(15,40,35,.07);
+    --shadow-md:0 6px 20px rgba(15,40,35,.10);
+    --sp-1:4px; --sp-2:8px; --sp-3:12px; --sp-4:16px; --sp-5:20px; --sp-6:24px; --sp-8:32px;
+    --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    --header-h:56px;
+    --tabbar-h:60px;
+    --motion-fast:170ms;
   }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#121615; --surface:#1B211F; --surface-2:#222927;
+      --ink:#EDF3F1; --muted:#9BAAA7; --line:#2B3331;
+      --overlay:rgba(0,0,0,.55);
+      --teal:#57CFCF; --teal-dark:#3AA5A5; --teal-light:#16302F; --on-teal:#06201F;
+      --status-open-bg:#12331F; --status-suspended-bg:#392B0C; --status-closed-bg:#3A1815; --status-announced-bg:#0E2A48;
+      --status-open-fg:#6FDB9B; --status-suspended-fg:#E8B95C; --status-closed-fg:#F0938B; --status-announced-fg:#8FB8F2;
+      --tier-official-bg:#0E2A48; --tier-official-fg:#8FB8F2;
+      --tier-press-bg:#2A2140; --tier-press-fg:#C6AEEE;
+      --tier-aggregator-bg:#222927; --tier-aggregator-fg:#9BAAA7;
+      --shadow-sm:0 1px 2px rgba(0,0,0,.45); --shadow-md:0 8px 24px rgba(0,0,0,.5);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#121615; --surface:#1B211F; --surface-2:#222927;
+    --ink:#EDF3F1; --muted:#9BAAA7; --line:#2B3331;
+    --overlay:rgba(0,0,0,.55);
+    --teal:#57CFCF; --teal-dark:#3AA5A5; --teal-light:#16302F; --on-teal:#06201F;
+    --status-open-bg:#12331F; --status-suspended-bg:#392B0C; --status-closed-bg:#3A1815; --status-announced-bg:#0E2A48;
+    --status-open-fg:#6FDB9B; --status-suspended-fg:#E8B95C; --status-closed-fg:#F0938B; --status-announced-fg:#8FB8F2;
+    --tier-official-bg:#0E2A48; --tier-official-fg:#8FB8F2;
+    --tier-press-bg:#2A2140; --tier-press-fg:#C6AEEE;
+    --tier-aggregator-bg:#222927; --tier-aggregator-fg:#9BAAA7;
+    --shadow-sm:0 1px 2px rgba(0,0,0,.45); --shadow-md:0 8px 24px rgba(0,0,0,.5);
+  }
+
   *{box-sizing:border-box;}
   html,body{margin:0;padding:0;}
   body{
-    background:var(--bg);
-    color:var(--ink);
-    font-family:"Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",Arial,sans-serif;
-    -webkit-font-smoothing:antialiased;
-    min-height:100vh;
-    padding-bottom:calc(72px + env(safe-area-inset-bottom));
+    background:var(--bg); color:var(--ink); font-family:var(--font);
+    -webkit-font-smoothing:antialiased; min-height:100vh;
+    padding-bottom:calc(var(--tabbar-h) + env(safe-area-inset-bottom));
   }
+  .tabular{font-variant-numeric:tabular-nums;}
+  a{color:var(--teal);}
+  button{font-family:inherit;}
+  :focus-visible{outline:2px solid var(--teal); outline-offset:2px; border-radius:4px;}
+
+  /* ============================================================
+     FEJLÉC — nagy cím, görgetésre összecsukódó, blur sávval
+     ============================================================ */
   header.appbar{
-    position:sticky; top:0; z-index:20;
-    background:var(--teal);
-    color:#fff;
-    padding:calc(14px + env(safe-area-inset-top)) 18px 14px;
-    box-shadow:var(--shadow);
+    position:sticky; top:0; z-index:40;
+    background:var(--surface);
+    border-bottom:1px solid transparent;
+    padding-top:env(safe-area-inset-top);
+    transition:background var(--motion-fast) ease, border-color var(--motion-fast) ease;
   }
-  header.appbar h1{
-    margin:0; font-size:19px; font-weight:700; letter-spacing:.2px;
-    display:flex; align-items:center; gap:8px;
+  header.appbar .bar{
+    display:flex; align-items:center; gap:var(--sp-2);
+    min-height:var(--header-h); padding:0 var(--sp-4);
   }
-  header.appbar h1 .logo{
-    width:26px;height:26px;border-radius:8px;background:#fff;color:var(--teal);
-    display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;
-    flex:none;
+  header.appbar .large-title{
+    font-size:28px; font-weight:800; letter-spacing:-.2px; color:var(--ink);
+    padding:var(--sp-2) var(--sp-4) var(--sp-3);
+    transition:font-size var(--motion-fast) ease, padding var(--motion-fast) ease, opacity var(--motion-fast) ease;
   }
-  header.appbar p{margin:2px 0 0;font-size:12.5px;opacity:.85;}
+  header.appbar .compact-title{
+    font-size:16px; font-weight:700; opacity:0; transform:translateY(4px);
+    transition:opacity var(--motion-fast) ease, transform var(--motion-fast) ease;
+  }
+  header.appbar.collapsed{
+    background:color-mix(in srgb, var(--surface) 82%, transparent);
+    backdrop-filter:saturate(160%) blur(14px);
+    -webkit-backdrop-filter:saturate(160%) blur(14px);
+    border-bottom-color:var(--line);
+  }
+  header.appbar.collapsed .large-title{font-size:0; padding-top:0; padding-bottom:0; opacity:0;}
+  header.appbar.collapsed .compact-title{opacity:1; transform:none;}
+  header.appbar .icon-btn{
+    width:40px;height:40px;border-radius:50%;border:none;background:transparent;color:var(--ink);
+    display:flex;align-items:center;justify-content:center;cursor:pointer;flex:none;
+  }
+  header.appbar .icon-btn:hover{background:var(--surface-2);}
+  .meta-line{
+    font-size:11.5px; color:var(--muted); padding:0 var(--sp-4) var(--sp-3);
+    display:flex; align-items:center; gap:6px; flex-wrap:wrap;
+  }
+  .meta-line .stale{color:var(--status-suspended-fg); font-weight:700;}
+  .offline-bar{
+    background:var(--status-suspended-bg); color:var(--status-suspended-fg);
+    font-size:12px; font-weight:700; text-align:center; padding:6px var(--sp-4);
+    display:none;
+  }
+  .offline-bar.show{display:block;}
 
-  main{max-width:720px;margin:0 auto;padding:16px 14px 24px;}
-  section.tab{display:none;}
-  section.tab.active{display:block;animation:fade .15s ease-out;}
-  @keyframes fade{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:none;}}
+  main{max-width:720px;margin:0 auto;padding:0 var(--sp-3) var(--sp-6);}
+  .view{display:none;}
+  .view.active{display:block;}
+  ::view-transition-old(root), ::view-transition-new(root){animation-duration:var(--motion-fast);}
+  @media (prefers-reduced-motion: reduce){
+    ::view-transition-old(root), ::view-transition-new(root){animation:none;}
+    *{transition-duration:0ms !important;}
+  }
 
-  h2.tab-title{font-size:16px;margin:2px 0 12px;color:var(--teal-dark);}
+  h2.section-title{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:var(--muted);margin:var(--sp-5) var(--sp-2) var(--sp-2);}
+  h2.section-title:first-child{margin-top:var(--sp-3);}
 
+  /* ============================================================
+     ALSÓ TABBAR — inline SVG ikonok
+     ============================================================ */
   nav.tabbar{
-    position:fixed; bottom:0; left:0; right:0; z-index:30;
-    background:#fff; border-top:1px solid var(--line);
-    display:flex;
-    padding-bottom:env(safe-area-inset-bottom);
-    box-shadow:0 -2px 10px rgba(15,40,35,.06);
+    position:fixed; bottom:0; left:0; right:0; z-index:50;
+    background:var(--surface); border-top:1px solid var(--line);
+    display:flex; padding-bottom:env(safe-area-inset-bottom);
+    box-shadow:0 -2px 12px rgba(15,40,35,.08);
   }
   nav.tabbar button{
     flex:1; background:none; border:none; cursor:pointer;
-    display:flex; flex-direction:column; align-items:center; gap:3px;
-    padding:9px 2px 8px; color:var(--muted); font-size:11px; font-family:inherit;
+    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2px;
+    min-height:var(--tabbar-h); padding:6px 2px; color:var(--muted); font-size:10.5px; font-weight:600;
   }
-  nav.tabbar button .ico{font-size:19px;line-height:1;}
-  nav.tabbar button.active{color:var(--teal);font-weight:700;}
-  nav.tabbar button.active .ico{transform:translateY(-1px);}
+  nav.tabbar button svg{width:23px;height:23px;stroke:currentColor;stroke-width:1.75;fill:none;stroke-linecap:round;stroke-linejoin:round;}
+  nav.tabbar button.active{color:var(--teal);}
+  nav.tabbar button .dot-alert{
+    position:absolute; margin-left:14px; margin-top:-16px;
+    width:8px;height:8px;border-radius:50%;background:var(--status-closed-fg);
+    border:1.5px solid var(--surface);
+  }
+  nav.tabbar button{position:relative;}
 
-  /* Status bar (figyelő) */
-  .watchbar{
-    display:flex; align-items:center; gap:10px;
-    background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
-    padding:11px 13px; margin-bottom:14px; box-shadow:var(--shadow); cursor:pointer;
-  }
-  .watchbar .dot{width:10px;height:10px;border-radius:50%;flex:none;background:var(--muted);}
-  .watchbar.ok .dot{background:var(--green);}
-  .watchbar.alert .dot{background:var(--red);}
-  .watchbar.warn .dot{background:var(--amber);}
-  .watchbar .txt{flex:1;min-width:0;}
-  .watchbar .txt b{display:block;font-size:13px;}
-  .watchbar .txt span{font-size:12px;color:var(--muted);}
-  .watchbar .badge-new{
-    background:var(--red); color:#fff; font-size:10.5px; font-weight:700;
-    padding:2px 7px; border-radius:20px; flex:none;
-  }
-
-  /* Cards */
+  /* ============================================================
+     KÖZÖS KOMPONENSEK
+     ============================================================ */
   .card{
-    background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
-    padding:14px; margin-bottom:12px; box-shadow:var(--shadow);
+    background:var(--surface); border:1px solid var(--line); border-radius:var(--radius-lg);
+    padding:var(--sp-4); margin-bottom:var(--sp-3); box-shadow:var(--shadow-sm);
   }
-  .card h3{margin:0 0 4px; font-size:15px; color:var(--teal-dark);}
-  .card .meta-row{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 6px;}
-  .pill{
-    font-size:11px; font-weight:600; padding:3px 9px; border-radius:20px;
-    background:var(--teal-light); color:var(--teal-dark);
+  .list-row{
+    display:flex; align-items:center; gap:var(--sp-3);
+    background:var(--surface); border:1px solid var(--line); border-radius:var(--radius-md);
+    padding:var(--sp-3) var(--sp-4); margin-bottom:var(--sp-2); cursor:pointer; min-height:44px;
+    text-decoration:none; color:inherit;
   }
-  .pill.status-aktív{background:var(--green-bg);color:var(--green);}
-  .pill.status-tervezett{background:var(--amber-bg);color:var(--amber);}
-  .pill.status-lezárt{background:var(--red-bg);color:var(--red);}
-  .pill.changed{background:var(--red-bg);color:var(--red);}
-  .summary{font-size:13px;color:var(--ink);line-height:1.45;margin:6px 0;}
+  .list-row:active{background:var(--surface-2);}
+  .list-row .chev{color:var(--gray-400); flex:none;}
+  .card h3{margin:0 0 4px; font-size:15.5px; color:var(--ink); font-weight:700;}
+  .card .meta-row{display:flex;flex-wrap:wrap;gap:6px;margin:var(--sp-2) 0 var(--sp-1);align-items:center;}
+  .summary{font-size:13.5px;color:var(--ink);line-height:1.5;margin:6px 0;}
   .kv{font-size:12.5px;color:var(--muted);margin:2px 0;}
   .kv b{color:var(--ink);font-weight:600;}
-  details{margin-top:8px;}
-  details summary{cursor:pointer;font-size:12.5px;color:var(--teal);font-weight:600;list-style:none;}
+
+  .pill{
+    font-size:11px; font-weight:700; padding:3px 9px; border-radius:20px;
+    background:var(--surface-2); color:var(--muted); display:inline-flex; align-items:center; gap:4px;
+    white-space:nowrap;
+  }
+  .pill.status-open{background:var(--status-open-bg);color:var(--status-open-fg);}
+  .pill.status-suspended{background:var(--status-suspended-bg);color:var(--status-suspended-fg);}
+  .pill.status-closed{background:var(--status-closed-bg);color:var(--status-closed-fg);}
+  .pill.status-announced{background:var(--status-announced-bg);color:var(--status-announced-fg);}
+  .pill.tier-official{background:var(--tier-official-bg);color:var(--tier-official-fg);}
+  .pill.tier-press{background:var(--tier-press-bg);color:var(--tier-press-fg);}
+  .pill.tier-aggregator{background:var(--tier-aggregator-bg);color:var(--tier-aggregator-fg);}
+  .pill.alert{background:var(--status-closed-bg);color:var(--status-closed-fg);}
+  .pill.dim{opacity:.7;}
+
+  details{margin-top:var(--sp-2);}
+  details summary{cursor:pointer;font-size:12.5px;color:var(--teal);font-weight:700;list-style:none;}
   details summary::-webkit-details-marker{display:none;}
   details summary::before{content:"▸ ";}
   details[open] summary::before{content:"▾ ";}
-  details ul{margin:8px 0 0;padding-left:18px;font-size:12.5px;color:var(--ink);}
+  details ul{margin:var(--sp-2) 0 0;padding-left:18px;font-size:12.5px;color:var(--ink);}
   details ul li{margin-bottom:4px;}
-  .card .link{
-    display:inline-block;margin-top:9px;font-size:12.5px;font-weight:700;color:#fff;
-    background:var(--teal);padding:7px 12px;border-radius:9px;text-decoration:none;
+  .card .link-btn{
+    display:inline-flex;align-items:center;gap:6px;margin-top:var(--sp-3);font-size:12.5px;font-weight:700;color:var(--on-teal);
+    background:var(--teal);padding:9px 14px;border-radius:var(--radius-sm);text-decoration:none;min-height:38px;
   }
 
-  /* Forms / inputs */
-  label{display:block;font-size:12.5px;font-weight:600;color:var(--ink);margin:10px 0 4px;}
+  label{display:block;font-size:12.5px;font-weight:700;color:var(--ink);margin:var(--sp-3) 0 4px;}
   input[type=text],input[type=number],input[type=tel],input[type=email],select,textarea{
-    width:100%;padding:10px 11px;border:1px solid var(--line);border-radius:10px;
-    font-size:14px;font-family:inherit;background:#fff;color:var(--ink);
+    width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:var(--radius-sm);
+    font-size:14px;font-family:inherit;background:var(--surface);color:var(--ink);min-height:44px;
   }
   textarea{min-height:64px;resize:vertical;}
-  .radiorow{display:flex;gap:8px;margin-top:4px;flex-wrap:wrap;}
-  .radiorow button{
-    flex:1;min-width:70px;padding:9px 6px;border-radius:10px;border:1px solid var(--line);
-    background:#fff;font-size:12.5px;font-weight:600;color:var(--muted);cursor:pointer;font-family:inherit;
-  }
-  .radiorow button.sel{background:var(--teal);border-color:var(--teal);color:#fff;}
   .btn{
-    display:inline-block;background:var(--teal);color:#fff;border:none;border-radius:10px;
-    padding:10px 16px;font-size:13.5px;font-weight:700;cursor:pointer;font-family:inherit;
+    display:inline-flex;align-items:center;justify-content:center;gap:6px;
+    background:var(--teal);color:var(--on-teal);border:none;border-radius:var(--radius-sm);
+    padding:11px 16px;font-size:13.5px;font-weight:700;cursor:pointer;min-height:44px;
   }
-  .btn.secondary{background:#fff;color:var(--teal);border:1px solid var(--teal);}
-  .btn.danger{background:var(--red);}
-  .btn-row{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap;}
+  .btn.secondary{background:transparent;color:var(--teal);border:1px solid var(--teal);}
+  .btn.danger{background:var(--status-closed-fg);}
+  .btn.ghost{background:var(--surface-2);color:var(--ink);}
+  .btn-row{display:flex;gap:8px;margin-top:var(--sp-3);flex-wrap:wrap;}
 
-  .q-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:13px;margin-bottom:10px;box-shadow:var(--shadow);}
-  .q-card p{margin:0 0 6px;font-size:13.5px;font-weight:600;}
-  .elig-result{border-radius:var(--radius);padding:13px;margin-bottom:12px;border:1px solid var(--line);}
-  .elig-result.good{background:var(--green-bg);border-color:var(--green);}
-  .elig-result.bad{background:var(--red-bg);border-color:var(--red);}
-  .elig-result.unknown{background:var(--amber-bg);border-color:var(--amber);}
-  .elig-result h4{margin:0 0 4px;font-size:14px;}
-  .elig-result p{margin:0;font-size:12.5px;color:var(--muted);}
-
-  .checklist label.chk{display:flex;align-items:center;gap:8px;font-weight:500;font-size:13px;margin:6px 0;}
-  .checklist input[type=checkbox]{width:17px;height:17px;accent-color:var(--teal);flex:none;}
-
-  .calc-result{
-    margin-top:14px;background:var(--teal);color:#fff;border-radius:var(--radius);padding:16px;
+  .segmented{
+    display:flex; background:var(--surface-2); border-radius:var(--radius-sm); padding:3px; gap:2px;
+    margin:var(--sp-2) 0 var(--sp-3);
   }
-  .calc-result .amount{font-size:26px;font-weight:800;}
-  .calc-result .label{font-size:12px;opacity:.85;margin-bottom:2px;}
-  .calc-result .note{font-size:11.5px;opacity:.8;margin-top:8px;}
+  .segmented button{
+    flex:1; border:none; background:transparent; color:var(--muted); font-size:12.5px; font-weight:700;
+    padding:8px 4px; border-radius:7px; cursor:pointer; min-height:38px;
+  }
+  .segmented button.sel{background:var(--surface); color:var(--ink); box-shadow:var(--shadow-sm);}
 
+  .empty{color:var(--muted);font-size:13.5px;text-align:center;padding:var(--sp-8) var(--sp-4);line-height:1.5;}
+  .disclaimer{font-size:11.5px;color:var(--muted);text-align:center;margin-top:var(--sp-5);line-height:1.6;padding:0 var(--sp-3);}
+
+  /* Skeletonok */
+  @keyframes shimmer{0%{background-position:-120px 0;}100%{background-position:120px 0;}}
+  .skeleton{
+    background:linear-gradient(90deg, var(--surface-2) 25%, var(--line) 37%, var(--surface-2) 63%);
+    background-size:240px 100%; animation:shimmer 1.3s linear infinite;
+    border-radius:var(--radius-md); height:14px; margin:6px 0;
+  }
+  @media (prefers-reduced-motion: reduce){ .skeleton{animation:none;} }
+  .skeleton-card{padding:var(--sp-4);}
+  .skeleton-card .skeleton.title{width:60%;height:16px;}
+  .skeleton-card .skeleton.line{width:90%;}
+  .skeleton-card .skeleton.short{width:40%;}
+
+  /* Pull-to-refresh */
+  .ptr-indicator{
+    display:flex; align-items:center; justify-content:center; height:0; overflow:hidden;
+    color:var(--muted); font-size:12px; font-weight:600; gap:6px; transition:height .1s ease;
+  }
+  .ptr-indicator .spin{
+    width:15px;height:15px;border-radius:50%;border:2px solid var(--line);border-top-color:var(--teal);
+    animation:spin .7s linear infinite;
+  }
+  @keyframes spin{to{transform:rotate(360deg);}}
+
+  /* Toast */
+  #toast{
+    position:fixed; left:50%; bottom:calc(var(--tabbar-h) + env(safe-area-inset-bottom) + 14px);
+    transform:translateX(-50%) translateY(8px); background:var(--gray-900); color:#fff;
+    padding:10px 16px; border-radius:999px; font-size:12.5px; font-weight:600; z-index:80;
+    opacity:0; pointer-events:none; transition:opacity .2s ease, transform .2s ease; box-shadow:var(--shadow-md);
+    max-width:88vw; text-align:center;
+  }
+  :root[data-theme="dark"] #toast, @media (prefers-color-scheme:dark){ }
+  #toast.show{opacity:1; transform:translateX(-50%) translateY(0);}
+
+  /* Bottom sheet */
+  #sheetBackdrop{
+    position:fixed; inset:0; background:var(--overlay); z-index:90; opacity:0; pointer-events:none;
+    transition:opacity .2s ease;
+  }
+  #sheetBackdrop.show{opacity:1; pointer-events:auto;}
+  #sheet{
+    position:fixed; left:0; right:0; bottom:0; z-index:91; background:var(--surface);
+    border-radius:20px 20px 0 0; padding:var(--sp-5) var(--sp-4) calc(var(--sp-5) + env(safe-area-inset-bottom));
+    transform:translateY(100%); transition:transform .22s ease; max-height:80vh; overflow:auto;
+    box-shadow:var(--shadow-md);
+  }
+  #sheet.show{transform:translateY(0);}
+  #sheet .handle{width:36px;height:4px;background:var(--line);border-radius:4px;margin:0 auto var(--sp-4);}
+  #sheet h3{margin:0 0 var(--sp-2);font-size:16px;}
+  #sheet p{font-size:13.5px;color:var(--muted);line-height:1.5;margin:0 0 var(--sp-4);}
+
+  /* Hírek */
+  .news-item{padding:var(--sp-3) 0;border-bottom:1px solid var(--line);}
+  .news-item:last-child{border-bottom:none;}
+  .news-item .title{font-size:13.5px;font-weight:600;line-height:1.4;margin:4px 0 6px;display:block;color:var(--ink);text-decoration:none;}
+  .news-item .foot{display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:11.5px;color:var(--muted);}
+
+  /* Ügyfelek */
   .client-card .top-row{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;}
   .client-card .name{font-size:15px;font-weight:700;}
-  .empty{color:var(--muted);font-size:13px;text-align:center;padding:26px 10px;}
-  .disclaimer{font-size:11.5px;color:var(--muted);text-align:center;margin-top:18px;line-height:1.5;}
-  select.status-select{margin-top:8px;}
+  .checklist label.chk{display:flex;align-items:center;gap:8px;font-weight:500;font-size:13px;margin:6px 0;min-height:28px;}
+  .checklist input[type=checkbox]{width:19px;height:19px;accent-color:var(--teal);flex:none;}
+
+  .calc-result{margin-top:var(--sp-4);background:var(--teal);color:var(--on-teal);border-radius:var(--radius-lg);padding:var(--sp-5);}
+  .calc-result .amount{font-size:26px;font-weight:800;}
+  .calc-result .label{font-size:12px;opacity:.85;margin-bottom:2px;}
+  .calc-result .note{font-size:11.5px;opacity:.85;margin-top:var(--sp-3);}
+
+  .tools-grid{display:flex;flex-direction:column;gap:var(--sp-2);}
 
   ::selection{background:var(--teal-light);}
 </style>
 </head>
 <body>
 
-<header class="appbar">
-  <h1><span class="logo">P</span> Pályázatfigyelő</h1>
-  <p>Lakossági felújítási és energetikai pályázatok egy helyen</p>
+<div id="offlineBar" class="offline-bar">Nincs internetkapcsolat — a legutóbb mentett adatokat látod.</div>
+
+<header class="appbar" id="appHeader">
+  <div class="bar">
+    <div class="compact-title" id="compactTitle">Áttekintés</div>
+  </div>
+  <div class="large-title" id="largeTitle">Áttekintés</div>
+  <div class="meta-line" id="metaLine">Adatok frissítve: —</div>
 </header>
 
-<main>
+<main id="mainScroll">
+  <div class="ptr-indicator" id="ptrIndicator"><span class="spin"></span><span id="ptrLabel">Frissítés…</span></div>
 
-  <!-- 1. PÁLYÁZATOK -->
-  <section id="tab-palyazatok" class="tab active">
-    <h2 class="tab-title">Aktuális pályázatok</h2>
-    <div id="watchbar" class="watchbar">
-      <span class="dot"></span>
-      <span class="txt"><b>Figyelő betöltése…</b><span>—</span></span>
-    </div>
+  <!-- ÁTTEKINTÉS -->
+  <section id="view-home" class="view">
+    <div id="homeSkeleton"></div>
+    <div id="homeContent" style="display:none;"></div>
+  </section>
+
+  <!-- PÁLYÁZATOK (lista) -->
+  <section id="view-programs" class="view">
     <div id="programList"></div>
   </section>
 
-  <!-- 2. JOGOSULTSÁG -->
-  <section id="tab-jogosultsag" class="tab">
-    <h2 class="tab-title">Jogosultság-ellenőrzés</h2>
-    <p class="kv" style="margin-bottom:10px;">Válaszolj az alábbi kérdésekre, és megmutatjuk, mely programoknak felelhetsz meg. A válaszok csak a saját eszközödön, helyben tárolódnak.</p>
-    <div id="questionList"></div>
-    <h2 class="tab-title" style="margin-top:18px;">Eredmény</h2>
-    <div id="eligResults"></div>
+  <!-- PÁLYÁZAT RÉSZLETEK -->
+  <section id="view-program-detail" class="view">
+    <button class="btn ghost" id="backFromDetail" style="margin-bottom:var(--sp-3);">← Vissza a pályázatokhoz</button>
+    <div id="programDetail"></div>
   </section>
 
-  <!-- 3. KALKULÁTOR -->
-  <section id="tab-kalkulator" class="tab">
-    <h2 class="tab-title">Támogatás-kalkulátor</h2>
-    <p class="kv" style="margin-bottom:6px;">Tájékoztató jellegű becslés a várható támogatás összegéről — nem helyettesíti a hivatalos elbírálást.</p>
-    <label for="calcProgram">Program</label>
-    <select id="calcProgram"></select>
-    <label for="calcCost">Tervezett bruttó projektköltség (Ft)</label>
-    <input type="number" id="calcCost" min="0" step="10000" placeholder="pl. 8000000">
-    <div class="btn-row"><button class="btn" id="calcBtn">Becslés kiszámítása</button></div>
-    <div id="calcResult"></div>
+  <!-- HÍREK -->
+  <section id="view-news" class="view">
+    <div class="segmented" id="newsFilter">
+      <button data-f="all" class="sel">Mind</button>
+      <button data-f="official">Hivatalos</button>
+      <button data-f="press">Sajtó</button>
+      <button data-f="aggregator">Aggregátor</button>
+    </div>
+    <div id="newsSkeleton"></div>
+    <div id="newsList"></div>
   </section>
 
-  <!-- 4. ÜGYFELEK -->
-  <section id="tab-ugyfelek" class="tab">
-    <h2 class="tab-title">Ügyfelek</h2>
+  <!-- ÜGYFELEK -->
+  <section id="view-clients" class="view">
     <details id="newClientBox">
       <summary style="font-size:13.5px;">+ Új ügyfél / projekt hozzáadása</summary>
       <div class="card" style="margin-top:8px;">
@@ -246,23 +404,100 @@
     <div id="clientList" style="margin-top:12px;"></div>
   </section>
 
-  <!-- 5. FORRÁSOK -->
-  <section id="tab-forrasok" class="tab">
-    <h2 class="tab-title">Hivatalos és figyelt források</h2>
-    <div id="sourceWatchbar" class="watchbar"><span class="dot"></span><span class="txt"><b>Figyelő betöltése…</b><span>—</span></span></div>
+  <!-- ESZKÖZÖK -->
+  <section id="view-tools" class="view">
+    <h2 class="section-title">Eszközök</h2>
+    <div class="tools-grid">
+      <a class="list-row" href="#/eszkozok/jogosultsag" aria-label="Jogosultság-ellenőrző megnyitása">
+        <span style="flex:1;">Jogosultság-ellenőrző<br><span class="kv">Válaszolj pár kérdésre, megmutatjuk mely programoknak felelhetsz meg</span></span>
+        <span class="chev">›</span>
+      </a>
+      <a class="list-row" href="#/eszkozok/kalkulator" aria-label="Támogatás-kalkulátor megnyitása">
+        <span style="flex:1;">Támogatás-kalkulátor<br><span class="kv">Tájékoztató becslés a várható támogatás összegéről</span></span>
+        <span class="chev">›</span>
+      </a>
+      <a class="list-row" href="#/eszkozok/forrasok" aria-label="Források megnyitása">
+        <span style="flex:1;">Források<br><span class="kv">Figyelt hivatalos, sajtó- és aggregátor-oldalak állapota</span></span>
+        <span class="chev">›</span>
+      </a>
+    </div>
+
+    <h2 class="section-title">Heti ellenőrzési ciklus</h2>
+    <div class="card">
+      <p class="kv" id="weeklyStatusText">—</p>
+      <div class="btn-row"><button class="btn secondary" id="weeklyAckBtn">Heti ellenőrzés megtörtént</button></div>
+    </div>
+
+    <h2 class="section-title">Megjelenés</h2>
+    <div class="card">
+      <div class="segmented" id="themeSwitch">
+        <button data-t="system">Rendszer</button>
+        <button data-t="light">Világos</button>
+        <button data-t="dark">Sötét</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOGOSULTSÁG -->
+  <section id="view-elig" class="view">
+    <button class="btn ghost" id="backFromElig" style="margin-bottom:var(--sp-3);">← Vissza az eszközökhöz</button>
+    <p class="kv" style="margin-bottom:10px;">Válaszolj az alábbi kérdésekre, és megmutatjuk, mely programoknak felelhetsz meg. A válaszok csak a saját eszközödön, helyben tárolódnak.</p>
+    <div id="questionList"></div>
+    <h2 class="section-title">Eredmény</h2>
+    <div id="eligResults"></div>
+  </section>
+
+  <!-- KALKULÁTOR -->
+  <section id="view-calc" class="view">
+    <button class="btn ghost" id="backFromCalc" style="margin-bottom:var(--sp-3);">← Vissza az eszközökhöz</button>
+    <p class="kv" style="margin-bottom:6px;">Tájékoztató jellegű becslés a várható támogatás összegéről — nem helyettesíti a hivatalos elbírálást.</p>
+    <label for="calcProgram">Program</label>
+    <select id="calcProgram"></select>
+    <label for="calcCost">Tervezett bruttó projektköltség (Ft)</label>
+    <input type="number" id="calcCost" min="0" step="10000" placeholder="pl. 8000000">
+    <div class="btn-row"><button class="btn" id="calcBtn">Becslés kiszámítása</button></div>
+    <div id="calcResult"></div>
+  </section>
+
+  <!-- FORRÁSOK -->
+  <section id="view-sources" class="view">
+    <button class="btn ghost" id="backFromSources" style="margin-bottom:var(--sp-3);">← Vissza az eszközökhöz</button>
     <div id="sourceList"></div>
-    <p class="disclaimer">Az adatok tájékoztató jellegűek, a mindenkori hivatalos feltételeket a fenti forrásokon ellenőrizd. A figyelő a forrásoldalak szöveges tartalmának változását észleli, nem a hivatalos állásfoglalást helyettesíti.</p>
+    <p class="disclaimer">Az adatok tájékoztató jellegűek, a mindenkori hivatalos feltételeket a fenti forrásokon ellenőrizd. A figyelő a forrásoldalak tartalmának változását és a hírfolyamokat észleli, nem a hivatalos állásfoglalást helyettesíti.</p>
   </section>
 
 </main>
 
-<nav class="tabbar">
-  <button data-tab="palyazatok" class="active"><span class="ico">📋</span>Pályázatok</button>
-  <button data-tab="jogosultsag"><span class="ico">✅</span>Jogosultság</button>
-  <button data-tab="kalkulator"><span class="ico">🧮</span>Kalkulátor</button>
-  <button data-tab="ugyfelek"><span class="ico">👥</span>Ügyfelek</button>
-  <button data-tab="forrasok"><span class="ico">🔗</span>Források</button>
+<nav class="tabbar" id="tabbar">
+  <button data-route="/" aria-label="Áttekintés">
+    <svg viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+    Áttekintés
+  </button>
+  <button data-route="/palyazatok" aria-label="Pályázatok">
+    <svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></svg>
+    Pályázatok
+  </button>
+  <button data-route="/hirek" aria-label="Hírek">
+    <svg viewBox="0 0 24 24"><path d="M4 5h13a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5Z"/><path d="M8 9h7M8 12.5h7M8 16h4"/><path d="M4 8v9a2 2 0 0 0 2 2"/></svg>
+    Hírek
+  </button>
+  <button data-route="/ugyfelek" aria-label="Ügyfelek">
+    <svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.5"/><path d="M15.5 14a5 5 0 0 1 4.5 5.5"/></svg>
+    Ügyfelek
+  </button>
+  <button data-route="/eszkozok" aria-label="Eszközök">
+    <svg viewBox="0 0 24 24"><path d="M14.7 6.3a3.5 3.5 0 0 1-4.4 4.4L4 17l3 3 6.3-6.3a3.5 3.5 0 0 1 4.4-4.4L21 6l-3-3-3.3 3.3Z"/></svg>
+    Eszközök
+  </button>
 </nav>
+
+<div id="sheetBackdrop"></div>
+<div id="sheet" role="dialog" aria-modal="true">
+  <div class="handle"></div>
+  <div id="sheetContent"></div>
+</div>
+
+<div id="toast" role="status" aria-live="polite"></div>
 
 <script>
 (function(){
@@ -270,9 +505,10 @@
 
   /* ============================================================
      1. TÁROLÁS — localStorage-alapú, async wrapper.
-     A hívó kód sGet/sSet-et await-tel hívja, mintha külső storage
-     lenne; privát böngészőmódban / letiltott localStorage esetén
-     memóriabeli fallback-re esik vissza, nem dob hibát.
+     A meglévő kulcsok (pf:checks, pf:projects, pf:answers, pf:weekly)
+     sémája NEM változott — nincs szükség migrációra. Két új kulcs
+     jött: pf:statusChecks (§7 — "ellenőrizve" nyugta programonként)
+     és pf:theme (Rendszer/Világos/Sötét).
      ============================================================ */
   const memoryStore = {};
   async function sGet(key, fallback){
@@ -285,197 +521,518 @@
     }
   }
   async function sSet(key, value){
-    try{
-      window.localStorage.setItem(key, JSON.stringify(value));
-    }catch(err){
-      memoryStore[key] = value;
-    }
+    try{ window.localStorage.setItem(key, JSON.stringify(value)); }
+    catch(err){ memoryStore[key] = value; }
     return value;
   }
 
-  const KEY_CHECKS = "pf:checks";     // { [clientId]: { [docIndex]: bool } }
-  const KEY_PROJECTS = "pf:projects"; // [{ id, name, contact, programId, status, note, createdAt }]
-  const KEY_ANSWERS = "pf:answers";   // { [questionId]: "yes"|"no"|"unknown" }
-  const KEY_WEEKLY = "pf:weekly";     // { lastSeenRunAt: ISO|null }
+  const KEY_CHECKS = "pf:checks";
+  const KEY_PROJECTS = "pf:projects";
+  const KEY_ANSWERS = "pf:answers";
+  const KEY_WEEKLY = "pf:weekly";
+  const KEY_STATUS_CHECKS = "pf:statusChecks"; // { [programId]: { lastVerifiedAt: ISO } }
+  const KEY_THEME = "pf:theme"; // "system" | "light" | "dark"
 
   /* ============================================================
-     2. ADATOK — programs.json / sources.json fetch, beágyazott
-     fallback offline / fetch-hiba esetén.
+     2. ADATOK
      ============================================================ */
   const FALLBACK_PROGRAMS = [
-    {
-      id:"kehop-plusz", name:"KEHOP Plusz – Lakossági energiahatékonysági felhívás", shortName:"KEHOP Plusz",
-      category:"Energiahatékonyság", targetGroup:"Magánszemély ingatlantulajdonosok",
-      subsidyType:"Vissza nem térítendő támogatás", maxAmount:"Legfeljebb 11 millió Ft",
-      ownContribution:"min. 30%", deadline:"Folyamatos, forráskimerülésig", status:"aktív",
-      summary:"Napelem, hőszivattyú, nyílászáró-csere és hőszigetelés támogatása lakóépületekben.",
-      eligibility:["Tulajdonos vagy résztulajdonos","Életvitelszerű lakhatás","Nincs köztartozás"],
-      requiredDocs:["Tulajdoni lap","Energetikai tanúsítvány","Kivitelezői árajánlat"],
-      applyUrl:"https://www.palyazat.gov.hu/palyazatok", watchUrl:"https://www.palyazat.gov.hu/palyazatok", lastChanged:null
-    },
-    {
-      id:"energiatarolo", name:"Otthoni Energiatároló Program", shortName:"Energiatároló Program",
-      category:"Energiatárolás", targetGroup:"Meglévő napelemes háztartások",
-      subsidyType:"Vissza nem térítendő támogatás", maxAmount:"Legfeljebb 3,5 millió Ft",
-      ownContribution:"min. 50%", deadline:"Sávos, keretkimerülésig", status:"aktív",
-      summary:"Akkumulátoros energiatároló telepítésének támogatása meglévő napelem mellé.",
-      eligibility:["Van engedélyezett napelemes rendszer","Engedélyes kivitelező telepít"],
-      requiredDocs:["Kiserőmű engedély","Kivitelezői ajánlat"],
-      applyUrl:"https://kormany.hu/energiaugyi-miniszterium/hirek", watchUrl:"https://kormany.hu/energiaugyi-miniszterium/hirek", lastChanged:null
-    },
-    {
-      id:"videki-otthonfelujitas", name:"Vidéki otthonfelújítási program", shortName:"Vidéki otthonfelújítás",
-      category:"Otthonteremtés, felújítás", targetGroup:"Kistelepülésen otthont vásárlók",
-      subsidyType:"Vissza nem térítendő támogatás", maxAmount:"Legfeljebb 15 millió Ft",
-      ownContribution:"egyedi elbírálás", deadline:"Folyamatos", status:"aktív",
-      summary:"Kistelepülésen ingatlan vásárlásához és felújításához nyújtott támogatás.",
-      eligibility:["5000 fő alatti település","Beköltözési szándék"],
-      requiredDocs:["Adásvételi szerződés / tulajdoni lap","Felújítási árajánlat"],
-      applyUrl:"https://www.otthonstartprogram.hu/", watchUrl:"https://www.otthonstartprogram.hu/", lastChanged:null
-    }
+    {id:"kehop-plusz", name:"KEHOP Plusz – Lakossági energiahatékonysági felhívás", shortName:"KEHOP Plusz",
+     category:"Energiahatékonyság", targetGroup:"Magánszemély ingatlantulajdonosok", subsidyType:"Vissza nem térítendő támogatás",
+     maxAmount:"Legfeljebb 11 millió Ft", ownContribution:"min. 30%", deadline:"Folyamatos, forráskimerülésig", status:"aktív",
+     summary:"Napelem, hőszivattyú, nyílászáró-csere és hőszigetelés támogatása lakóépületekben.",
+     eligibility:["Tulajdonos vagy résztulajdonos","Életvitelszerű lakhatás","Nincs köztartozás"],
+     requiredDocs:["Tulajdoni lap","Energetikai tanúsítvány","Kivitelezői árajánlat"],
+     applyUrl:"https://www.palyazat.gov.hu/", watchUrl:"https://kormany.hu/kormanyzat/energiaugyi-miniszterium/hirek", lastChanged:null},
+    {id:"energiatarolo", name:"Otthoni Energiatároló Program", shortName:"Energiatároló Program",
+     category:"Energiatárolás", targetGroup:"Meglévő napelemes háztartások", subsidyType:"Vissza nem térítendő támogatás",
+     maxAmount:"Legfeljebb 3,5 millió Ft", ownContribution:"min. 50%", deadline:"Sávos, keretkimerülésig", status:"aktív",
+     summary:"Akkumulátoros energiatároló telepítésének támogatása meglévő napelem mellé.",
+     eligibility:["Van engedélyezett napelemes rendszer","Engedélyes kivitelező telepít"],
+     requiredDocs:["Kiserőmű engedély","Kivitelezői ajánlat"],
+     applyUrl:"https://kormany.hu/kormanyzat/energiaugyi-miniszterium/hirek", watchUrl:"https://kormany.hu/kormanyzat/energiaugyi-miniszterium/hirek", lastChanged:null},
+    {id:"videki-otthonfelujitas", name:"Vidéki otthonfelújítási program", shortName:"Vidéki otthonfelújítás",
+     category:"Otthonteremtés, felújítás", targetGroup:"Kistelepülésen otthont vásárlók", subsidyType:"Vissza nem térítendő támogatás",
+     maxAmount:"Legfeljebb 15 millió Ft", ownContribution:"egyedi elbírálás", deadline:"Folyamatos", status:"aktív",
+     summary:"Kistelepülésen ingatlan vásárlásához és felújításához nyújtott támogatás.",
+     eligibility:["5000 fő alatti település","Beköltözési szándék"],
+     requiredDocs:["Adásvételi szerződés / tulajdoni lap","Felújítási árajánlat"],
+     applyUrl:"https://www.allamkincstar.gov.hu/", watchUrl:"https://www.allamkincstar.gov.hu/", lastChanged:null}
   ];
-  const FALLBACK_SOURCES = [
-    {id:"palyazat-gov-felhivasok", name:"Pályázat.gov.hu – Aktuális felhívások", url:"https://www.palyazat.gov.hu/palyazatok", category:"Hivatalos pályázati portál", description:"Hivatalos felhívás-kereső."},
-    {id:"energiaugyi-miniszterium-hirek", name:"Energiaügyi Minisztérium – Hírek", url:"https://kormany.hu/energiaugyi-miniszterium/hirek", category:"Minisztériumi hírfolyam", description:"Tárcaközlemények."},
-    {id:"otthon-start-program", name:"Otthon Start Program", url:"https://www.otthonstartprogram.hu/", category:"Programoldal", description:"Hivatalos tájékoztató oldal."}
-  ];
+  const FALLBACK_SOURCES = [];
 
   let PROGRAMS = [];
   let SOURCES = [];
   let CHANGES = null;
+  let NEWS = [];
+  let dataLoaded = false;
 
   async function loadJSON(path, fallback){
     try{
       const res = await fetch(path, {cache:"no-store"});
       if(!res.ok) throw new Error("HTTP "+res.status);
       return await res.json();
-    }catch(err){
-      return fallback;
-    }
+    }catch(err){ return fallback; }
+  }
+
+  async function loadAllData(){
+    const [programs, sources, changes, news] = await Promise.all([
+      loadJSON("data/programs.json", FALLBACK_PROGRAMS),
+      loadJSON("data/sources.json", FALLBACK_SOURCES),
+      loadJSON("data/changes.json", null),
+      loadJSON("data/news.json", [])
+    ]);
+    PROGRAMS = programs; SOURCES = sources; CHANGES = changes; NEWS = Array.isArray(news) ? news : [];
+    dataLoaded = true;
   }
 
   /* ============================================================
-     3. TAB VÁLTÁS
+     3. SEGÉDFÜGGVÉNYEK
      ============================================================ */
-  document.querySelectorAll("nav.tabbar button").forEach(btn=>{
-    btn.addEventListener("click", ()=>{
-      const tab = btn.dataset.tab;
-      document.querySelectorAll("nav.tabbar button").forEach(b=>b.classList.toggle("active", b===btn));
-      document.querySelectorAll("section.tab").forEach(s=>s.classList.toggle("active", s.id==="tab-"+tab));
-      if(tab==="jogosultsag") renderEligibility();
-    });
-  });
+  function escapeHtml(str){
+    return String(str==null?"":str).replace(/[&<>"']/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  }
+  function escapeAttr(str){ return escapeHtml(str); }
 
-  /* ============================================================
-     4. FIGYELŐ SÁV (data/changes.json)
-     ============================================================ */
+  function statusClass(status){
+    const s = String(status||"").toLowerCase();
+    if(s.includes("felfüggesz")) return "status-suspended";
+    if(s.includes("lezár") || s.includes("megszűn")) return "status-closed";
+    if(s.includes("terv") || s.includes("várható") || s.includes("bejelent")) return "status-announced";
+    return "status-open";
+  }
+  function statusLabel(status){ return status ? status.charAt(0).toUpperCase()+status.slice(1) : "ismeretlen"; }
+
+  const TIER_LABEL = {official:"Hivatalos", press:"Sajtó", aggregator:"Aggregátor"};
+  function tierPill(tier){
+    if(!tier) return "";
+    return `<span class="pill tier-${escapeAttr(tier)}">${escapeHtml(TIER_LABEL[tier]||tier)}</span>`;
+  }
+
   function fmtDateTime(iso){
     if(!iso) return "—";
     try{
-      const d = new Date(iso);
-      return d.toLocaleString("hu-HU", {year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit"});
+      return new Date(iso).toLocaleString("hu-HU", {year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit"});
     }catch(e){ return iso; }
   }
-
-  function changedUrlsSet(){
-    const set = new Set();
-    if(CHANGES && Array.isArray(CHANGES.results)){
-      CHANGES.results.forEach(r=>{ if(r.changed) set.add(r.url); });
-    }
-    return set;
+  function fmtDate(iso){
+    if(!iso) return "—";
+    try{ return new Date(iso).toLocaleDateString("hu-HU", {year:"numeric",month:"2-digit",day:"2-digit"}); }
+    catch(e){ return iso; }
+  }
+  function relativeTime(iso){
+    if(!iso) return "—";
+    const d = new Date(iso);
+    if(isNaN(d.getTime())) return "—";
+    const diffMs = Date.now() - d.getTime();
+    const min = Math.round(diffMs/60000);
+    if(min < 1) return "most";
+    if(min < 60) return min+" perce";
+    const hrs = Math.round(min/60);
+    if(hrs < 24) return hrs+" órája";
+    const days = Math.round(hrs/24);
+    if(days < 7) return days+" napja";
+    const weeks = Math.round(days/7);
+    if(weeks < 5) return weeks+" hete";
+    return fmtDate(iso);
+  }
+  function timeEl(iso){
+    return `<span class="tabular" title="${escapeAttr(fmtDateTime(iso))}">${escapeHtml(relativeTime(iso))}</span>`;
   }
 
-  async function renderWatchbars(){
-    const els = [document.getElementById("watchbar"), document.getElementById("sourceWatchbar")];
-    if(!CHANGES){
-      els.forEach(el=>{
-        el.className = "watchbar";
-        el.querySelector(".txt b").textContent = "A figyelő még nem futott le";
-        el.querySelector(".txt span").textContent = "A GitHub Action első futása után itt látszik az állapot.";
-      });
-      return;
+  function toast(msg){
+    const el = document.getElementById("toast");
+    el.textContent = msg;
+    el.classList.add("show");
+    clearTimeout(toast._t);
+    toast._t = setTimeout(()=>el.classList.remove("show"), 2600);
+  }
+
+  function openSheet(html){
+    document.getElementById("sheetContent").innerHTML = html;
+    document.getElementById("sheetBackdrop").classList.add("show");
+    document.getElementById("sheet").classList.add("show");
+  }
+  function closeSheet(){
+    document.getElementById("sheetBackdrop").classList.remove("show");
+    document.getElementById("sheet").classList.remove("show");
+  }
+  document.getElementById("sheetBackdrop").addEventListener("click", closeSheet);
+
+  function skeletonCards(n){
+    let html = "";
+    for(let i=0;i<n;i++){
+      html += `<div class="card skeleton-card"><div class="skeleton title"></div><div class="skeleton line"></div><div class="skeleton line short"></div></div>`;
     }
-    const results = Array.isArray(CHANGES.results) ? CHANGES.results : [];
-    const changedCount = results.filter(r=>r.changed).length;
-    const keywordCount = results.filter(r=>r.keywordHit).length;
-    const errorCount = results.filter(r=>r.status==="error").length;
-    const staleCount = results.filter(r=>(r.consecutiveFailures||0) >= 3).length;
-
-    const weekly = await sGet(KEY_WEEKLY, {lastSeenRunAt:null});
-    const isNew = CHANGES.runAt && CHANGES.runAt !== weekly.lastSeenRunAt && (changedCount>0);
-
-    let cls = "ok", title, sub;
-    if(keywordCount>0){
-      cls="alert";
-      title = keywordCount+" forrásnál kulcsszavas találat (pl. határidő, felfüggesztés)";
-    } else if(changedCount>0){
-      cls="warn";
-      title = changedCount+" forrás tartalma változott";
-    } else {
-      title = "Nincs új változás egyik figyelt forrásnál sem";
-    }
-    sub = "Utolsó ellenőrzés: "+fmtDateTime(CHANGES.runAt);
-    if(errorCount>0) sub += " · "+errorCount+" forrás nem volt elérhető";
-    if(staleCount>0) sub += " · "+staleCount+" forrás 3+ próbálkozás óta nem elérhető, ellenőrizd";
-
-    els.forEach(el=>{
-      el.className = "watchbar "+cls;
-      el.querySelector(".txt b").textContent = title;
-      el.querySelector(".txt span").textContent = sub;
-      const existingBadge = el.querySelector(".badge-new");
-      if(existingBadge) existingBadge.remove();
-      if(isNew){
-        const b = document.createElement("span");
-        b.className = "badge-new";
-        b.textContent = "ÚJ";
-        el.appendChild(b);
-      }
-      el.onclick = async ()=>{
-        if(CHANGES.runAt) await sSet(KEY_WEEKLY, {lastSeenRunAt: CHANGES.runAt});
-        renderWatchbars();
-      };
-    });
+    return html;
   }
 
   /* ============================================================
-     5. PÁLYÁZATOK TAB
+     4. TÉMA (rendszer / világos / sötét)
+     ============================================================ */
+  async function initTheme(){
+    const theme = await sGet(KEY_THEME, "system");
+    applyTheme(theme);
+    document.querySelectorAll("#themeSwitch button").forEach(b=>{
+      b.classList.toggle("sel", b.dataset.t===theme);
+      b.addEventListener("click", async ()=>{
+        await sSet(KEY_THEME, b.dataset.t);
+        applyTheme(b.dataset.t);
+        document.querySelectorAll("#themeSwitch button").forEach(x=>x.classList.toggle("sel", x===b));
+        toast("Megjelenés frissítve");
+      });
+    });
+  }
+  function applyTheme(theme){
+    if(theme==="light" || theme==="dark") document.documentElement.setAttribute("data-theme", theme);
+    else document.documentElement.removeAttribute("data-theme");
+  }
+
+  /* ============================================================
+     5. FEJLÉC — cím + görgetésre összecsukódás + adatfrissítési sor
+     ============================================================ */
+  const ROUTE_TITLES = {
+    "/":"Áttekintés", "/palyazatok":"Pályázatok", "/hirek":"Hírek", "/ugyfelek":"Ügyfelek",
+    "/eszkozok":"Eszközök", "/eszkozok/jogosultsag":"Jogosultság-ellenőrző",
+    "/eszkozok/kalkulator":"Kalkulátor", "/eszkozok/forrasok":"Források"
+  };
+  function setHeaderTitle(title){
+    document.getElementById("largeTitle").textContent = title;
+    document.getElementById("compactTitle").textContent = title;
+  }
+  function updateMetaLine(){
+    const el = document.getElementById("metaLine");
+    if(!CHANGES || !CHANGES.runAt){
+      el.innerHTML = "Adatok frissítve: — <span class='kv'>a figyelő még nem futott le</span>";
+      return;
+    }
+    const ageMs = Date.now() - new Date(CHANGES.runAt).getTime();
+    const staleHours = ageMs / 36e5;
+    let html = `Adatok frissítve: <span class="tabular" title="${escapeAttr(fmtDateTime(CHANGES.runAt))}">${escapeHtml(relativeTime(CHANGES.runAt))}</span>`;
+    if(staleHours > 36){
+      html += ` · <span class="stale">⚠ a figyelő valószínűleg leállt</span>`;
+    }
+    el.innerHTML = html;
+  }
+  const mainScroll = document.getElementById("mainScroll");
+  const appHeader = document.getElementById("appHeader");
+  window.addEventListener("scroll", ()=>{
+    appHeader.classList.toggle("collapsed", window.scrollY > 24);
+  }, {passive:true});
+
+  function updateOfflineBar(){
+    document.getElementById("offlineBar").classList.toggle("show", !navigator.onLine);
+  }
+  window.addEventListener("online", updateOfflineBar);
+  window.addEventListener("offline", updateOfflineBar);
+
+  /* ============================================================
+     6. ROUTING (hash alapú)
+     ============================================================ */
+  const routes = {};
+  function defineRoute(path, viewId, onEnter){ routes[path] = {viewId, onEnter}; }
+
+  function currentPath(){
+    let h = location.hash.replace(/^#/, "");
+    if(!h) h = "/";
+    return h;
+  }
+
+  function navigate(){
+    const path = currentPath();
+    let match = routes[path];
+    let param = null;
+    if(!match && path.startsWith("/palyazatok/")){
+      match = routes["/palyazatok/:id"];
+      param = path.slice("/palyazatok/".length);
+    }
+    if(!match) match = routes["/"];
+
+    const doSwitch = ()=>{
+      document.querySelectorAll(".view").forEach(v=>v.classList.toggle("active", v.id==="view-"+match.viewId));
+      document.querySelectorAll("nav.tabbar button").forEach(b=>{
+        const active = (b.dataset.route === "/" && path === "/") ||
+          (b.dataset.route !== "/" && path.indexOf(b.dataset.route) === 0);
+        b.classList.toggle("active", active);
+      });
+      setHeaderTitle(ROUTE_TITLES[path] || (param ? "Pályázat részletei" : "Pályázatfigyelő"));
+      window.scrollTo(0,0);
+      if(match.onEnter) match.onEnter(param);
+    };
+
+    if(document.startViewTransition && !window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+      document.startViewTransition(doSwitch);
+    } else {
+      doSwitch();
+    }
+  }
+  window.addEventListener("hashchange", navigate);
+
+  document.querySelectorAll("nav.tabbar button").forEach(b=>{
+    b.addEventListener("click", ()=>{ location.hash = "#"+b.dataset.route; });
+  });
+  document.getElementById("backFromDetail").addEventListener("click", ()=>{ location.hash="#/palyazatok"; });
+  document.getElementById("backFromElig").addEventListener("click", ()=>{ location.hash="#/eszkozok"; });
+  document.getElementById("backFromCalc").addEventListener("click", ()=>{ location.hash="#/eszkozok"; });
+  document.getElementById("backFromSources").addEventListener("click", ()=>{ location.hash="#/eszkozok"; });
+
+  /* ============================================================
+     7. MEGBÍZHATÓSÁGI SZABÁLY (§7)
+     Egy program állapota SOSEM változik automatikusan. Egy hivatalos
+     forráson észlelt releváns változás csak egy "Ellenőrizendő
+     változás" jelzést tesz ki — a felhasználónak kell megerősítenie,
+     hogy ellenőrizte, ez menti el a pf:statusChecks-be a dátummal.
+     ============================================================ */
+  let statusChecksCache = null;
+  async function getStatusChecks(){
+    if(!statusChecksCache) statusChecksCache = await sGet(KEY_STATUS_CHECKS, {});
+    return statusChecksCache;
+  }
+
+  function officialAlertForProgram(programId){
+    if(!NEWS.length) return null;
+    const lastVerified = statusChecksCache && statusChecksCache[programId] ? statusChecksCache[programId].lastVerifiedAt : null;
+    const lastVerifiedMs = lastVerified ? new Date(lastVerified).getTime() : 0;
+    const hits = NEWS.filter(n=>{
+      if(n.tier !== "official") return false;
+      if(!Array.isArray(n.programs) || n.programs.indexOf(programId) === -1) return false;
+      const t = new Date(n.publishedAt || n.fetchedAt).getTime();
+      return t > lastVerifiedMs;
+    });
+    if(!hits.length) return null;
+    hits.sort((a,b)=> new Date(b.publishedAt||b.fetchedAt) - new Date(a.publishedAt||a.fetchedAt));
+    return hits[0];
+  }
+
+  async function ackProgramVerified(programId){
+    const checks = await getStatusChecks();
+    checks[programId] = {lastVerifiedAt: new Date().toISOString()};
+    await sSet(KEY_STATUS_CHECKS, checks);
+    statusChecksCache = checks;
+  }
+
+  /* ============================================================
+     8. ÁTTEKINTÉS
+     ============================================================ */
+  async function renderHome(){
+    document.getElementById("homeSkeleton").innerHTML = dataLoaded ? "" : skeletonCards(3);
+    document.getElementById("homeContent").style.display = dataLoaded ? "block" : "none";
+    if(!dataLoaded) return;
+
+    await getStatusChecks();
+    const wrap = document.getElementById("homeContent");
+    const results = (CHANGES && Array.isArray(CHANGES.results)) ? CHANGES.results : [];
+    const errorCount = results.filter(r=>r.status==="error").length;
+    const staleCount = results.filter(r=>(r.consecutiveFailures||0)>=3).length;
+    const officialAlertPrograms = PROGRAMS.filter(p=>officialAlertForProgram(p.id));
+
+    let html = "";
+
+    // Figyelő állapota
+    let bar = {cls:"status-open", title:"Nincs új változás a figyelt forrásoknál"};
+    if(officialAlertPrograms.length){
+      bar = {cls:"status-closed", title:officialAlertPrograms.length+" programnál ellenőrizendő hivatalos változás"};
+    } else if(errorCount>0){
+      bar = {cls:"status-suspended", title:errorCount+" forrás jelenleg nem elérhető"};
+    }
+    html += `<div class="card">
+      <div class="meta-row"><span class="pill ${bar.cls}">●</span><b style="font-size:13.5px;">${escapeHtml(bar.title)}</b></div>
+      ${staleCount ? `<p class="kv">⚠ ${staleCount} forrás 3+ egymást követő alkalommal elérhetetlen — ellenőrizd a Források oldalt.</p>` : ""}
+    </div>`;
+
+    // Programok állapota egy pillantásra
+    html += `<h2 class="section-title">Programok állapota</h2>`;
+    PROGRAMS.forEach(p=>{
+      const alert = officialAlertForProgram(p.id);
+      html += `<a class="list-row" href="#/palyazatok/${encodeURIComponent(p.id)}">
+        <span style="flex:1;">
+          <b style="font-size:13.5px;">${escapeHtml(p.shortName||p.name)}</b><br>
+          <span class="pill ${statusClass(p.status)}">${escapeHtml(statusLabel(p.status))}</span>
+          ${alert ? '<span class="pill alert">Ellenőrizendő változás</span>' : ""}
+        </span>
+        <span class="chev">›</span>
+      </a>`;
+    });
+
+    // Közelgő határidők
+    html += `<h2 class="section-title">Határidők</h2><div class="card">`;
+    PROGRAMS.forEach(p=>{
+      html += `<p class="kv"><b>${escapeHtml(p.shortName||p.name)}:</b> ${escapeHtml(p.deadline||"—")}</p>`;
+    });
+    html += `</div>`;
+
+    // Legutóbbi hivatalos változások
+    const officialNews = NEWS.filter(n=>n.tier==="official").slice(0,5);
+    html += `<h2 class="section-title">Legutóbbi hivatalos változások</h2>`;
+    if(!officialNews.length){
+      html += `<p class="empty">Az elmúlt időszakban nem volt változás a hivatalos forrásokon.</p>`;
+    } else {
+      html += `<div class="card">` + officialNews.map(n=>`
+        <div class="news-item">
+          ${tierPill(n.tier)}
+          <a class="title" href="${escapeAttr(n.url)}" target="_blank" rel="noopener">${escapeHtml(n.title)}</a>
+          <div class="foot">${escapeHtml(n.sourceName)} · ${timeEl(n.publishedAt||n.fetchedAt)}</div>
+        </div>`).join("") + `</div>`;
+    }
+
+    // Legutóbbi 5 hír összesen
+    const latestNews = NEWS.slice(0,5);
+    html += `<h2 class="section-title">Legfrissebb hírek</h2>`;
+    if(!latestNews.length){
+      html += `<p class="empty">Még nincs betöltött hír.</p>`;
+    } else {
+      html += `<div class="card">` + latestNews.map(n=>`
+        <div class="news-item">
+          ${tierPill(n.tier)}
+          <a class="title" href="${escapeAttr(n.url)}" target="_blank" rel="noopener">${escapeHtml(n.title)}</a>
+          <div class="foot">${escapeHtml(n.sourceName)} · ${timeEl(n.publishedAt||n.fetchedAt)}</div>
+        </div>`).join("") + `</div>`;
+      html += `<div class="btn-row"><a class="btn secondary" href="#/hirek">Összes hír megnyitása</a></div>`;
+    }
+
+    wrap.innerHTML = html;
+    updateNavAlertDot();
+  }
+
+  function updateNavAlertDot(){
+    const btn = document.querySelector('nav.tabbar button[data-route="/palyazatok"]');
+    const has = PROGRAMS.some(p=>officialAlertForProgram(p.id));
+    let dot = btn.querySelector(".dot-alert");
+    if(has && !dot){ dot = document.createElement("span"); dot.className="dot-alert"; btn.appendChild(dot); }
+    if(!has && dot) dot.remove();
+  }
+
+  /* ============================================================
+     9. PÁLYÁZATOK — lista + részletek
      ============================================================ */
   function renderPrograms(){
     const wrap = document.getElementById("programList");
+    if(!dataLoaded){ wrap.innerHTML = skeletonCards(3); return; }
     wrap.innerHTML = "";
-    const changed = changedUrlsSet();
-    if(PROGRAMS.length===0){
-      wrap.innerHTML = '<p class="empty">Nincs betölthető pályázati adat.</p>';
-      return;
-    }
+    if(PROGRAMS.length===0){ wrap.innerHTML = '<p class="empty">Nincs betölthető pályázati adat.</p>'; return; }
     PROGRAMS.forEach(p=>{
-      const isChanged = p.watchUrl && changed.has(p.watchUrl);
-      const el = document.createElement("div");
-      el.className = "card";
+      const alert = officialAlertForProgram(p.id);
+      const el = document.createElement("a");
+      el.className = "card"; el.href = "#/palyazatok/"+encodeURIComponent(p.id);
+      el.style.display = "block"; el.style.textDecoration="none"; el.style.color="inherit";
       el.innerHTML = `
         <h3>${escapeHtml(p.name)}</h3>
         <div class="meta-row">
-          <span class="pill status-${escapeHtml(p.status||"")}">${escapeHtml(p.status||"")}</span>
+          <span class="pill ${statusClass(p.status)}">${escapeHtml(statusLabel(p.status))}</span>
           <span class="pill">${escapeHtml(p.category||"")}</span>
-          ${isChanged ? '<span class="pill changed">⚡ változás észlelve</span>' : ""}
+          ${alert ? '<span class="pill alert">Ellenőrizendő változás</span>' : ""}
         </div>
         <p class="summary">${escapeHtml(p.summary||"")}</p>
-        <p class="kv"><b>Célcsoport:</b> ${escapeHtml(p.targetGroup||"—")}</p>
         <p class="kv"><b>Támogatás:</b> ${escapeHtml(p.maxAmount||"—")} · <b>önerő:</b> ${escapeHtml(p.ownContribution||"—")}</p>
-        <p class="kv"><b>Benyújtás:</b> ${escapeHtml(p.deadline||"—")}</p>
-        <details>
-          <summary>Jogosultsági feltételek és szükséges dokumentumok</summary>
-          <ul>${(p.eligibility||[]).map(e=>`<li>${escapeHtml(e)}</li>`).join("")}</ul>
-          <ul>${(p.requiredDocs||[]).map(e=>`<li>📄 ${escapeHtml(e)}</li>`).join("")}</ul>
-        </details>
-        ${p.applyUrl ? `<a class="link" href="${escapeAttr(p.applyUrl)}" target="_blank" rel="noopener">Hivatalos oldal megnyitása ↗</a>` : ""}
       `;
       wrap.appendChild(el);
     });
   }
 
+  function renderProgramDetail(id){
+    const wrap = document.getElementById("programDetail");
+    if(!dataLoaded){ wrap.innerHTML = skeletonCards(1); return; }
+    const p = PROGRAMS.find(x=>x.id===id);
+    if(!p){ wrap.innerHTML = '<p class="empty">A program nem található.</p>'; return; }
+    const checks = statusChecksCache || {};
+    const lastVerified = checks[id] ? checks[id].lastVerifiedAt : null;
+    const alert = officialAlertForProgram(id);
+
+    wrap.innerHTML = `
+      <div class="card">
+        <h3>${escapeHtml(p.name)}</h3>
+        <div class="meta-row">
+          <span class="pill ${statusClass(p.status)}">${escapeHtml(statusLabel(p.status))}</span>
+          <span class="pill">${escapeHtml(p.category||"")}</span>
+        </div>
+        <p class="summary">${escapeHtml(p.summary||"")}</p>
+        <p class="kv"><b>Célcsoport:</b> ${escapeHtml(p.targetGroup||"—")}</p>
+        <p class="kv"><b>Támogatás típusa:</b> ${escapeHtml(p.subsidyType||"—")}</p>
+        <p class="kv"><b>Támogatás:</b> ${escapeHtml(p.maxAmount||"—")} · <b>önerő:</b> ${escapeHtml(p.ownContribution||"—")}</p>
+        <p class="kv"><b>Benyújtás:</b> ${escapeHtml(p.deadline||"—")}</p>
+        <details open>
+          <summary>Jogosultsági feltételek</summary>
+          <ul>${(p.eligibility||[]).map(e=>`<li>${escapeHtml(e)}</li>`).join("")}</ul>
+        </details>
+        <details>
+          <summary>Szükséges dokumentumok</summary>
+          <ul>${(p.requiredDocs||[]).map(e=>`<li>📄 ${escapeHtml(e)}</li>`).join("")}</ul>
+        </details>
+        ${p.applyUrl ? `<a class="link-btn" href="${escapeAttr(p.applyUrl)}" target="_blank" rel="noopener">Hivatalos oldal megnyitása ↗</a>` : ""}
+      </div>
+
+      <h2 class="section-title">Megbízhatóság</h2>
+      <div class="card">
+        <p class="kv">Utoljára ellenőrizve hivatalos forráson: <b>${lastVerified ? escapeHtml(fmtDateTime(lastVerified)) : "még nem"}</b></p>
+        <p class="kv" style="margin-top:2px;">A program állapotát (nyitott/felfüggesztett/lezárt) sosem módosítja automatikusan a rendszer — csak a hivatalos forráson észlelt változást jelezzük, a döntés és a megerősítés a tiéd.</p>
+        ${alert ? `
+          <div class="card" style="background:var(--status-closed-bg);border-color:var(--status-closed-fg);margin-top:10px;margin-bottom:0;">
+            <p class="kv" style="color:var(--status-closed-fg);font-weight:700;">⚠ Ellenőrizendő változás</p>
+            <p class="summary" style="margin:4px 0;">${escapeHtml(alert.sourceName)}: ${escapeHtml(alert.title)}</p>
+            <a class="link-btn" href="${escapeAttr(alert.url)}" target="_blank" rel="noopener">Forrás megnyitása ↗</a>
+          </div>
+        ` : ""}
+        <div class="btn-row"><button class="btn secondary" id="ackBtn">Megerősítem, hogy ellenőriztem</button></div>
+      </div>
+    `;
+
+    const ackBtn = document.getElementById("ackBtn");
+    if(ackBtn) ackBtn.addEventListener("click", ()=>{
+      openSheet(`
+        <h3>Ellenőrzés megerősítése</h3>
+        <p>Megerősíted, hogy ellenőrizted a hivatalos forrást, és a program aktuális állapotát ennek megfelelően kezeled? Ez a megerősítés dátummal elmentődik, és eltünteti az "Ellenőrizendő változás" jelzést, amíg nincs újabb hivatalos változás.</p>
+        <div class="btn-row">
+          <button class="btn" id="sheetConfirm">Megerősítem</button>
+          <button class="btn ghost" id="sheetCancel">Mégse</button>
+        </div>
+      `);
+      document.getElementById("sheetConfirm").addEventListener("click", async ()=>{
+        await ackProgramVerified(id);
+        closeSheet();
+        toast("Ellenőrzés rögzítve");
+        renderProgramDetail(id);
+        updateNavAlertDot();
+      });
+      document.getElementById("sheetCancel").addEventListener("click", closeSheet);
+    });
+  }
+
   /* ============================================================
-     6. JOGOSULTSÁG TAB
+     10. HÍREK
+     ============================================================ */
+  let newsFilter = "all";
+  function renderNews(){
+    document.getElementById("newsSkeleton").innerHTML = dataLoaded ? "" : skeletonCards(4);
+    const wrap = document.getElementById("newsList");
+    if(!dataLoaded){ wrap.innerHTML = ""; return; }
+    let items = NEWS;
+    if(newsFilter !== "all") items = items.filter(n=>n.tier===newsFilter);
+
+    if(!items.length){
+      const label = newsFilter==="official" ? "hivatalos forrásokon" : newsFilter==="press" ? "sajtóforrásokon" : newsFilter==="aggregator" ? "aggregátor-forrásokon" : "a figyelt forrásokon";
+      wrap.innerHTML = `<p class="empty">Az elmúlt időszakban nem volt változás ${escapeHtml(label)}.</p>`;
+      return;
+    }
+    wrap.innerHTML = `<div class="card">` + items.map(n=>`
+      <div class="news-item">
+        ${tierPill(n.tier)}${n.kind==="page-change" ? '<span class="pill dim">oldalváltozás</span>' : ""}
+        <a class="title" href="${escapeAttr(n.url)}" target="_blank" rel="noopener">${escapeHtml(n.title)}</a>
+        <div class="foot">
+          <b>${escapeHtml(n.sourceName)}</b> · ${timeEl(n.publishedAt||n.fetchedAt)}
+          ${(n.matched&&n.matched.length) ? " · "+escapeHtml(n.matched.slice(0,3).join(", ")) : ""}
+        </div>
+      </div>`).join("") + `</div>`;
+  }
+  document.querySelectorAll("#newsFilter button").forEach(b=>{
+    b.addEventListener("click", ()=>{
+      newsFilter = b.dataset.f;
+      document.querySelectorAll("#newsFilter button").forEach(x=>x.classList.toggle("sel", x===b));
+      renderNews();
+    });
+  });
+
+  /* ============================================================
+     11. JOGOSULTSÁG
      ============================================================ */
   const QUESTIONS = [
     {id:"owner", text:"Ön tulajdonosa vagy résztulajdonosa a felújítandó / megvásárolandó ingatlannak?"},
@@ -484,26 +1041,24 @@
     {id:"small_settlement", text:"Az ingatlan 5000 fő alatti településen található?"},
     {id:"has_solar", text:"Van már működő, engedélyezett napelemes rendszere?"}
   ];
-  // Melyik program mely kérdésekre vár "yes" választ a valószínű jogosultsághoz
   const PROGRAM_REQUIREMENTS = {
     "kehop-plusz": ["owner","resident","no_debt"],
     "energiatarolo": ["has_solar","no_debt"],
     "videki-otthonfelujitas": ["small_settlement","resident","no_debt"]
   };
-
   let answersCache = null;
 
-  async function renderQuestions(){
+  async function renderElig(){
     answersCache = await sGet(KEY_ANSWERS, {});
     const wrap = document.getElementById("questionList");
     wrap.innerHTML = "";
     QUESTIONS.forEach(q=>{
       const cur = answersCache[q.id] || "unknown";
       const el = document.createElement("div");
-      el.className = "q-card";
+      el.className = "card";
       el.innerHTML = `
-        <p>${escapeHtml(q.text)}</p>
-        <div class="radiorow" data-q="${q.id}">
+        <p style="font-size:13.5px;font-weight:600;margin:0 0 8px;">${escapeHtml(q.text)}</p>
+        <div class="segmented" data-q="${q.id}" style="margin:0;">
           <button data-v="yes" class="${cur==='yes'?'sel':''}">Igen</button>
           <button data-v="no" class="${cur==='no'?'sel':''}">Nem</button>
           <button data-v="unknown" class="${cur==='unknown'?'sel':''}">Nem tudom</button>
@@ -511,19 +1066,20 @@
       `;
       wrap.appendChild(el);
     });
-    wrap.querySelectorAll(".radiorow button").forEach(btn=>{
+    wrap.querySelectorAll(".segmented button").forEach(btn=>{
       btn.addEventListener("click", async ()=>{
-        const row = btn.closest(".radiorow");
+        const row = btn.closest(".segmented");
         const qid = row.dataset.q;
         answersCache[qid] = btn.dataset.v;
         row.querySelectorAll("button").forEach(b=>b.classList.toggle("sel", b===btn));
         await sSet(KEY_ANSWERS, answersCache);
-        renderEligibilityResults();
+        renderEligResults();
       });
     });
+    renderEligResults();
   }
 
-  function renderEligibilityResults(){
+  function renderEligResults(){
     const wrap = document.getElementById("eligResults");
     wrap.innerHTML = "";
     if(!answersCache) return;
@@ -532,55 +1088,38 @@
       let good=0, bad=0, unknown=0;
       req.forEach(qid=>{
         const a = answersCache[qid];
-        if(a==="yes") good++;
-        else if(a==="no") bad++;
-        else unknown++;
+        if(a==="yes") good++; else if(a==="no") bad++; else unknown++;
       });
       let cls, title;
-      if(req.length===0 || (good===0 && bad===0 && unknown===0)){
-        cls="unknown"; title="Nincs elég információ";
-      } else if(bad>0){
-        cls="bad"; title="Valószínűleg nem felel meg";
-      } else if(unknown>0){
-        cls="unknown"; title="Töltsd ki a hiányzó válaszokat";
-      } else {
-        cls="good"; title="Valószínűleg jogosult";
-      }
+      if(req.length===0 || (good===0 && bad===0 && unknown===0)){ cls="status-announced"; title="Nincs elég információ"; }
+      else if(bad>0){ cls="status-closed"; title="Valószínűleg nem felel meg"; }
+      else if(unknown>0){ cls="status-suspended"; title="Töltsd ki a hiányzó válaszokat"; }
+      else { cls="status-open"; title="Valószínűleg jogosult"; }
       const el = document.createElement("div");
-      el.className = "elig-result "+cls;
-      el.innerHTML = `<h4>${escapeHtml(p.shortName||p.name)} — ${title}</h4><p>${escapeHtml(p.summary||"")}</p>`;
+      el.className = "card";
+      el.innerHTML = `<div class="meta-row"><span class="pill ${cls}">${escapeHtml(title)}</span></div><h3 style="margin-top:6px;">${escapeHtml(p.shortName||p.name)}</h3><p class="summary">${escapeHtml(p.summary||"")}</p>`;
       wrap.appendChild(el);
     });
   }
 
-  async function renderEligibility(){
-    await renderQuestions();
-    renderEligibilityResults();
-  }
-
   /* ============================================================
-     7. KALKULÁTOR TAB
+     12. KALKULÁTOR
      ============================================================ */
-  // Egyszerűsített, tájékoztató jellegű intenzitás- és plafonértékek programonként.
   const CALC_RULES = {
     "kehop-plusz": {intensity:0.70, cap:11000000},
     "energiatarolo": {intensity:0.50, cap:3500000},
     "videki-otthonfelujitas": {intensity:1.00, cap:15000000}
   };
-
   function populateProgramSelects(){
-    const selects = [document.getElementById("calcProgram"), document.getElementById("cProgram")];
-    selects.forEach(sel=>{
+    [document.getElementById("calcProgram"), document.getElementById("cProgram")].forEach(sel=>{
       sel.innerHTML = "";
       PROGRAMS.forEach(p=>{
         const opt = document.createElement("option");
-        opt.value = p.id;
-        opt.textContent = p.shortName || p.name;
+        opt.value = p.id; opt.textContent = p.shortName || p.name;
         sel.appendChild(opt);
       });
     });
   }
-
   document.getElementById("calcBtn").addEventListener("click", ()=>{
     const progId = document.getElementById("calcProgram").value;
     const cost = parseFloat(document.getElementById("calcCost").value);
@@ -591,22 +1130,20 @@
       return;
     }
     const rule = CALC_RULES[progId] || {intensity:0.5, cap:5000000};
-    const raw = cost * rule.intensity;
-    const grant = Math.min(raw, rule.cap);
+    const grant = Math.min(cost * rule.intensity, rule.cap);
     resultEl.innerHTML = `
       <div class="calc-result">
         <div class="label">Becsült támogatás — ${escapeHtml(prog.shortName||prog.name)}</div>
-        <div class="amount">${Math.round(grant).toLocaleString("hu-HU")} Ft</div>
+        <div class="amount tabular">${Math.round(grant).toLocaleString("hu-HU")} Ft</div>
         <div class="note">Számítás: projektköltség × ${Math.round(rule.intensity*100)}%, legfeljebb ${rule.cap.toLocaleString("hu-HU")} Ft. A tényleges összeg a felhívás aktuális feltételeitől függ — ez csak tájékoztató becslés.</div>
       </div>
     `;
   });
 
   /* ============================================================
-     8. ÜGYFELEK TAB
+     13. ÜGYFELEK
      ============================================================ */
   const STATUSES = ["érdeklődő","előkészítés alatt","benyújtva","elbírálás alatt","jóváhagyva","elutasítva"];
-
   function uid(){ return "c"+Date.now().toString(36)+Math.random().toString(36).slice(2,7); }
 
   async function renderClients(){
@@ -627,11 +1164,8 @@
       el.className = "card client-card";
       el.innerHTML = `
         <div class="top-row">
-          <div>
-            <div class="name">${escapeHtml(c.name)}</div>
-            <div class="kv">${escapeHtml(c.contact||"")}</div>
-          </div>
-          <button class="btn danger" data-del="${c.id}" style="padding:6px 10px;font-size:11.5px;">Törlés</button>
+          <div><div class="name">${escapeHtml(c.name)}</div><div class="kv">${escapeHtml(c.contact||"")}</div></div>
+          <button class="btn danger" data-del="${c.id}" style="padding:8px 12px;font-size:11.5px;min-height:36px;">Törlés</button>
         </div>
         <p class="kv" style="margin-top:8px;"><b>Program:</b> ${escapeHtml(prog ? (prog.shortName||prog.name) : "—")}</p>
         ${c.note ? `<p class="summary">${escapeHtml(c.note)}</p>` : ""}
@@ -643,12 +1177,7 @@
           <details ${doneCount>0 && doneCount<docs.length ? "open":""}>
             <summary>Dokumentum-checklist (${doneCount}/${docs.length})</summary>
             <div class="checklist">
-              ${docs.map((d,i)=>`
-                <label class="chk">
-                  <input type="checkbox" data-check="${c.id}" data-idx="${i}" ${clientChecks[i]?"checked":""}>
-                  ${escapeHtml(d)}
-                </label>
-              `).join("")}
+              ${docs.map((d,i)=>`<label class="chk"><input type="checkbox" data-check="${c.id}" data-idx="${i}" ${clientChecks[i]?"checked":""}>${escapeHtml(d)}</label>`).join("")}
             </div>
           </details>
         ` : ""}
@@ -657,15 +1186,24 @@
     });
 
     wrap.querySelectorAll("[data-del]").forEach(btn=>{
-      btn.addEventListener("click", async ()=>{
-        if(!confirm("Biztosan törlöd ezt az ügyfelet? A művelet nem vonható vissza.")) return;
-        const id = btn.dataset.del;
-        const list = (await sGet(KEY_PROJECTS, [])).filter(c=>c.id!==id);
-        await sSet(KEY_PROJECTS, list);
-        const allChecks = await sGet(KEY_CHECKS, {});
-        delete allChecks[id];
-        await sSet(KEY_CHECKS, allChecks);
-        renderClients();
+      btn.addEventListener("click", ()=>{
+        openSheet(`
+          <h3>Ügyfél törlése</h3>
+          <p>Biztosan törlöd ezt az ügyfelet? A művelet nem vonható vissza.</p>
+          <div class="btn-row"><button class="btn danger" id="sheetConfirm">Törlés</button><button class="btn ghost" id="sheetCancel">Mégse</button></div>
+        `);
+        document.getElementById("sheetConfirm").addEventListener("click", async ()=>{
+          const id = btn.dataset.del;
+          const list = (await sGet(KEY_PROJECTS, [])).filter(c=>c.id!==id);
+          await sSet(KEY_PROJECTS, list);
+          const allChecks = await sGet(KEY_CHECKS, {});
+          delete allChecks[id];
+          await sSet(KEY_CHECKS, allChecks);
+          closeSheet();
+          toast("Ügyfél törölve");
+          renderClients();
+        });
+        document.getElementById("sheetCancel").addEventListener("click", closeSheet);
       });
     });
     wrap.querySelectorAll("[data-status]").forEach(sel=>{
@@ -673,13 +1211,12 @@
         const id = sel.dataset.status;
         const list = await sGet(KEY_PROJECTS, []);
         const item = list.find(c=>c.id===id);
-        if(item){ item.status = sel.value; await sSet(KEY_PROJECTS, list); }
+        if(item){ item.status = sel.value; await sSet(KEY_PROJECTS, list); toast("Állapot mentve"); }
       });
     });
     wrap.querySelectorAll("[data-check]").forEach(cb=>{
       cb.addEventListener("change", async ()=>{
-        const id = cb.dataset.check;
-        const idx = cb.dataset.idx;
+        const id = cb.dataset.check, idx = cb.dataset.idx;
         const allChecks = await sGet(KEY_CHECKS, {});
         if(!allChecks[id]) allChecks[id] = {};
         allChecks[id][idx] = cb.checked;
@@ -690,15 +1227,11 @@
 
   document.getElementById("addClientBtn").addEventListener("click", async ()=>{
     const name = document.getElementById("cName").value.trim();
-    if(!name){ alert("Add meg az ügyfél nevét."); return; }
+    if(!name){ toast("Add meg az ügyfél nevét."); return; }
     const newClient = {
-      id: uid(),
-      name,
-      contact: document.getElementById("cContact").value.trim(),
-      programId: document.getElementById("cProgram").value,
-      status: STATUSES[0],
-      note: document.getElementById("cNote").value.trim(),
-      createdAt: new Date().toISOString()
+      id: uid(), name, contact: document.getElementById("cContact").value.trim(),
+      programId: document.getElementById("cProgram").value, status: STATUSES[0],
+      note: document.getElementById("cNote").value.trim(), createdAt: new Date().toISOString()
     };
     const list = await sGet(KEY_PROJECTS, []);
     list.push(newClient);
@@ -707,81 +1240,151 @@
     document.getElementById("cContact").value = "";
     document.getElementById("cNote").value = "";
     document.getElementById("newClientBox").open = false;
+    toast("Ügyfél mentve");
     renderClients();
   });
 
   /* ============================================================
-     9. FORRÁSOK TAB
+     14. FORRÁSOK
      ============================================================ */
   function renderSources(){
     const wrap = document.getElementById("sourceList");
+    if(!dataLoaded){ wrap.innerHTML = skeletonCards(4); return; }
     wrap.innerHTML = "";
-    if(SOURCES.length===0){
-      wrap.innerHTML = '<p class="empty">Nincs betölthető forrás.</p>';
-      return;
-    }
+    if(SOURCES.length===0){ wrap.innerHTML = '<p class="empty">Nincs betölthető forrás.</p>'; return; }
     const statusById = {};
-    if(CHANGES && Array.isArray(CHANGES.results)){
-      CHANGES.results.forEach(r=>{ statusById[r.id] = r; });
-    }
-    SOURCES.forEach(s=>{
-      const st = statusById[s.id];
-      let badge = "";
-      if(st){
-        if(st.status==="error") badge = '<span class="pill" style="background:var(--red-bg);color:var(--red);">nem elérhető</span>';
-        else if(st.keywordHit) badge = '<span class="pill changed">⚡ kulcsszavas találat</span>';
-        else if(st.changed) badge = '<span class="pill changed">változás</span>';
-      }
-      const el = document.createElement("div");
-      el.className = "card";
-      el.innerHTML = `
-        <h3>${escapeHtml(s.name)}</h3>
-        <div class="meta-row"><span class="pill">${escapeHtml(s.category||"")}</span>${badge}</div>
-        <p class="summary">${escapeHtml(s.description||"")}</p>
-        <a class="link" href="${escapeAttr(s.url)}" target="_blank" rel="noopener">Megnyitás ↗</a>
-      `;
-      wrap.appendChild(el);
+    if(CHANGES && Array.isArray(CHANGES.results)) CHANGES.results.forEach(r=>{ statusById[r.id] = r; });
+
+    ["official","press","aggregator"].forEach(tier=>{
+      const list = SOURCES.filter(s=>s.tier===tier);
+      if(!list.length) return;
+      let html = `<h2 class="section-title">${escapeHtml(TIER_LABEL[tier])}</h2>`;
+      list.forEach(s=>{
+        const st = statusById[s.id];
+        const isStale = st && (st.consecutiveFailures||0) >= 3;
+        let badge = "";
+        if(s.enabled===false) badge = '<span class="pill dim">kikapcsolva</span>';
+        else if(isStale) badge = '<span class="pill status-closed">nem elérhető (3+)</span>';
+        else if(st && st.status==="error") badge = '<span class="pill status-suspended">nem elérhető</span>';
+        else if(st && st.keywordHit) badge = '<span class="pill alert">⚡ releváns találat</span>';
+        else if(st && st.changed) badge = '<span class="pill status-announced">változás</span>';
+        html += `<div class="card">
+          <h3>${escapeHtml(s.name)}</h3>
+          <div class="meta-row">${tierPill(s.tier)}<span class="pill">${escapeHtml(s.method==="rss"?"RSS":"oldalfigyelés")}</span>${badge}</div>
+          ${s.note ? `<p class="summary">${escapeHtml(s.note)}</p>` : ""}
+          ${st && st.lastSuccess !== undefined ? "" : ""}
+          <a class="link-btn" href="${escapeAttr(s.watchUrl||s.feedUrl||"#")}" target="_blank" rel="noopener">Megnyitás ↗</a>
+        </div>`;
+      });
+      wrap.innerHTML += html;
     });
   }
 
   /* ============================================================
-     10. SEGÉDFÜGGVÉNYEK
+     15. HETI ELLENŐRZÉSI CIKLUS (Eszközök)
      ============================================================ */
-  function escapeHtml(str){
-    return String(str==null?"":str).replace(/[&<>"']/g, c=>({
-      "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
-    }[c]));
+  async function renderWeekly(){
+    const weekly = await sGet(KEY_WEEKLY, {lastSeenRunAt:null});
+    document.getElementById("weeklyStatusText").textContent =
+      weekly.lastSeenRunAt ? "Utolsó heti ellenőrzés megerősítve: "+fmtDateTime(weekly.lastSeenRunAt) : "Még nem volt megerősítve heti ellenőrzés.";
   }
-  function escapeAttr(str){ return escapeHtml(str); }
+  document.getElementById("weeklyAckBtn").addEventListener("click", async ()=>{
+    await sSet(KEY_WEEKLY, {lastSeenRunAt: new Date().toISOString()});
+    toast("Heti ellenőrzés rögzítve");
+    renderWeekly();
+  });
 
   /* ============================================================
-     11. INDÍTÁS
+     16. PULL-TO-REFRESH (Áttekintés / Hírek)
+     ============================================================ */
+  (function setupPTR(){
+    const indicator = document.getElementById("ptrIndicator");
+    const label = document.getElementById("ptrLabel");
+    let startY = null, pulling = false, refreshing = false;
+    const THRESHOLD = 64;
+
+    function ptrEnabledHere(){
+      const path = currentPath();
+      return path === "/" || path === "/hirek";
+    }
+
+    window.addEventListener("touchstart", (e)=>{
+      if(!ptrEnabledHere() || window.scrollY > 2 || refreshing) { startY = null; return; }
+      startY = e.touches[0].clientY;
+      pulling = true;
+    }, {passive:true});
+
+    window.addEventListener("touchmove", (e)=>{
+      if(!pulling || startY===null || refreshing) return;
+      const dy = e.touches[0].clientY - startY;
+      if(dy > 0){
+        const h = Math.min(dy*0.5, 70);
+        indicator.style.height = h+"px";
+        label.textContent = h >= THRESHOLD ? "Engedd el a frissítéshez" : "Húzd le a frissítéshez";
+      }
+    }, {passive:true});
+
+    window.addEventListener("touchend", async ()=>{
+      if(!pulling || startY===null) { pulling=false; return; }
+      const h = parseInt(indicator.style.height||"0",10);
+      pulling = false; startY = null;
+      if(h >= THRESHOLD && !refreshing){
+        refreshing = true;
+        indicator.style.height = "46px";
+        label.textContent = "Frissítés…";
+        await loadAllData();
+        updateMetaLine();
+        renderCurrentView();
+        indicator.style.height = "0px";
+        refreshing = false;
+        toast("Frissítve");
+      } else {
+        indicator.style.height = "0px";
+      }
+    });
+  })();
+
+  function renderCurrentView(){
+    const path = currentPath();
+    if(path === "/") renderHome();
+    else if(path === "/hirek") renderNews();
+    else if(path === "/palyazatok") renderPrograms();
+    else if(path.startsWith("/palyazatok/")) renderProgramDetail(path.slice("/palyazatok/".length));
+    else if(path === "/eszkozok/forrasok") renderSources();
+  }
+
+  /* ============================================================
+     17. ÚTVONALAK REGISZTRÁLÁSA
+     ============================================================ */
+  defineRoute("/", "home", renderHome);
+  defineRoute("/palyazatok", "programs", renderPrograms);
+  defineRoute("/palyazatok/:id", "program-detail", renderProgramDetail);
+  defineRoute("/hirek", "news", renderNews);
+  defineRoute("/ugyfelek", "clients", renderClients);
+  defineRoute("/eszkozok", "tools", renderWeekly);
+  defineRoute("/eszkozok/jogosultsag", "elig", renderElig);
+  defineRoute("/eszkozok/kalkulator", "calc", null);
+  defineRoute("/eszkozok/forrasok", "sources", renderSources);
+
+  /* ============================================================
+     18. INDÍTÁS
      ============================================================ */
   async function init(){
-    const [programs, sources, changes] = await Promise.all([
-      loadJSON("data/programs.json", FALLBACK_PROGRAMS),
-      loadJSON("data/sources.json", FALLBACK_SOURCES),
-      loadJSON("data/changes.json", null)
-    ]);
-    PROGRAMS = programs;
-    SOURCES = sources;
-    CHANGES = changes;
-
-    renderPrograms();
-    renderSources();
+    await initTheme();
+    updateOfflineBar();
+    await loadAllData();
+    await getStatusChecks();
+    updateMetaLine();
     populateProgramSelects();
-    renderClients();
-    await renderWatchbars();
-  }
+    navigate();
 
+    if("serviceWorker" in navigator){
+      window.addEventListener("load", ()=>{
+        navigator.serviceWorker.register("sw.js").catch(()=>{});
+      });
+    }
+  }
   init();
-
-  // Service worker regisztráció (csak https / localhost, támogatott böngészőben)
-  if("serviceWorker" in navigator){
-    window.addEventListener("load", ()=>{
-      navigator.serviceWorker.register("sw.js").catch(()=>{ /* néma hiba: SW nélkül is működik az app */ });
-    });
-  }
 })();
 </script>
 </body>
