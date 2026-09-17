@@ -40,18 +40,18 @@ jobs:
           should_commit=$(jq -r '.shouldCommit' data/changes.json)
           echo "should_commit=$should_commit" >> "$GITHUB_OUTPUT"
 
-      - name: Változások commitolása
-        if: steps.result.outputs.should_commit == 'true'
-        run: |
-          git config user.name "palyazatfigyelo-bot"
-          git config user.email "actions@users.noreply.github.com"
-          git add data/state.json data/changes.json
-          git commit -m "chore: figyelő frissítés"
-          git push
-
       - name: Telegram értesítés
         if: steps.result.outputs.should_commit == 'true'
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: node scripts/notify-telegram.mjs
+
+      - name: Változások commitolása
+        if: steps.result.outputs.should_commit == 'true'
+        run: |
+          git config user.name "palyazatfigyelo-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/state.json data/changes.json data/news.json
+          git commit -m "chore: figyelő frissítés"
+          git push
