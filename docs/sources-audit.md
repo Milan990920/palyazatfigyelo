@@ -1,6 +1,6 @@
 # Forrás-audit
 
-Generálva: 2026-09-17T12:31:55.783Z
+Generálva: 2026-09-17T12:36:13.021Z
 
 Ez a fájl a `scripts/audit-sources.mjs` futásának eredménye. **A `data/sources.json`-t csak ez alapján szabad frissíteni** — sosem szabad feed URL-t kitalálni. Ha egy forrásnál nincs RSS, a `method` maradjon `"page"` (hash-alapú oldalfigyelés).
 
@@ -13,15 +13,18 @@ Ez a fájl a `scripts/audit-sources.mjs` futásának eredménye. **A `data/sourc
 | Pályázat.gov.hu (`palyazat-gov`) | 200 | *(változatlan)* | ✅ `https://www.palyazat.gov.hu/rss.xml` (10 elem) | ✅ HTTP 404 — nincs robots.txt, alapból engedélyezettnek vesszük | method: "rss", feedUrl: "https://www.palyazat.gov.hu/rss.xml" |
 | MFB Pont Plusz (`mfb-pontok-plusz`) | 200 | *(változatlan)* | ❌ nem XML/RSS válasz | ✅ engedélyezett | method: "page" (nincs használható RSS) |
 | Nemzeti Energetikai Ügynökség (neuzrt.hu) (`neuzrt`) | 403 | *(változatlan)* | — | — | nem elérhető — hagyd ki vagy vizsgáld felül az URL-t |
-| NEÜ – Otthoni Energiatároló Program aloldal (`neuzrt-oetp`) | 200 | *(változatlan)* | ❌ HTTP 404 | ✅ engedélyezett | method: "page" (nincs használható RSS) |
+| NEÜ – Otthoni Energiatároló Program aloldal (`neuzrt-oetp`) | 200 | *(változatlan)* | ❌ nem XML/RSS válasz | ✅ engedélyezett | method: "page" (nincs használható RSS) |
 | NEÜ – régi domain (nffku.hu) (`nffku`) | 403 | https://neuzrt.hu/ | — | — | nem elérhető — hagyd ki vagy vizsgáld felül az URL-t |
 | Kormany.hu – Energiaügyi Minisztérium hírei (`kormany-energiaugyi`) | 200 | https://kormany.hu/kormanyzat/energiaugyi-miniszterium/hirek | ❌ HTTP 404 | ✅ engedélyezett | method: "page" (nincs használható RSS) |
 | Magyar Államkincstár (`allamkincstar`) | 200 | *(változatlan)* | ❌ HTTP 404 | ✅ engedélyezett | method: "page" (nincs használható RSS) |
+| Otthon Start Program – hivatalos oldal (`otthon-start-program`) | 200 | https://otthonstartprogram.hu/ | ✅ `https://otthonstartprogram.hu/feed/` (1 elem) | ✅ engedélyezett | method: "rss", feedUrl: "https://otthonstartprogram.hu/feed/" |
 
 ## Sajtó
 
 | Forrás | HTTP | Végső URL | Talált feed | Robots | Javaslat |
 |---|---|---|---|---|---|
+| MEHI – Magyar Energiahatékonysági Intézet (`mehi`) | 200 | *(változatlan)* | ✅ `https://mehi.hu/feed/` (15 elem) | ✅ engedélyezett | method: "rss", feedUrl: "https://mehi.hu/feed/" |
+| Energiaklub – Hírek (`energiaklub`) | 200 | *(változatlan)* | ❌ HTTP 404 | ✅ engedélyezett | method: "page" (nincs használható RSS) |
 | Hirado.hu (MTI) (`hirado`) | 403 | *(változatlan)* | — | — | nem elérhető — hagyd ki vagy vizsgáld felül az URL-t |
 | Portfolio (`portfolio`) | 200 | *(változatlan)* | ✅ `https://www.portfolio.hu/rss/all.xml` (20 elem) | ✅ engedélyezett | method: "rss", feedUrl: "https://www.portfolio.hu/rss/all.xml" |
 | Világgazdaság (`vg`) | 200 | *(változatlan)* | ✅ `https://www.vg.hu/publicapi/hu/rss/vilaggazdasag/articles` (50 elem) | ✅ engedélyezett | method: "rss", feedUrl: "https://www.vg.hu/publicapi/hu/rss/vilaggazdasag/articles" |
@@ -134,7 +137,7 @@ Ez a fájl a `scripts/audit-sources.mjs` futásának eredménye. **A `data/sourc
     "feed": {
       "url": "https://otthonienergiatarolo.neuzrt.hu/rss",
       "ok": false,
-      "reason": "HTTP 404"
+      "reason": "nem XML/RSS válasz"
     },
     "robots": {
       "present": true,
@@ -182,6 +185,63 @@ Ez a fájl a `scripts/audit-sources.mjs` futásának eredménye. **A `data/sourc
     "finalUrl": "https://www.allamkincstar.gov.hu/",
     "feed": {
       "url": "https://www.allamkincstar.gov.hu/rss",
+      "ok": false,
+      "reason": "HTTP 404"
+    },
+    "robots": {
+      "present": true,
+      "allowsRoot": true,
+      "note": "engedélyezett"
+    },
+    "error": null
+  },
+  {
+    "id": "otthon-start-program",
+    "name": "Otthon Start Program – hivatalos oldal",
+    "tier": "official",
+    "url": "https://www.otthonstartprogram.hu/",
+    "httpStatus": 200,
+    "finalUrl": "https://otthonstartprogram.hu/",
+    "feed": {
+      "url": "https://otthonstartprogram.hu/feed/",
+      "ok": true,
+      "itemCount": 1
+    },
+    "robots": {
+      "present": true,
+      "allowsRoot": true,
+      "note": "engedélyezett"
+    },
+    "error": null
+  },
+  {
+    "id": "mehi",
+    "name": "MEHI – Magyar Energiahatékonysági Intézet",
+    "tier": "press",
+    "url": "https://mehi.hu/",
+    "httpStatus": 200,
+    "finalUrl": "https://mehi.hu/",
+    "feed": {
+      "url": "https://mehi.hu/feed/",
+      "ok": true,
+      "itemCount": 15
+    },
+    "robots": {
+      "present": true,
+      "allowsRoot": true,
+      "note": "engedélyezett"
+    },
+    "error": null
+  },
+  {
+    "id": "energiaklub",
+    "name": "Energiaklub – Hírek",
+    "tier": "press",
+    "url": "https://energiaklub.hu/hirek",
+    "httpStatus": 200,
+    "finalUrl": "https://energiaklub.hu/hirek",
+    "feed": {
+      "url": "https://energiaklub.hu/rss",
       "ok": false,
       "reason": "HTTP 404"
     },
