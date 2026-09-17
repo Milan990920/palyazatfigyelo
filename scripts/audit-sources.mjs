@@ -38,8 +38,11 @@ const CANDIDATES = [
   { id: "nffku", name: "NEÜ – régi domain (nffku.hu)", tier: "official", url: "https://nffku.hu/" },
   { id: "kormany-energiaugyi", name: "Kormany.hu – Energiaügyi Minisztérium hírei", tier: "official", url: "https://kormany.hu/energiaugyi-miniszterium/hirek" },
   { id: "allamkincstar", name: "Magyar Államkincstár", tier: "official", url: "https://www.allamkincstar.gov.hu/" },
+  { id: "otthon-start-program", name: "Otthon Start Program – hivatalos oldal", tier: "official", url: "https://www.otthonstartprogram.hu/" },
 
-  // --- Sajtó ---
+  // --- Sajtó / független szakmai figyelők ---
+  { id: "mehi", name: "MEHI – Magyar Energiahatékonysági Intézet", tier: "press", url: "https://mehi.hu/" },
+  { id: "energiaklub", name: "Energiaklub – Hírek", tier: "press", url: "https://energiaklub.hu/hirek" },
   { id: "hirado", name: "Hirado.hu (MTI)", tier: "press", url: "https://hirado.hu/" },
   { id: "portfolio", name: "Portfolio", tier: "press", url: "https://www.portfolio.hu/" },
   { id: "vg", name: "Világgazdaság", tier: "press", url: "https://www.vg.hu/" },
