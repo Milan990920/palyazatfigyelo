@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Minta Atom feed</title>
+  <link href="https://example.hu/atom" rel="self"/>
+  <updated>2026-09-17T10:00:00Z</updated>
+  <entry>
+    <title>Otthon Start Program: új feltételek</title>
+    <link rel="alternate" href="https://example.hu/atom/otthon-start-feltetelek"/>
+    <updated>2026-09-17T07:30:00Z</updated>
+    <summary>Az Otthon Start Program kapcsán módosultak a jogosultsági feltételek.</summary>
+  </entry>
+  <entry>
+    <title>Random cikk, nem releváns</title>
+    <link rel="alternate" href="https://example.hu/atom/random-cikk"/>
+    <updated>2026-09-17T06:00:00Z</updated>
+    <summary>Ez a bejegyzés semmilyen figyelt programhoz nem kapcsolódik.</summary>
+  </entry>
+</feed>

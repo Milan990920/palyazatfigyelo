@@ -25,7 +25,7 @@
       "Nyilatkozat életvitelszerű lakhatásról"
     ],
     "applyUrl": "https://www.palyazat.gov.hu/",
-    "watchUrl": "https://kormany.hu/energiaugyi-miniszterium/hirek",
+    "watchUrl": "https://kormany.hu/kormanyzat/energiaugyi-miniszterium/hirek",
     "aliases": ["KEHOP Plusz", "KEHOP Plusz-4.1.7", "KEHOP-Plusz", "kehop plusz"],
     "lastChanged": null
   },
@@ -52,8 +52,8 @@
       "Tulajdonosi hozzájáruló nyilatkozat (ha nem a pályázó a tulajdonos)",
       "Legutóbbi villanyszámla"
     ],
-    "applyUrl": "https://kormany.hu/energiaugyi-miniszterium/hirek",
-    "watchUrl": "https://kormany.hu/energiaugyi-miniszterium/hirek",
+    "applyUrl": "https://kormany.hu/kormanyzat/energiaugyi-miniszterium/hirek",
+    "watchUrl": "https://kormany.hu/kormanyzat/energiaugyi-miniszterium/hirek",
     "aliases": ["Otthoni Energiatároló Program", "Otthoni Energiatároló", "OETP", "energiatároló program", "energiatároló pályázat"],
     "lastChanged": null
   },

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>Minta hírforrás</title>
+  <link>https://example.hu/</link>
+  <description>Teszt feed a watch.mjs RSS-parseréhez</description>
+  <item>
+    <title><![CDATA[Módosult az Otthoni Energiatároló Program keretösszege]]></title>
+    <link>https://example.hu/hirek/oetp-keretosszeg-modosult</link>
+    <pubDate>Wed, 17 Sep 2026 08:00:00 +0200</pubDate>
+    <description><![CDATA[Az energiaügyi tárca bejelentette, hogy az <b>Otthoni Energiatároló Program</b> keretösszege megemelkedett.]]></description>
+  </item>
+  <item>
+    <title>Teljesen irreleváns hír egy másik témában</title>
+    <link>https://example.hu/hirek/idojaras-hu</link>
+    <pubDate>Wed, 17 Sep 2026 09:00:00 +0200</pubDate>
+    <description>Ez a cikk se pályázatról, se energetikai programról nem szól.</description>
+  </item>
+  <item>
+    <title>KEHOP Plusz-4.1.7 benyújtási határidő közeleg</title>
+    <link>https://example.hu/hirek/kehop-plusz-hatarido</link>
+    <pubDate>Wed, 17 Sep 2026 10:00:00 +0200</pubDate>
+    <description>A KEHOP Plusz felhívás benyújtási határideje hamarosan lejár.</description>
+  </item>
+  <item>
+    <title>Hibás elem teszt &amp; entitás-dekódolás</title>
+    <link>https://example.hu/hirek/entitas-teszt?a=1&amp;b=2</link>
+    <pubDate>invalid-date-format</pubDate>
+    <description>Ékezetek: áéíóöőúüű, és egy vidéki otthonfelújítás említés.</description>
+  </item>
+</channel>
+</rss>
