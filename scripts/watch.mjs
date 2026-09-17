@@ -152,9 +152,14 @@ function diffAddedText(oldText, newText) {
    ============================================================ */
 
 function buildAliasIndex(programs) {
+  // Szándékosan NEM használjuk a "shortName"-et általános egyezési
+  // alapként: egy rövid, umbrella-jellegű név (pl. "KEHOP Plusz") sok más,
+  // nem a mi programunkhoz tartozó felhívásra is illeszkedne. A pontos
+  // egyezés forrása a kurált "aliases" tömb (+ a teljes "name", ami elég
+  // hosszú/specifikus ahhoz, hogy önmagában is biztonságos legyen).
   return programs.map((p) => ({
     id: p.id,
-    terms: [...(p.aliases || []), p.shortName, p.name]
+    terms: [...(p.aliases || []), p.name]
       .filter(Boolean)
       .map(normalizeForMatch)
       .filter((t) => t.length >= 3)
@@ -181,10 +186,18 @@ function matchProgramAliases(text, aliasIndex, allowedProgramIds) {
 /**
  * Egy forrás (vagy egy oldalváltozás/hír-elem) relevanciáját dönti el.
  * Ha a forrás pontosan egy programhoz tartozik, a teljes forrás eleve
- * releváns annak a programnak — nincs szükség kulcsszavas szűrésre. Ha
- * több programhoz (vagy egyáltalán nem konkrét programhoz) tartozik,
- * csak akkor releváns egy elem, ha alias- vagy általános kulcsszó-találat
- * van benne.
+ * releváns annak a programnak — nincs szükség kulcsszavas szűrésre.
+ *
+ * Ha több programhoz (vagy szélesebb témakörhöz) tartozik — pl. Magyar
+ * Közlöny, palyazat.gov.hu (AMI AZ ÖSSZES állami pályázatot listázza, nem
+ * csak a mieinket), vagy egy általános hírportál — kizárólag egy konkrét
+ * program-alias (pl. "Otthoni Energiatároló Program", "KEHOP Plusz-4.1.7")
+ * számít relevánsnak. Az általános kulcsszavak (pl. "felhívás", "módosult",
+ * "határidő") ÖNMAGUKBAN NEM elegendők: ezek annyira gyakori szavak bármely
+ * pályázati/hír-szövegben, hogy önálló szűrőként állandó álpozitívokat
+ * adnának (pl. egy teljesen más tárgyú GINOP-felhívás "módosult" szóra).
+ * Csak akkor kerülnek a találatok közé kiegészítésként, ha már van
+ * alias-találat is.
  */
 function computeRelevance(text, source, aliasIndex) {
   const programs = source.programs || [];
@@ -192,8 +205,8 @@ function computeRelevance(text, source, aliasIndex) {
     return { relevant: true, programs: [programs[0]], matched: [] };
   }
   const aliasHit = matchProgramAliases(text, aliasIndex, programs);
-  const generalHit = findGeneralKeywords(text);
-  const relevant = aliasHit.programs.length > 0 || generalHit.length > 0;
+  const relevant = aliasHit.programs.length > 0;
+  const generalHit = relevant ? findGeneralKeywords(text) : [];
   return { relevant, programs: aliasHit.programs, matched: [...aliasHit.terms, ...generalHit] };
 }
 
