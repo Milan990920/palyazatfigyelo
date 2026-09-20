@@ -1,5 +1,5 @@
 {
-  "runAt": "2026-09-19T09:37:04.281Z",
+  "runAt": "2026-09-20T09:53:34.942Z",
   "results": [
     {
       "id": "magyar-kozlony",
@@ -14,7 +14,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-19T09:37:04.284Z"
+      "checkedAt": "2026-09-20T09:53:34.945Z"
     },
     {
       "id": "palyazat-gov",
@@ -29,7 +29,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-19T09:37:06.253Z"
+      "checkedAt": "2026-09-20T09:53:36.958Z"
     },
     {
       "id": "mfb-pontok-plusz",
@@ -44,7 +44,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-19T09:37:07.702Z"
+      "checkedAt": "2026-09-20T09:53:39.506Z"
     },
     {
       "id": "neuzrt-oetp",
@@ -59,7 +59,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-19T09:37:08.811Z"
+      "checkedAt": "2026-09-20T09:53:40.664Z"
     },
     {
       "id": "kormany-energiaugyi",
@@ -74,7 +74,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-19T09:37:09.453Z"
+      "checkedAt": "2026-09-20T09:53:41.322Z"
     },
     {
       "id": "allamkincstar",
@@ -89,7 +89,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-19T09:37:12.818Z"
+      "checkedAt": "2026-09-20T09:53:43.825Z"
     },
     {
       "id": "otthon-start-program",
@@ -104,7 +104,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-19T09:37:20.182Z"
+      "checkedAt": "2026-09-20T09:53:51.735Z"
     },
     {
       "id": "mehi",
@@ -119,7 +119,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-19T09:37:22.749Z"
+      "checkedAt": "2026-09-20T09:53:53.727Z"
     },
     {
       "id": "energiaklub",
@@ -134,7 +134,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-19T09:37:23.844Z"
+      "checkedAt": "2026-09-20T09:53:54.845Z"
     },
     {
       "id": "portfolio",
@@ -149,7 +149,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-19T09:37:24.492Z"
+      "checkedAt": "2026-09-20T09:53:55.474Z"
     },
     {
       "id": "vg",
@@ -164,7 +164,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-19T09:37:25.181Z"
+      "checkedAt": "2026-09-20T09:53:56.115Z"
     },
     {
       "id": "hvg",
@@ -179,7 +179,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-19T09:37:25.592Z"
+      "checkedAt": "2026-09-20T09:53:56.844Z"
     },
     {
       "id": "telex",
@@ -194,7 +194,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-19T09:37:25.755Z"
+      "checkedAt": "2026-09-20T09:53:57.115Z"
     },
     {
       "id": "index",
@@ -209,7 +209,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-19T09:37:25.925Z"
+      "checkedAt": "2026-09-20T09:53:57.853Z"
     },
     {
       "id": "bankmonitor",
@@ -224,7 +224,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-19T09:37:26.915Z"
+      "checkedAt": "2026-09-20T09:53:58.878Z"
     },
     {
       "id": "penzcentrum",
@@ -239,7 +239,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-19T09:37:27.192Z"
+      "checkedAt": "2026-09-20T09:53:59.193Z"
     },
     {
       "id": "google-news-search",
@@ -254,7 +254,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-19T09:37:04.281Z"
+      "checkedAt": "2026-09-20T09:53:34.942Z"
     },
     {
       "id": "palyaz",
@@ -269,7 +269,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-19T09:37:27.874Z"
+      "checkedAt": "2026-09-20T09:53:59.966Z"
     },
     {
       "id": "palyazatok-org",
@@ -284,7 +284,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-19T09:37:29.693Z"
+      "checkedAt": "2026-09-20T09:54:01.736Z"
     }
   ],
   "summary": {
