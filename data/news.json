@@ -1,5 +1,23 @@
 [
   {
+    "id": "57ad4947d44a843ead8d82e9279d54b829a8f2b4db32f83ab6731db82139ffd7",
+    "sourceId": "penzcentrum",
+    "sourceName": "Pénzcentrum",
+    "tier": "press",
+    "title": "Nem várt fordulat a lakáspiacon: hirtelen rengeteg lakóingatlan ára esett be, jár rájuk az állami gigatámogatás",
+    "url": "https://www.penzcentrum.hu/otthon/20260921/nem-vart-fordulat-a-lakaspiacon-hirtelen-rengeteg-lakoingatlan-ara-esett-be-jar-rajuk-az-allami-gigatamogatas-1205708",
+    "publishedAt": "2026-09-21T08:02:00.000Z",
+    "fetchedAt": "2026-09-21T10:52:24.485Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start",
+      "otthon start program"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "9254f13214036c8aab955fedfb6e35643a19cb80dab63cbc9fab5b2f213c3bca",
     "sourceId": "allamkincstar",
     "sourceName": "Magyar Államkincstár",
