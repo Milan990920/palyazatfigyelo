@@ -1,5 +1,58 @@
 [
   {
+    "id": "970bcdd5586b1a9910fad8e26da624ce767d848ba722961ed97e98cf26999836",
+    "sourceId": "penzcentrum",
+    "sourceName": "Pénzcentrum",
+    "tier": "press",
+    "title": "Súlyos csapda fenyegeti a magyar lakásvásárlókat: egyetlen tévedés miatt bukhatják a milliókat",
+    "url": "https://www.penzcentrum.hu/hitel/20260922/sulyos-csapda-fenyegeti-a-magyar-lakasvasarlokat-egyetlen-tevedes-miatt-bukhatjak-a-milliokat-1205899",
+    "publishedAt": "2026-09-22T14:35:00.000Z",
+    "fetchedAt": "2026-09-22T15:34:28.297Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "f91430c92614dc3006da51bd6553a009b697f0b9220ceb66f725aa27e29bf98a",
+    "sourceId": "telex",
+    "sourceName": "Telex",
+    "tier": "press",
+    "title": "Még csak körvonalazódik, hogyan folytatják a fél éve befagyott akkus-napelemes programot",
+    "url": "https://telex.hu/g7/kozelet/2026/09/22/oetp-akkus-napelemes-program-modositas-kapitany-istvan",
+    "publishedAt": "2026-09-22T13:46:52.000Z",
+    "fetchedAt": "2026-09-22T15:34:28.297Z",
+    "programs": [
+      "energiatarolo"
+    ],
+    "matched": [
+      "otthoni energiatarolo program",
+      "otthoni energiatarolo",
+      "energiatarolo program"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "2060548371d3688eb12d0ad267a001d64ef9fd942712b5b4390e63a3c99ace49",
+    "sourceId": "vg",
+    "sourceName": "Világgazdaság",
+    "tier": "press",
+    "title": "Otthon Start lakásberuházásokat akaszt meg a kormány, mert jön az új program – aminek azonban egyelőre nyoma sincs",
+    "url": "https://www.vg.hu/vilaggazdasag-magyar-gazdasag/2026/09/lakasepetesi-program-otthon-start-kiemelt-beruhazas",
+    "publishedAt": "2026-09-22T11:43:14.000Z",
+    "fetchedAt": "2026-09-22T15:34:28.297Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "f906ac829444478030dca0c0400fa54f6fb561030adf5b4f496ca83cd94b0767",
     "sourceId": "bankmonitor",
     "sourceName": "Bankmonitor",

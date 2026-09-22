@@ -1,5 +1,5 @@
 {
-  "runAt": "2026-09-22T10:07:12.482Z",
+  "runAt": "2026-09-22T15:34:28.297Z",
   "results": [
     {
       "id": "magyar-kozlony",
@@ -14,7 +14,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-22T10:07:12.485Z"
+      "checkedAt": "2026-09-22T15:34:28.300Z"
     },
     {
       "id": "palyazat-gov",
@@ -29,7 +29,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-22T10:07:14.489Z"
+      "checkedAt": "2026-09-22T15:34:30.724Z"
     },
     {
       "id": "mfb-pontok-plusz",
@@ -38,13 +38,13 @@
       "method": "page",
       "url": "https://www.mfb.hu/mfb-pontok-plusz",
       "status": "ok",
-      "changed": true,
+      "changed": false,
       "keywordHit": false,
       "matchedKeywords": [],
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-22T10:07:15.124Z"
+      "checkedAt": "2026-09-22T15:34:31.646Z"
     },
     {
       "id": "neuzrt-oetp",
@@ -59,7 +59,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-22T10:07:16.139Z"
+      "checkedAt": "2026-09-22T15:34:32.885Z"
     },
     {
       "id": "kormany-energiaugyi",
@@ -74,7 +74,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-22T10:07:16.751Z"
+      "checkedAt": "2026-09-22T15:34:33.577Z"
     },
     {
       "id": "allamkincstar",
@@ -89,7 +89,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-22T10:07:20.005Z"
+      "checkedAt": "2026-09-22T15:34:37.240Z"
     },
     {
       "id": "otthon-start-program",
@@ -104,7 +104,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-22T10:07:27.433Z"
+      "checkedAt": "2026-09-22T15:34:45.693Z"
     },
     {
       "id": "mehi",
@@ -119,7 +119,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-22T10:07:29.492Z"
+      "checkedAt": "2026-09-22T15:34:47.371Z"
     },
     {
       "id": "energiaklub",
@@ -128,13 +128,13 @@
       "method": "page",
       "url": "https://energiaklub.hu/hirek",
       "status": "ok",
-      "changed": false,
+      "changed": true,
       "keywordHit": false,
       "matchedKeywords": [],
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-22T10:07:30.673Z"
+      "checkedAt": "2026-09-22T15:34:48.440Z"
     },
     {
       "id": "portfolio",
@@ -149,7 +149,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-22T10:07:31.305Z"
+      "checkedAt": "2026-09-22T15:34:49.086Z"
     },
     {
       "id": "vg",
@@ -158,13 +158,15 @@
       "method": "rss",
       "url": "https://www.vg.hu/",
       "status": "ok",
-      "changed": false,
-      "keywordHit": false,
-      "matchedKeywords": [],
-      "newItemCount": 0,
+      "changed": true,
+      "keywordHit": true,
+      "matchedKeywords": [
+        "otthon start"
+      ],
+      "newItemCount": 1,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-22T10:07:31.885Z"
+      "checkedAt": "2026-09-22T15:34:49.807Z"
     },
     {
       "id": "hvg",
@@ -179,7 +181,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-22T10:07:32.318Z"
+      "checkedAt": "2026-09-22T15:34:50.613Z"
     },
     {
       "id": "telex",
@@ -188,13 +190,17 @@
       "method": "rss",
       "url": "https://telex.hu/",
       "status": "ok",
-      "changed": false,
-      "keywordHit": false,
-      "matchedKeywords": [],
-      "newItemCount": 0,
+      "changed": true,
+      "keywordHit": true,
+      "matchedKeywords": [
+        "otthoni energiatarolo program",
+        "otthoni energiatarolo",
+        "energiatarolo program"
+      ],
+      "newItemCount": 1,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-22T10:07:32.475Z"
+      "checkedAt": "2026-09-22T15:34:50.895Z"
     },
     {
       "id": "index",
@@ -209,7 +215,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-22T10:07:32.635Z"
+      "checkedAt": "2026-09-22T15:34:51.097Z"
     },
     {
       "id": "bankmonitor",
@@ -226,7 +232,7 @@
       "newItemCount": 2,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-22T10:07:33.647Z"
+      "checkedAt": "2026-09-22T15:34:52.291Z"
     },
     {
       "id": "penzcentrum",
@@ -235,13 +241,15 @@
       "method": "rss",
       "url": "https://www.penzcentrum.hu/",
       "status": "ok",
-      "changed": false,
-      "keywordHit": false,
-      "matchedKeywords": [],
-      "newItemCount": 0,
+      "changed": true,
+      "keywordHit": true,
+      "matchedKeywords": [
+        "otthon start"
+      ],
+      "newItemCount": 1,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-22T10:07:34.100Z"
+      "checkedAt": "2026-09-22T15:34:52.466Z"
     },
     {
       "id": "google-news-search",
@@ -256,7 +264,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-22T10:07:12.482Z"
+      "checkedAt": "2026-09-22T15:34:28.297Z"
     },
     {
       "id": "palyaz",
@@ -271,7 +279,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-22T10:07:34.741Z"
+      "checkedAt": "2026-09-22T15:34:53.200Z"
     },
     {
       "id": "palyazatok-org",
@@ -286,21 +294,21 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-22T10:07:36.903Z"
+      "checkedAt": "2026-09-22T15:34:55.076Z"
     }
   ],
   "summary": {
     "total": 18,
-    "changedCount": 2,
-    "keywordHitCount": 1,
+    "changedCount": 5,
+    "keywordHitCount": 4,
     "errorCount": 0,
     "staleCount": 0,
-    "newsItemCount": 2
+    "newsItemCount": 3
   },
   "staleAlerts": [],
   "newsByTier": {
     "official": 0,
-    "press": 2,
+    "press": 3,
     "aggregator": 0
   },
   "shouldCommit": true
