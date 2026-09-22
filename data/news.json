@@ -1,5 +1,39 @@
 [
   {
+    "id": "f906ac829444478030dca0c0400fa54f6fb561030adf5b4f496ca83cd94b0767",
+    "sourceId": "bankmonitor",
+    "sourceName": "Bankmonitor",
+    "tier": "press",
+    "title": "Piaci lakáshitel Otthon Start nélkül: így juthatsz a legjobb kamathoz kevés önerővel is",
+    "url": "https://bankmonitor.hu/mediatar/cikk/piaci-lakashitel-otthon-start-nelkul-igy-juthatsz-a-legjobb-kamathoz-keves-onerovel-is/",
+    "publishedAt": "2026-09-22T07:45:57.000Z",
+    "fetchedAt": "2026-09-22T10:07:12.482Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "f86f6d70ab1a4b853e50414bf768ef54922d685998bd27342a1a727b297cdecd",
+    "sourceId": "bankmonitor",
+    "sourceName": "Bankmonitor",
+    "tier": "press",
+    "title": "Az Otthon Start óta a vételár 75 százalékát finanszírozná hitelből egy vidéki fiatal",
+    "url": "https://bankmonitor.hu/mediatar/cikk/az-otthon-start-ota-a-vetelar-75-szazalekat-finanszirozna-hitelbol-egy-videki-fiatal/",
+    "publishedAt": "2026-09-22T06:50:53.000Z",
+    "fetchedAt": "2026-09-22T10:07:12.482Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "57ad4947d44a843ead8d82e9279d54b829a8f2b4db32f83ab6731db82139ffd7",
     "sourceId": "penzcentrum",
     "sourceName": "Pénzcentrum",
