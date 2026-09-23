@@ -1,5 +1,62 @@
 [
   {
+    "id": "6a1c4165fec033414ab72157a6c1827f8acc9835328cfb93cdc7d752f3dac420",
+    "sourceId": "portfolio",
+    "sourceName": "Portfolio",
+    "tier": "press",
+    "title": "Tisza-kormány: döntöttek a várva várt támogatásról, közben Magyar Péter átírná a mentelmi szabályokat",
+    "url": "https://www.portfolio.hu/gazdasag/20260923/tisza-kormany-dontottek-a-varva-vart-tamogatasrol-kozben-magyar-peter-atirna-a-mentelmi-szabalyokat-864608",
+    "publishedAt": "2026-09-23T14:38:00.000Z",
+    "fetchedAt": "2026-09-23T15:30:04.321Z",
+    "programs": [
+      "energiatarolo"
+    ],
+    "matched": [
+      "otthoni energiatarolo program",
+      "otthoni energiatarolo",
+      "oetp",
+      "energiatarolo program"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "895865fd79ec8e36a53f07cb675c168e8d64e3e409837ad040187acbda0e6949",
+    "sourceId": "portfolio",
+    "sourceName": "Portfolio",
+    "tier": "press",
+    "title": "Megszületett a döntés az otthoni akkuprogramról: 15 ezerrel több pályázó kap támogatást, új program is jön",
+    "url": "https://www.portfolio.hu/gazdasag/20260923/megszuletett-a-dontes-az-otthoni-akkuprogramrol-15-ezerrel-tobb-palyazo-kap-tamogatast-uj-program-is-jon-864788",
+    "publishedAt": "2026-09-23T14:38:00.000Z",
+    "fetchedAt": "2026-09-23T15:30:04.321Z",
+    "programs": [
+      "energiatarolo"
+    ],
+    "matched": [
+      "otthoni energiatarolo program",
+      "otthoni energiatarolo",
+      "oetp",
+      "energiatarolo program"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "fd75c841bd2f7b7d91a7a0cb9a98a0ca499198e6a47403b30dc6b9f2cddc8789",
+    "sourceId": "portfolio",
+    "sourceName": "Portfolio",
+    "tier": "press",
+    "title": "Háromszor annyiba kerül a bankoknak egy támogatott hitel kezelése, mint egy piaci lakáshitel",
+    "url": "https://www.portfolio.hu/bank/20260923/haromszor-annyiba-kerul-a-bankoknak-egy-tamogatott-hitel-kezelese-mint-egy-piaci-lakashitel-864778",
+    "publishedAt": "2026-09-23T14:32:00.000Z",
+    "fetchedAt": "2026-09-23T15:30:04.321Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "970bcdd5586b1a9910fad8e26da624ce767d848ba722961ed97e98cf26999836",
     "sourceId": "penzcentrum",
     "sourceName": "Pénzcentrum",
