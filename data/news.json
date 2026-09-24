@@ -1,5 +1,38 @@
 [
   {
+    "id": "2db1d0afccdcfe18cc62c839bb965a62b5b93b183a6fe9487e229ef84e905690",
+    "sourceId": "allamkincstar",
+    "sourceName": "Magyar Államkincstár",
+    "tier": "official",
+    "title": "Magyar Államkincstár: tartalom módosult",
+    "url": "https://www.allamkincstar.gov.hu/",
+    "publishedAt": "2026-09-24T10:14:30.306Z",
+    "fetchedAt": "2026-09-24T10:14:22.942Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [],
+    "kind": "page-change"
+  },
+  {
+    "id": "5f8b8f2b13218f2a24530747f3b316197596ea0fd11a064bc8b7483eeac9ea50",
+    "sourceId": "bankmonitor",
+    "sourceName": "Bankmonitor",
+    "tier": "press",
+    "title": "Mit okozna, ha tényleg kivezetnék az Otthon Startot?",
+    "url": "https://bankmonitor.hu/mediatar/cikk/mit-okozna-ha-tenyleg-kivezetnek-az-otthon-startot/",
+    "publishedAt": "2026-09-24T07:59:55.000Z",
+    "fetchedAt": "2026-09-24T10:14:22.942Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start",
+      "otthon start program"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "6a1c4165fec033414ab72157a6c1827f8acc9835328cfb93cdc7d752f3dac420",
     "sourceId": "portfolio",
     "sourceName": "Portfolio",
