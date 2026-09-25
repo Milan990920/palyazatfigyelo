@@ -1,5 +1,5 @@
 {
-  "runAt": "2026-09-24T15:52:07.933Z",
+  "runAt": "2026-09-25T10:19:06.178Z",
   "results": [
     {
       "id": "magyar-kozlony",
@@ -14,7 +14,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-24T15:52:07.936Z"
+      "checkedAt": "2026-09-25T10:19:06.180Z"
     },
     {
       "id": "palyazat-gov",
@@ -29,7 +29,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-24T15:52:10.166Z"
+      "checkedAt": "2026-09-25T10:19:08.368Z"
     },
     {
       "id": "mfb-pontok-plusz",
@@ -38,13 +38,13 @@
       "method": "page",
       "url": "https://www.mfb.hu/mfb-pontok-plusz",
       "status": "ok",
-      "changed": false,
+      "changed": true,
       "keywordHit": false,
       "matchedKeywords": [],
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-24T15:52:11.194Z"
+      "checkedAt": "2026-09-25T10:19:09.239Z"
     },
     {
       "id": "neuzrt-oetp",
@@ -59,7 +59,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-24T15:52:12.283Z"
+      "checkedAt": "2026-09-25T10:19:10.541Z"
     },
     {
       "id": "kormany-energiaugyi",
@@ -74,7 +74,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-24T15:52:12.915Z"
+      "checkedAt": "2026-09-25T10:19:11.302Z"
     },
     {
       "id": "allamkincstar",
@@ -89,7 +89,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-24T15:52:16.293Z"
+      "checkedAt": "2026-09-25T10:19:14.928Z"
     },
     {
       "id": "otthon-start-program",
@@ -104,7 +104,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-24T15:52:23.254Z"
+      "checkedAt": "2026-09-25T10:19:19.895Z"
     },
     {
       "id": "mehi",
@@ -119,7 +119,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-24T15:52:25.355Z"
+      "checkedAt": "2026-09-25T10:19:22.659Z"
     },
     {
       "id": "energiaklub",
@@ -134,7 +134,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-24T15:52:26.190Z"
+      "checkedAt": "2026-09-25T10:19:23.630Z"
     },
     {
       "id": "portfolio",
@@ -149,7 +149,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-24T15:52:26.800Z"
+      "checkedAt": "2026-09-25T10:19:24.334Z"
     },
     {
       "id": "vg",
@@ -164,7 +164,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-24T15:52:27.380Z"
+      "checkedAt": "2026-09-25T10:19:25.101Z"
     },
     {
       "id": "hvg",
@@ -179,7 +179,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-24T15:52:27.647Z"
+      "checkedAt": "2026-09-25T10:19:25.596Z"
     },
     {
       "id": "telex",
@@ -194,7 +194,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-24T15:52:27.798Z"
+      "checkedAt": "2026-09-25T10:19:25.804Z"
     },
     {
       "id": "index",
@@ -209,7 +209,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-24T15:52:28.279Z"
+      "checkedAt": "2026-09-25T10:19:25.980Z"
     },
     {
       "id": "bankmonitor",
@@ -227,7 +227,7 @@
       "newItemCount": 3,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-24T15:52:29.569Z"
+      "checkedAt": "2026-09-25T10:19:27.196Z"
     },
     {
       "id": "penzcentrum",
@@ -242,7 +242,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-24T15:52:30.167Z"
+      "checkedAt": "2026-09-25T10:19:27.963Z"
     },
     {
       "id": "google-news-search",
@@ -257,7 +257,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-24T15:52:07.933Z"
+      "checkedAt": "2026-09-25T10:19:06.178Z"
     },
     {
       "id": "palyaz",
@@ -272,7 +272,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-24T15:52:30.827Z"
+      "checkedAt": "2026-09-25T10:19:28.810Z"
     },
     {
       "id": "palyazatok-org",
@@ -287,12 +287,12 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-24T15:52:32.550Z"
+      "checkedAt": "2026-09-25T10:19:30.857Z"
     }
   ],
   "summary": {
     "total": 18,
-    "changedCount": 1,
+    "changedCount": 2,
     "keywordHitCount": 1,
     "errorCount": 0,
     "staleCount": 0,
