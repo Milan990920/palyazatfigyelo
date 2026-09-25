@@ -1,5 +1,5 @@
 {
-  "runAt": "2026-09-25T10:19:06.178Z",
+  "runAt": "2026-09-25T15:52:26.306Z",
   "results": [
     {
       "id": "magyar-kozlony",
@@ -7,14 +7,14 @@
       "tier": "official",
       "method": "rss",
       "url": "https://magyarkozlony.hu/",
-      "status": "ok",
+      "status": "error",
       "changed": false,
       "keywordHit": false,
       "matchedKeywords": [],
       "newItemCount": 0,
-      "error": null,
-      "consecutiveFailures": 0,
-      "checkedAt": "2026-09-25T10:19:06.180Z"
+      "error": "This operation was aborted",
+      "consecutiveFailures": 1,
+      "checkedAt": "2026-09-25T15:52:26.309Z"
     },
     {
       "id": "palyazat-gov",
@@ -22,14 +22,14 @@
       "tier": "official",
       "method": "rss",
       "url": "https://www.palyazat.gov.hu/",
-      "status": "ok",
+      "status": "error",
       "changed": false,
       "keywordHit": false,
       "matchedKeywords": [],
       "newItemCount": 0,
-      "error": null,
-      "consecutiveFailures": 0,
-      "checkedAt": "2026-09-25T10:19:08.368Z"
+      "error": "This operation was aborted",
+      "consecutiveFailures": 1,
+      "checkedAt": "2026-09-25T15:52:36.309Z"
     },
     {
       "id": "mfb-pontok-plusz",
@@ -38,13 +38,13 @@
       "method": "page",
       "url": "https://www.mfb.hu/mfb-pontok-plusz",
       "status": "ok",
-      "changed": true,
+      "changed": false,
       "keywordHit": false,
       "matchedKeywords": [],
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-25T10:19:09.239Z"
+      "checkedAt": "2026-09-25T15:52:46.310Z"
     },
     {
       "id": "neuzrt-oetp",
@@ -59,7 +59,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-25T10:19:10.541Z"
+      "checkedAt": "2026-09-25T15:52:47.288Z"
     },
     {
       "id": "kormany-energiaugyi",
@@ -67,14 +67,14 @@
       "tier": "official",
       "method": "page",
       "url": "https://kormany.hu/kormanyzat/energiaugyi-miniszterium/hirek",
-      "status": "ok",
+      "status": "error",
       "changed": false,
       "keywordHit": false,
       "matchedKeywords": [],
       "newItemCount": 0,
-      "error": null,
-      "consecutiveFailures": 0,
-      "checkedAt": "2026-09-25T10:19:11.302Z"
+      "error": "This operation was aborted",
+      "consecutiveFailures": 1,
+      "checkedAt": "2026-09-25T15:52:47.917Z"
     },
     {
       "id": "allamkincstar",
@@ -82,14 +82,14 @@
       "tier": "official",
       "method": "page",
       "url": "https://www.allamkincstar.gov.hu/",
-      "status": "ok",
+      "status": "error",
       "changed": false,
       "keywordHit": false,
       "matchedKeywords": [],
       "newItemCount": 0,
-      "error": null,
-      "consecutiveFailures": 0,
-      "checkedAt": "2026-09-25T10:19:14.928Z"
+      "error": "This operation was aborted",
+      "consecutiveFailures": 1,
+      "checkedAt": "2026-09-25T15:52:57.918Z"
     },
     {
       "id": "otthon-start-program",
@@ -104,7 +104,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-25T10:19:19.895Z"
+      "checkedAt": "2026-09-25T15:53:07.917Z"
     },
     {
       "id": "mehi",
@@ -119,7 +119,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-25T10:19:22.659Z"
+      "checkedAt": "2026-09-25T15:53:10.463Z"
     },
     {
       "id": "energiaklub",
@@ -134,7 +134,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-25T10:19:23.630Z"
+      "checkedAt": "2026-09-25T15:53:11.333Z"
     },
     {
       "id": "portfolio",
@@ -149,7 +149,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-25T10:19:24.334Z"
+      "checkedAt": "2026-09-25T15:53:11.937Z"
     },
     {
       "id": "vg",
@@ -164,7 +164,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-25T10:19:25.101Z"
+      "checkedAt": "2026-09-25T15:53:12.714Z"
     },
     {
       "id": "hvg",
@@ -179,7 +179,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-25T10:19:25.596Z"
+      "checkedAt": "2026-09-25T15:53:13.112Z"
     },
     {
       "id": "telex",
@@ -194,7 +194,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-25T10:19:25.804Z"
+      "checkedAt": "2026-09-25T15:53:13.291Z"
     },
     {
       "id": "index",
@@ -209,7 +209,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-25T10:19:25.980Z"
+      "checkedAt": "2026-09-25T15:53:13.465Z"
     },
     {
       "id": "bankmonitor",
@@ -218,16 +218,13 @@
       "method": "rss",
       "url": "https://bankmonitor.hu/",
       "status": "ok",
-      "changed": true,
-      "keywordHit": true,
-      "matchedKeywords": [
-        "otthon start",
-        "otthon start program"
-      ],
-      "newItemCount": 3,
+      "changed": false,
+      "keywordHit": false,
+      "matchedKeywords": [],
+      "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-25T10:19:27.196Z"
+      "checkedAt": "2026-09-25T15:53:14.451Z"
     },
     {
       "id": "penzcentrum",
@@ -242,7 +239,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-25T10:19:27.963Z"
+      "checkedAt": "2026-09-25T15:53:14.836Z"
     },
     {
       "id": "google-news-search",
@@ -257,7 +254,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-25T10:19:06.178Z"
+      "checkedAt": "2026-09-25T15:52:26.306Z"
     },
     {
       "id": "palyaz",
@@ -272,7 +269,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-25T10:19:28.810Z"
+      "checkedAt": "2026-09-25T15:53:15.535Z"
     },
     {
       "id": "palyazatok-org",
@@ -287,14 +284,14 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-09-25T10:19:30.857Z"
+      "checkedAt": "2026-09-25T15:53:17.424Z"
     }
   ],
   "summary": {
     "total": 18,
-    "changedCount": 2,
-    "keywordHitCount": 1,
-    "errorCount": 0,
+    "changedCount": 0,
+    "keywordHitCount": 0,
+    "errorCount": 4,
     "staleCount": 0,
     "newsItemCount": 0
   },
