@@ -1,5 +1,22 @@
 [
   {
+    "id": "9ff798f390423594549c0b12166e4240ef2c89b81c6847674bea3d91871fe4c8",
+    "sourceId": "portfolio",
+    "sourceName": "Portfolio",
+    "tier": "press",
+    "title": "Belenyúl a kormány az Otthon Startba, gyengébb forintra vágynak a magyar cégek",
+    "url": "https://www.portfolio.hu/bank/20260927/belenyul-a-kormany-az-otthon-startba-gyengebb-forintra-vagynak-a-magyar-cegek-865292",
+    "publishedAt": "2026-09-27T13:00:00.000Z",
+    "fetchedAt": "2026-09-27T15:43:24.853Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "2db1d0afccdcfe18cc62c839bb965a62b5b93b183a6fe9487e229ef84e905690",
     "sourceId": "allamkincstar",
     "sourceName": "Magyar Államkincstár",
