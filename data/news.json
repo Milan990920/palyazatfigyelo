@@ -1,5 +1,41 @@
 [
   {
+    "id": "05f897802e45d2135b8c16f0c8a29de769ae4f0a8ce187cd1b1d9c78b30a7f07",
+    "sourceId": "allamkincstar",
+    "sourceName": "Magyar Államkincstár",
+    "tier": "official",
+    "title": "Magyar Államkincstár: tartalom módosult",
+    "url": "https://www.allamkincstar.gov.hu/",
+    "publishedAt": "2026-09-28T11:49:37.310Z",
+    "fetchedAt": "2026-09-28T11:49:27.839Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [],
+    "kind": "page-change"
+  },
+  {
+    "id": "aead6110ca4fc441a05c491844d31e09d77ee772f2e2f1f949dfd73cc762d21d",
+    "sourceId": "portfolio",
+    "sourceName": "Portfolio",
+    "tier": "press",
+    "title": "Otthoni akkutámogatás: több nyertes lesz, de több ponton is átírják a szabályokat",
+    "url": "https://www.portfolio.hu/gazdasag/20260928/otthoni-akkutamogatas-tobb-nyertes-lesz-de-tobb-ponton-is-atirjak-a-szabalyokat-865696",
+    "publishedAt": "2026-09-28T11:04:00.000Z",
+    "fetchedAt": "2026-09-28T11:49:27.839Z",
+    "programs": [
+      "energiatarolo"
+    ],
+    "matched": [
+      "otthoni energiatarolo program",
+      "otthoni energiatarolo",
+      "oetp",
+      "energiatarolo program",
+      "benyújtás"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "9ff798f390423594549c0b12166e4240ef2c89b81c6847674bea3d91871fe4c8",
     "sourceId": "portfolio",
     "sourceName": "Portfolio",
