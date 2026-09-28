@@ -1,5 +1,22 @@
 [
   {
+    "id": "510928a672d1538160ad7de55955cafea1bf75bc28cf8555e19f75139c1aa8f7",
+    "sourceId": "vg",
+    "sourceName": "Világgazdaság",
+    "tier": "press",
+    "title": "Lezárult a felülvizsgálat, komolyan belenyúlt a kormány az energiatároló programba: újabb 15 ezer család figyelhet – jó hírt kaptak a nyertesek is",
+    "url": "https://www.vg.hu/vilaggazdasag-magyar-gazdasag/2026/09/otthoni-energiatarolo-program-vezerelheto",
+    "publishedAt": "2026-09-28T15:37:20.000Z",
+    "fetchedAt": "2026-09-28T18:39:49.555Z",
+    "programs": [
+      "energiatarolo"
+    ],
+    "matched": [
+      "energiatarolo program"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "05f897802e45d2135b8c16f0c8a29de769ae4f0a8ce187cd1b1d9c78b30a7f07",
     "sourceId": "allamkincstar",
     "sourceName": "Magyar Államkincstár",
