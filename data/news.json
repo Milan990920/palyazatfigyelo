@@ -1,5 +1,94 @@
 [
   {
+    "id": "325fd573a3ffc6304628e23a01a6362bb448a17413678320419e64fc7d2a71b7",
+    "sourceId": "telex",
+    "sourceName": "Telex",
+    "tier": "press",
+    "title": "Pont fordított folyamat zajlott le a lakáspiacon, mint ami kedvező lett volna a vásárlóknak",
+    "url": "https://telex.hu/g7/elet/2026/09/29/ingatlan-uj-lakas-piac-kinalat-osp-kereslet",
+    "publishedAt": "2026-09-29T10:46:28.000Z",
+    "fetchedAt": "2026-09-29T11:26:45.714Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "a424922666491caf889bc79781f0e933f9c9875bb9e0ad931b8d5fc1f2a82658",
+    "sourceId": "portfolio",
+    "sourceName": "Portfolio",
+    "tier": "press",
+    "title": "Nyílt levélben fordult Kapitány Istvánhoz az MNNSZ",
+    "url": "https://www.portfolio.hu/gazdasag/20260929/nyilt-levelben-fordult-kapitany-istvanhoz-az-mnnsz-865942",
+    "publishedAt": "2026-09-29T09:49:00.000Z",
+    "fetchedAt": "2026-09-29T11:26:45.714Z",
+    "programs": [
+      "energiatarolo"
+    ],
+    "matched": [
+      "otthoni energiatarolo program",
+      "otthoni energiatarolo",
+      "energiatarolo program"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "3fdc37f1d061a3dc784bcaeb5180eec2fd3a0d6edfac02ae6fac8af7a3e86e56",
+    "sourceId": "penzcentrum",
+    "sourceName": "Pénzcentrum",
+    "tier": "press",
+    "title": "Elárulta az államtitkár, tényleg változtatnak az Otthon Starton: kiderült, milyen szigorítást tervez a kormány",
+    "url": "https://www.penzcentrum.hu/otthon/20260929/elarulta-az-allamtitkar-tenyleg-valtoztatnak-az-otthon-starton-kiderult-milyen-szigoritast-tervez-a-kormany-1206343",
+    "publishedAt": "2026-09-29T08:52:00.000Z",
+    "fetchedAt": "2026-09-29T11:26:45.714Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start",
+      "otthon start program"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "9ef5d2546af6d894179f6a9c2b27de20625b7d0c26ad1477582c0906cd8ac689",
+    "sourceId": "index",
+    "sourceName": "Index",
+    "tier": "press",
+    "title": "Itt a hidegzuhany az Otthon Startnál, ez keresztülhúzhatja sokak terveit",
+    "url": "https://index.hu/gazdasag/2026/09/29/ingatlan-ingatlanpiac-lakas-vasarlas-otthon-start-program-lakasepites/",
+    "publishedAt": "2026-09-29T07:42:00.000Z",
+    "fetchedAt": "2026-09-29T11:26:45.714Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "ca9d79e2782ac268ac360f6af64e8f17e0a9b3840e1be11468b31fb49a3fa439",
+    "sourceId": "vg",
+    "sourceName": "Világgazdaság",
+    "tier": "press",
+    "title": "Váratlanul elhangzott a parlamentben, mit kezd az Otthon Start Programmal a Tisza-kormány: így fogják átalakítani, megnevezték a változásokat",
+    "url": "https://www.vg.hu/vilaggazdasag-magyar-gazdasag/2026/09/otthon-start-program-valtozasok-tisza-kormany",
+    "publishedAt": "2026-09-28T19:55:51.000Z",
+    "fetchedAt": "2026-09-29T11:26:45.714Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start",
+      "otthon start program"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "510928a672d1538160ad7de55955cafea1bf75bc28cf8555e19f75139c1aa8f7",
     "sourceId": "vg",
     "sourceName": "Világgazdaság",
