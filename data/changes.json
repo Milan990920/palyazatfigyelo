@@ -1,5 +1,5 @@
 {
-  "runAt": "2026-10-01T11:42:14.438Z",
+  "runAt": "2026-10-01T17:26:14.556Z",
   "results": [
     {
       "id": "magyar-kozlony",
@@ -14,7 +14,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-01T11:42:14.441Z"
+      "checkedAt": "2026-10-01T17:26:14.558Z"
     },
     {
       "id": "palyazat-gov",
@@ -29,7 +29,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-01T11:42:16.663Z"
+      "checkedAt": "2026-10-01T17:26:17.013Z"
     },
     {
       "id": "mfb-pontok-plusz",
@@ -38,13 +38,13 @@
       "method": "page",
       "url": "https://www.mfb.hu/mfb-pontok-plusz",
       "status": "ok",
-      "changed": true,
+      "changed": false,
       "keywordHit": false,
       "matchedKeywords": [],
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-01T11:42:17.268Z"
+      "checkedAt": "2026-10-01T17:26:18.736Z"
     },
     {
       "id": "neuzrt-oetp",
@@ -59,7 +59,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-01T11:42:18.320Z"
+      "checkedAt": "2026-10-01T17:26:20.323Z"
     },
     {
       "id": "kormany-energiaugyi",
@@ -74,7 +74,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-01T11:42:18.909Z"
+      "checkedAt": "2026-10-01T17:26:21.250Z"
     },
     {
       "id": "allamkincstar",
@@ -89,7 +89,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-01T11:42:22.109Z"
+      "checkedAt": "2026-10-01T17:26:25.399Z"
     },
     {
       "id": "otthon-start-program",
@@ -104,7 +104,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-01T11:42:30.149Z"
+      "checkedAt": "2026-10-01T17:26:30.586Z"
     },
     {
       "id": "mehi",
@@ -119,7 +119,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-01T11:42:32.502Z"
+      "checkedAt": "2026-10-01T17:26:32.590Z"
     },
     {
       "id": "energiaklub",
@@ -134,7 +134,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-01T11:42:33.476Z"
+      "checkedAt": "2026-10-01T17:26:33.408Z"
     },
     {
       "id": "portfolio",
@@ -143,16 +143,13 @@
       "method": "rss",
       "url": "https://www.portfolio.hu/",
       "status": "ok",
-      "changed": true,
-      "keywordHit": true,
-      "matchedKeywords": [
-        "otthon start",
-        "otthon start program"
-      ],
-      "newItemCount": 1,
+      "changed": false,
+      "keywordHit": false,
+      "matchedKeywords": [],
+      "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-01T11:42:34.066Z"
+      "checkedAt": "2026-10-01T17:26:34.355Z"
     },
     {
       "id": "vg",
@@ -167,7 +164,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-01T11:42:34.711Z"
+      "checkedAt": "2026-10-01T17:26:35.176Z"
     },
     {
       "id": "hvg",
@@ -182,7 +179,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-01T11:42:35.083Z"
+      "checkedAt": "2026-10-01T17:26:36.148Z"
     },
     {
       "id": "telex",
@@ -196,8 +193,8 @@
       "matchedKeywords": [],
       "newItemCount": 0,
       "error": "HTTP 403",
-      "consecutiveFailures": 2,
-      "checkedAt": "2026-10-01T11:42:35.242Z"
+      "consecutiveFailures": 3,
+      "checkedAt": "2026-10-01T17:26:36.550Z"
     },
     {
       "id": "index",
@@ -212,7 +209,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-01T11:42:35.486Z"
+      "checkedAt": "2026-10-01T17:26:36.762Z"
     },
     {
       "id": "bankmonitor",
@@ -221,16 +218,13 @@
       "method": "rss",
       "url": "https://bankmonitor.hu/",
       "status": "ok",
-      "changed": true,
-      "keywordHit": true,
-      "matchedKeywords": [
-        "otthon start",
-        "otthon start program"
-      ],
-      "newItemCount": 1,
+      "changed": false,
+      "keywordHit": false,
+      "matchedKeywords": [],
+      "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-01T11:42:36.489Z"
+      "checkedAt": "2026-10-01T17:26:38.196Z"
     },
     {
       "id": "penzcentrum",
@@ -245,7 +239,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-01T11:42:36.618Z"
+      "checkedAt": "2026-10-01T17:26:38.966Z"
     },
     {
       "id": "google-news-search",
@@ -260,7 +254,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-01T11:42:14.438Z"
+      "checkedAt": "2026-10-01T17:26:14.556Z"
     },
     {
       "id": "palyaz",
@@ -275,7 +269,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-01T11:42:37.299Z"
+      "checkedAt": "2026-10-01T17:26:39.857Z"
     },
     {
       "id": "palyazatok-org",
@@ -290,21 +284,29 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-01T11:42:39.236Z"
+      "checkedAt": "2026-10-01T17:26:41.951Z"
     }
   ],
   "summary": {
     "total": 18,
-    "changedCount": 3,
-    "keywordHitCount": 2,
+    "changedCount": 0,
+    "keywordHitCount": 0,
     "errorCount": 1,
-    "staleCount": 0,
-    "newsItemCount": 1
+    "staleCount": 1,
+    "newsItemCount": 0
   },
-  "staleAlerts": [],
+  "staleAlerts": [
+    {
+      "id": "telex",
+      "name": "Telex",
+      "url": "https://telex.hu/",
+      "tier": "press",
+      "consecutiveFailures": 3
+    }
+  ],
   "newsByTier": {
     "official": 0,
-    "press": 1,
+    "press": 0,
     "aggregator": 0
   },
   "shouldCommit": true
