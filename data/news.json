@@ -1,5 +1,23 @@
 [
   {
+    "id": "90097db5b4cdc5e4b11b5f0bdad87ba63f3b419401078367a243e1a28ef4df4a",
+    "sourceId": "portfolio",
+    "sourceName": "Portfolio",
+    "tier": "press",
+    "title": "Csúcsdöntésre készül a magyar lakosság, mindenkit meglepett az Otthon Start",
+    "url": "https://www.portfolio.hu/bank/20261001/csucsdontesre-keszul-a-magyar-lakossag-mindenkit-meglepett-az-otthon-start-866640",
+    "publishedAt": "2026-10-01T11:08:00.000Z",
+    "fetchedAt": "2026-10-01T11:42:14.438Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start",
+      "otthon start program"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "325fd573a3ffc6304628e23a01a6362bb448a17413678320419e64fc7d2a71b7",
     "sourceId": "telex",
     "sourceName": "Telex",
