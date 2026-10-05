@@ -1,5 +1,23 @@
 [
   {
+    "id": "f085b0259ac0cad8dfa336fc935b9a1387706d8937095752ade9b783c13339cb",
+    "sourceId": "bankmonitor",
+    "sourceName": "Bankmonitor",
+    "tier": "press",
+    "title": "Miért kötelező beszélni a hitelfedezeti biztosításról Otthon Startnál?",
+    "url": "https://bankmonitor.hu/mediatar/cikk/miert-kotelezo-beszelni-a-hitelfedezeti-biztositasrol-otthon-startnal/",
+    "publishedAt": "2026-10-05T11:11:51.000Z",
+    "fetchedAt": "2026-10-05T12:24:54.616Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start",
+      "otthon start program"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "f0c6e6d9e92fbe5d951b9520d07877424947278f83a28cb76817e6e63a1c9266",
     "sourceId": "neuzrt-oetp",
     "sourceName": "Nemzeti Energetikai Ügynökség – Otthoni Energiatároló Program aloldal",
