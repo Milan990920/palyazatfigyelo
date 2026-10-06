@@ -1,5 +1,54 @@
 [
   {
+    "id": "294f2f89fa1b9bf89165d65093347941f3ff22f75fe65b202fae49366c5e2f5e",
+    "sourceId": "allamkincstar",
+    "sourceName": "Magyar Államkincstár",
+    "tier": "official",
+    "title": "Magyar Államkincstár: tartalom módosult",
+    "url": "https://www.allamkincstar.gov.hu/",
+    "publishedAt": "2026-10-06T12:07:07.762Z",
+    "fetchedAt": "2026-10-06T12:06:58.647Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [],
+    "kind": "page-change"
+  },
+  {
+    "id": "fe8b586b5469e66bd995d8849585dfb02d55de71b535b5922369d29c1ac66d4d",
+    "sourceId": "index",
+    "sourceName": "Index",
+    "tier": "press",
+    "title": "Látványosan lassul az Otthon Start lendülete, de a támogatott lakáshitelek továbbra is uralják a piacot",
+    "url": "https://index.hu/gazdasag/2026/10/06/otthon-start-tamogatas-lakashitel/",
+    "publishedAt": "2026-10-06T08:42:00.000Z",
+    "fetchedAt": "2026-10-06T12:06:58.647Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "90869646e21013156a9e2721e96aac4542fa5bd6c1923bc22d54653fec59bc86",
+    "sourceId": "vg",
+    "sourceName": "Világgazdaság",
+    "tier": "press",
+    "title": "Fű alatt megüzenték a bankok a Tisza-kormánynak: fenheti a kést Kármán András, véget vetnének az Otthon Start mostani rendszerének",
+    "url": "https://www.vg.hu/vilaggazdasag-magyar-gazdasag/2026/10/otthon-start-allami-lakastamogatas-bank-hitel-tisza",
+    "publishedAt": "2026-10-05T17:44:57.000Z",
+    "fetchedAt": "2026-10-06T12:06:58.647Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "f085b0259ac0cad8dfa336fc935b9a1387706d8937095752ade9b783c13339cb",
     "sourceId": "bankmonitor",
     "sourceName": "Bankmonitor",
