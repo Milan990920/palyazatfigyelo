@@ -1,5 +1,23 @@
 [
   {
+    "id": "48015452f759c2cb21718586d9859575aa8b7c3447bf14e583966297b7073409",
+    "sourceId": "portfolio",
+    "sourceName": "Portfolio",
+    "tier": "press",
+    "title": "Vérszemet kaptak az Otthon Starttól a fiatalok, rengetegen vágnak bele 20% alatti önerővel a lakásvásárlásba",
+    "url": "https://www.portfolio.hu/bank/20261010/verszemet-kaptak-az-otthon-starttol-a-fiatalok-rengetegen-vagnak-bele-20-alatti-onerovel-a-lakasvasarlasba-868740",
+    "publishedAt": "2026-10-10T14:00:00.000Z",
+    "fetchedAt": "2026-10-10T16:18:19.500Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start",
+      "otthon start program"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "c43547376d3f377076f80ed6077c4cda15a76e27fcacb68626833598994a27d1",
     "sourceId": "neuzrt-oetp",
     "sourceName": "Nemzeti Energetikai Ügynökség – Otthoni Energiatároló Program aloldal",
