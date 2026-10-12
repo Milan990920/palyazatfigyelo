@@ -1,5 +1,37 @@
 [
   {
+    "id": "b92cc730c090faf3c486cb5def080df02a44c32d8c1f8d8cf5b08b756aa9fb49",
+    "sourceId": "neuzrt-oetp",
+    "sourceName": "Nemzeti Energetikai Ügynökség – Otthoni Energiatároló Program aloldal",
+    "tier": "official",
+    "title": "Nemzeti Energetikai Ügynökség – Otthoni Energiatároló Program aloldal: tartalom módosult",
+    "url": "https://otthonienergiatarolo.neuzrt.hu/",
+    "publishedAt": "2026-10-12T13:19:52.985Z",
+    "fetchedAt": "2026-10-12T13:19:39.728Z",
+    "programs": [
+      "energiatarolo"
+    ],
+    "matched": [],
+    "kind": "page-change"
+  },
+  {
+    "id": "07d0a0e791d2149fe5a138de06138d54c1e9f97c53d35c2d688a0c593e8eda8e",
+    "sourceId": "penzcentrum",
+    "sourceName": "Pénzcentrum",
+    "tier": "press",
+    "title": "Itt az igazi hidegzuhany az Otthon Start kapcsán? Ez tehet most be nagyon a lakásvásárlóknak",
+    "url": "https://www.penzcentrum.hu/otthon/20261012/itt-az-igazi-hidegzuhany-az-otthon-start-kapcsan-ez-tehet-most-be-nagyon-a-lakasvasarloknak-1207090",
+    "publishedAt": "2026-10-12T13:03:00.000Z",
+    "fetchedAt": "2026-10-12T13:19:39.728Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "48015452f759c2cb21718586d9859575aa8b7c3447bf14e583966297b7073409",
     "sourceId": "portfolio",
     "sourceName": "Portfolio",
