@@ -1,5 +1,5 @@
 {
-  "runAt": "2026-10-14T10:22:05.077Z",
+  "runAt": "2026-10-14T15:52:44.689Z",
   "results": [
     {
       "id": "magyar-kozlony",
@@ -14,7 +14,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-14T10:22:05.079Z"
+      "checkedAt": "2026-10-14T15:52:44.692Z"
     },
     {
       "id": "palyazat-gov",
@@ -28,8 +28,8 @@
       "matchedKeywords": [],
       "newItemCount": 0,
       "error": "fetch failed (indoka: ECONNREFUSED)",
-      "consecutiveFailures": 23,
-      "checkedAt": "2026-10-14T10:22:07.321Z"
+      "consecutiveFailures": 24,
+      "checkedAt": "2026-10-14T15:52:46.782Z"
     },
     {
       "id": "mfb-pontok-plusz",
@@ -38,13 +38,13 @@
       "method": "page",
       "url": "https://www.mfb.hu/mfb-pontok-plusz",
       "status": "ok",
-      "changed": true,
+      "changed": false,
       "keywordHit": false,
       "matchedKeywords": [],
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-14T10:22:07.825Z"
+      "checkedAt": "2026-10-14T15:52:47.910Z"
     },
     {
       "id": "neuzrt-oetp",
@@ -53,13 +53,13 @@
       "method": "page",
       "url": "https://otthonienergiatarolo.neuzrt.hu/",
       "status": "ok",
-      "changed": true,
-      "keywordHit": true,
+      "changed": false,
+      "keywordHit": false,
       "matchedKeywords": [],
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-14T10:22:09.230Z"
+      "checkedAt": "2026-10-14T15:52:48.990Z"
     },
     {
       "id": "kormany-energiaugyi",
@@ -68,13 +68,13 @@
       "method": "page",
       "url": "https://kormany.hu/kormanyzat/energiaugyi-miniszterium/hirek",
       "status": "ok",
-      "changed": true,
+      "changed": false,
       "keywordHit": false,
       "matchedKeywords": [],
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-14T10:22:11.047Z"
+      "checkedAt": "2026-10-14T15:52:50.300Z"
     },
     {
       "id": "allamkincstar",
@@ -89,7 +89,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-14T10:22:14.734Z"
+      "checkedAt": "2026-10-14T15:52:53.686Z"
     },
     {
       "id": "otthon-start-program",
@@ -104,7 +104,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-14T10:22:21.603Z"
+      "checkedAt": "2026-10-14T15:53:01.098Z"
     },
     {
       "id": "mehi",
@@ -119,7 +119,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-14T10:22:24.731Z"
+      "checkedAt": "2026-10-14T15:53:03.984Z"
     },
     {
       "id": "energiaklub",
@@ -134,7 +134,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-14T10:22:26.417Z"
+      "checkedAt": "2026-10-14T15:53:05.138Z"
     },
     {
       "id": "portfolio",
@@ -149,7 +149,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-14T10:22:27.251Z"
+      "checkedAt": "2026-10-14T15:53:05.731Z"
     },
     {
       "id": "vg",
@@ -164,7 +164,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-14T10:22:28.268Z"
+      "checkedAt": "2026-10-14T15:53:06.361Z"
     },
     {
       "id": "hvg",
@@ -179,7 +179,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-14T10:22:29.578Z"
+      "checkedAt": "2026-10-14T15:53:06.753Z"
     },
     {
       "id": "telex",
@@ -193,8 +193,8 @@
       "matchedKeywords": [],
       "newItemCount": 0,
       "error": "HTTP 403",
-      "consecutiveFailures": 5,
-      "checkedAt": "2026-10-14T10:22:29.948Z"
+      "consecutiveFailures": 6,
+      "checkedAt": "2026-10-14T15:53:06.918Z"
     },
     {
       "id": "index",
@@ -209,7 +209,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-14T10:22:30.167Z"
+      "checkedAt": "2026-10-14T15:53:07.067Z"
     },
     {
       "id": "bankmonitor",
@@ -224,7 +224,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-14T10:22:31.363Z"
+      "checkedAt": "2026-10-14T15:53:08.037Z"
     },
     {
       "id": "penzcentrum",
@@ -239,7 +239,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-14T10:22:31.720Z"
+      "checkedAt": "2026-10-14T15:53:08.399Z"
     },
     {
       "id": "google-news-search",
@@ -254,7 +254,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-14T10:22:05.077Z"
+      "checkedAt": "2026-10-14T15:52:44.689Z"
     },
     {
       "id": "palyaz",
@@ -269,7 +269,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-14T10:22:32.623Z"
+      "checkedAt": "2026-10-14T15:53:09.068Z"
     },
     {
       "id": "palyazatok-org",
@@ -284,16 +284,16 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-14T10:22:34.528Z"
+      "checkedAt": "2026-10-14T15:53:11.123Z"
     }
   ],
   "summary": {
     "total": 18,
-    "changedCount": 3,
-    "keywordHitCount": 1,
+    "changedCount": 0,
+    "keywordHitCount": 0,
     "errorCount": 2,
     "staleCount": 2,
-    "newsItemCount": 1
+    "newsItemCount": 0
   },
   "staleAlerts": [
     {
@@ -301,18 +301,18 @@
       "name": "Pályázat.gov.hu",
       "url": "https://www.palyazat.gov.hu/",
       "tier": "official",
-      "consecutiveFailures": 23
+      "consecutiveFailures": 24
     },
     {
       "id": "telex",
       "name": "Telex",
       "url": "https://telex.hu/",
       "tier": "press",
-      "consecutiveFailures": 5
+      "consecutiveFailures": 6
     }
   ],
   "newsByTier": {
-    "official": 1,
+    "official": 0,
     "press": 0,
     "aggregator": 0
   },
