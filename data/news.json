@@ -1,5 +1,41 @@
 [
   {
+    "id": "b1ad379f9c92981456974e80ea78c34fb52c90589907d17077dcff64e640e8cf",
+    "sourceId": "portfolio",
+    "sourceName": "Portfolio",
+    "tier": "press",
+    "title": "Rég láttunk ilyet: 2,85%-os lakáshitel jelent meg Magyarországon, és ez nem az Otthon Start",
+    "url": "https://www.portfolio.hu/bank/20261015/reg-lattunk-ilyet-285-os-lakashitel-jelent-meg-magyarorszagon-es-ez-nem-az-otthon-start-869590",
+    "publishedAt": "2026-10-15T10:00:00.000Z",
+    "fetchedAt": "2026-10-15T10:07:40.644Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start",
+      "otthon start program"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "03bf8e3d3e9a15182909b3f790d9795c13c77161f75d7c6349194258d8689fe4",
+    "sourceId": "bankmonitor",
+    "sourceName": "Bankmonitor",
+    "tier": "press",
+    "title": "Mit ajánlanak a bankok az Otthon Start-szigorítás előtt?",
+    "url": "https://bankmonitor.hu/mediatar/cikk/mit-ajanlanak-a-bankok-az-otthon-start-szigoritas-elott/",
+    "publishedAt": "2026-10-15T08:53:22.000Z",
+    "fetchedAt": "2026-10-15T10:07:40.644Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start",
+      "otthon start program"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "88bbd6e69be081de4f51ef146fde262eef4356027601a70432667a6093ede404",
     "sourceId": "neuzrt-oetp",
     "sourceName": "Nemzeti Energetikai Ügynökség – Otthoni Energiatároló Program aloldal",
