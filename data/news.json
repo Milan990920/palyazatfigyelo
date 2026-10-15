@@ -1,5 +1,43 @@
 [
   {
+    "id": "8dd16e13721b77c5b1b8005ecc80a33c65150d2619696face129e13c031d5e90",
+    "sourceId": "portfolio",
+    "sourceName": "Portfolio",
+    "tier": "press",
+    "title": "Otthoni energiatároló pályázat: fontos figyelmeztetés érkezett, ezért ne a legolcsóbb ajánlatot válasszuk!",
+    "url": "https://www.portfolio.hu/gazdasag/20261015/otthoni-energiatarolo-palyazat-fontos-figyelmeztetes-erkezett-ezert-ne-a-legolcsobb-ajanlatot-valasszuk-869806",
+    "publishedAt": "2026-10-15T15:00:00.000Z",
+    "fetchedAt": "2026-10-15T15:40:19.882Z",
+    "programs": [
+      "energiatarolo"
+    ],
+    "matched": [
+      "otthoni energiatarolo program",
+      "otthoni energiatarolo",
+      "oetp",
+      "energiatarolo program",
+      "energiatarolo palyazat"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "b81a60ab1c394ba225d3b35420d09c34715809f1335fe77e9e4a9754f23c4eb9",
+    "sourceId": "bankmonitor",
+    "sourceName": "Bankmonitor",
+    "tier": "press",
+    "title": "Tavaly a fiatalok 68%-a nyitott volt a hitelre – mondd el idén is, hogy mit gondolsz a hitelekről",
+    "url": "https://bankmonitor.hu/mediatar/cikk/tavaly-a-fiatalok-68-a-nyitott-volt-a-hitelre-mondd-el-iden-is-hogy-mit-gondolsz-a-hitelekrol/",
+    "publishedAt": "2026-10-15T11:07:29.000Z",
+    "fetchedAt": "2026-10-15T15:40:19.882Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "b1ad379f9c92981456974e80ea78c34fb52c90589907d17077dcff64e640e8cf",
     "sourceId": "portfolio",
     "sourceName": "Portfolio",
