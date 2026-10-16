@@ -1,5 +1,39 @@
 [
   {
+    "id": "d1cc1a6ab4d4f5b5243d2bdef85f1ba958ff61e8dc79975b9145f40cad41290d",
+    "sourceId": "bankmonitor",
+    "sourceName": "Bankmonitor",
+    "tier": "press",
+    "title": "Ezek a legolcsóbb lakáshitelek októberben",
+    "url": "https://bankmonitor.hu/mediatar/cikk/ezek-a-legolcsobb-lakashitelek-oktoberben/",
+    "publishedAt": "2026-10-16T09:04:20.000Z",
+    "fetchedAt": "2026-10-16T09:57:42.629Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "af53af041662f4a459b4a10819463ddb38736a1309de4683ba1bcbb90d2bcce1",
+    "sourceId": "vg",
+    "sourceName": "Világgazdaság",
+    "tier": "press",
+    "title": "A kormányváltás után hirtelen agyondicsérik az Otthon Startot, igazi mézesbödönhöz jutott az OTP – Magyarország a régió egyik legerősebb növekedési motorja",
+    "url": "https://www.vg.hu/penz-es-tokepiac/2026/10/otp-hatalmas-perspektiva-tarult-fel-a-lakashitelpiacon",
+    "publishedAt": "2026-10-16T04:00:50.000Z",
+    "fetchedAt": "2026-10-16T09:57:42.629Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "8dd16e13721b77c5b1b8005ecc80a33c65150d2619696face129e13c031d5e90",
     "sourceId": "portfolio",
     "sourceName": "Portfolio",
