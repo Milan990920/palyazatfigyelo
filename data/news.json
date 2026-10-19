@@ -1,5 +1,143 @@
 [
   {
+    "id": "b6de4ea1aafc86ebc49db15892cf2494fceec5f47a2d57254efa21b5706a78d2",
+    "sourceId": "bankmonitor",
+    "sourceName": "Bankmonitor",
+    "tier": "press",
+    "title": "9 millióval kevesebb hitel, 55 ezerrel drágább törlesztő – ezt jelenti a gyakorlatban a Wekerle+ hitel",
+    "url": "https://bankmonitor.hu/mediatar/cikk/9-millioval-kevesebb-hitel-55-ezerrel-dragabb-torleszto-ezt-jelenti-a-gyakorlatban-a-wekerle-hitel/",
+    "publishedAt": "2026-10-19T17:10:02.000Z",
+    "fetchedAt": "2026-10-19T17:38:04.762Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "d3c0183896be5cb7eb88c7de1b93222e963b8a80510ee3582e7365b582e47752",
+    "sourceId": "vg",
+    "sourceName": "Világgazdaság",
+    "tier": "press",
+    "title": "Otthon Start után Wekerle Plusz: nagy csinnadrattával jelentette be a Tisza-kormány, de van egy súlyos bökkenő – sok fiatal hoppon maradhat",
+    "url": "https://www.vg.hu/vilaggazdasag-magyar-gazdasag/2026/10/wekerle-plusz-otthon-start-lakasvasarlas-duna-house",
+    "publishedAt": "2026-10-19T16:54:54.000Z",
+    "fetchedAt": "2026-10-19T17:38:04.762Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "096e14e833e979771ab880ed5835f2c34581bdb232dafab0f189b7762f97ab6f",
+    "sourceId": "penzcentrum",
+    "sourceName": "Pénzcentrum",
+    "tier": "press",
+    "title": "Jön a Wekerle Plusz, mi lesz az ingatlanárakkal? Erre készüljön, aki használt lakást venne 2027-ben",
+    "url": "https://www.penzcentrum.hu/otthon/20261019/jon-a-wekerle-plusz-mi-lesz-az-ingatlanarakkal-erre-keszuljon-aki-hasznalt-lakast-venne-2027-ben-1207528",
+    "publishedAt": "2026-10-19T16:28:00.000Z",
+    "fetchedAt": "2026-10-19T17:38:04.762Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "0898ef9c7d6446c3b7f861753f6a6e87aeabf6b148be4b7a515e8a1a767ee69b",
+    "sourceId": "telex",
+    "sourceName": "Telex",
+    "tier": "press",
+    "title": "Vége az Otthon Startnak: új lakáshitel jön, a Wekerle Pluszban már nem mindenkinek jár a 3 százalékos kamat",
+    "url": "https://telex.hu/gazdasag/2026/10/19/otthon-start-helyett-wekerle-program-kinek-hany-eves-korig-mennyi-energetikai-korszerusites-kiknek-reszletek",
+    "publishedAt": "2026-10-19T14:34:18.000Z",
+    "fetchedAt": "2026-10-19T17:38:04.762Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "feffe65cd0166f11113c6843c559a3dec2322340d0042848bd5bcd3597a7d233",
+    "sourceId": "index",
+    "sourceName": "Index",
+    "tier": "press",
+    "title": "Jön az Otthon Start utódja: új lakástámogatási csomaggal segítené a kormány az otthonteremtést",
+    "url": "https://index.hu/belfold/2026/10/19/magyar-peter-wekerle-plusz-wekerle-sandor-lakas-es-kollegiumepitesi-program-otthon-start/",
+    "publishedAt": "2026-10-19T13:32:00.000Z",
+    "fetchedAt": "2026-10-19T17:38:04.762Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "3567b8fed8350578cbcf52e67df656e51f0a62bd075917612a58f163e52b7296",
+    "sourceId": "vg",
+    "sourceName": "Világgazdaság",
+    "tier": "press",
+    "title": "Vége, hivatalos: megszünteti az Otthon start programot a Tisza-kormány, most hirdette ki Magyar Péter – ez az új kormányzati intézkedés lép a helyébe",
+    "url": "https://www.vg.hu/vilaggazdasag-magyar-gazdasag/2026/10/otthon-start-program-megszuntetese-koltsegvetes-2027",
+    "publishedAt": "2026-10-19T13:25:30.000Z",
+    "fetchedAt": "2026-10-19T17:38:04.762Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start",
+      "otthon start program"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "2d92dea35d1338f561991f253cb9b05336ee62139397b2125a0083e398e08541",
+    "sourceId": "penzcentrum",
+    "sourceName": "Pénzcentrum",
+    "tier": "press",
+    "title": "Az Otthon Start Program megszűnik, jön a Wekerle+: Magyar Péter bejelentette az új lakástámogatás részleteit",
+    "url": "https://www.penzcentrum.hu/otthon/20261019/az-otthon-start-program-megszunik-jon-a-wekelre-magyar-peter-bejelentette-az-uj-lakastamogatas-reszleteit-1207516",
+    "publishedAt": "2026-10-19T12:50:00.000Z",
+    "fetchedAt": "2026-10-19T17:38:04.762Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start",
+      "otthon start program"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "e769d28e9bcde673cdc4fd6d9cac0f24abe76c648fd84c864103fecdf795c3e3",
+    "sourceId": "index",
+    "sourceName": "Index",
+    "tier": "press",
+    "title": "Jön a Wekerle+ lakásvásárlási és építési hitel, ez váltja az Otthon Startot",
+    "url": "https://index.hu/belfold/2026/10/19/orszaggyules-parlament-magyar-peter-koltsegvetes-tisza-part-fidesz-kdnp-mi-hazank-mozgalom/jon-a-wekerle-lakasvasarlasi-es-epitesi-hitel-ez-valtja-az-otthon-startot/",
+    "publishedAt": "2026-10-19T12:42:27.000Z",
+    "fetchedAt": "2026-10-19T17:38:04.762Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "1ef3389926772868295b249e05b45e6addbb3e6083bc3a046ff2eb77cefe8b2a",
     "sourceId": "neuzrt-oetp",
     "sourceName": "Nemzeti Energetikai Ügynökség – Otthoni Energiatároló Program aloldal",
