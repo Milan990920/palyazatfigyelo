@@ -1,5 +1,20 @@
 [
   {
+    "id": "1ef3389926772868295b249e05b45e6addbb3e6083bc3a046ff2eb77cefe8b2a",
+    "sourceId": "neuzrt-oetp",
+    "sourceName": "Nemzeti Energetikai Ügynökség – Otthoni Energiatároló Program aloldal",
+    "tier": "official",
+    "title": "Nemzeti Energetikai Ügynökség – Otthoni Energiatároló Program aloldal: tartalom módosult",
+    "url": "https://otthonienergiatarolo.neuzrt.hu/",
+    "publishedAt": "2026-10-19T10:59:05.674Z",
+    "fetchedAt": "2026-10-19T10:59:01.114Z",
+    "programs": [
+      "energiatarolo"
+    ],
+    "matched": [],
+    "kind": "page-change"
+  },
+  {
     "id": "d1cc1a6ab4d4f5b5243d2bdef85f1ba958ff61e8dc79975b9145f40cad41290d",
     "sourceId": "bankmonitor",
     "sourceName": "Bankmonitor",
