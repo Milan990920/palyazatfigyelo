@@ -1,5 +1,122 @@
 [
   {
+    "id": "0919f94fb4b826c6b83bdb17b1518ea8a69ebbb0a830c5ff0fe7908b58f7285e",
+    "sourceId": "allamkincstar",
+    "sourceName": "Magyar Államkincstár",
+    "tier": "official",
+    "title": "Magyar Államkincstár: tartalom módosult",
+    "url": "https://www.allamkincstar.gov.hu/",
+    "publishedAt": "2026-10-20T15:43:11.558Z",
+    "fetchedAt": "2026-10-20T15:43:02.580Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [],
+    "kind": "page-change"
+  },
+  {
+    "id": "e99193a3ee0423fc3603b8d1e85c6185235a83901ade83195a848c2c11edf669",
+    "sourceId": "neuzrt-oetp",
+    "sourceName": "Nemzeti Energetikai Ügynökség – Otthoni Energiatároló Program aloldal",
+    "tier": "official",
+    "title": "Nemzeti Energetikai Ügynökség – Otthoni Energiatároló Program aloldal: tartalom módosult",
+    "url": "https://otthonienergiatarolo.neuzrt.hu/",
+    "publishedAt": "2026-10-20T15:43:06.494Z",
+    "fetchedAt": "2026-10-20T15:43:02.580Z",
+    "programs": [
+      "energiatarolo"
+    ],
+    "matched": [],
+    "kind": "page-change"
+  },
+  {
+    "id": "03e2b062e3e65392a24bf3a1c98d3acac056f72d54c2343bfda9a25e966a2916",
+    "sourceId": "portfolio",
+    "sourceName": "Portfolio",
+    "tier": "press",
+    "title": "Viszlát, Otthon Start! − Új világ jön a támogatott lakáshitelpiacon",
+    "url": "https://www.portfolio.hu/podcast/20261020/viszlat-otthon-start-uj-vilag-jon-a-tamogatott-lakashitelpiacon-870962",
+    "publishedAt": "2026-10-20T15:00:00.000Z",
+    "fetchedAt": "2026-10-20T15:43:02.580Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start",
+      "otthon start program"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "1996bf517edd80968edaa91f8a32a77eb164caa2de605bc97186266e544d1169",
+    "sourceId": "hvg",
+    "sourceName": "HVG",
+    "tier": "press",
+    "title": "Az anyák adómentességének korlátozásával a kormány fenntarthatóvá, igazságosabbá akarja tenni a rendszert",
+    "url": "https://hvg.hu/gazdasag/20261020_koltsegvetes-2027-reszletek-szja-mentessegek-sporolas",
+    "publishedAt": "2026-10-20T14:56:18.000Z",
+    "fetchedAt": "2026-10-20T15:43:02.580Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "05e324d651657a71cbfd0749573690fab0979e19f8f134b4373f2369ef7b6185",
+    "sourceId": "bankmonitor",
+    "sourceName": "Bankmonitor",
+    "tier": "press",
+    "title": "Azt mondták, 41 felett már nem jár a 3%-os hitel. Judit mégis megtalálta a módját",
+    "url": "https://bankmonitor.hu/mediatar/cikk/azt-mondtak-41-felett-mar-nem-jar-a-3-os-hitel-judit-megis-megtalalta-a-modjat/",
+    "publishedAt": "2026-10-20T13:17:10.000Z",
+    "fetchedAt": "2026-10-20T15:43:02.580Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "ee04fe7af15a144ad249a5c047e55c93595417dfe974336219007986b34e1eca",
+    "sourceId": "bankmonitor",
+    "sourceName": "Bankmonitor",
+    "tier": "press",
+    "title": "Wekerle Plusz hitel – ezekre a kérdésekre még nincs válasz",
+    "url": "https://bankmonitor.hu/mediatar/cikk/wekerle-plusz-hitel-ezekre-a-kerdesekre-meg-nincs-valasz/",
+    "publishedAt": "2026-10-20T12:31:22.000Z",
+    "fetchedAt": "2026-10-20T15:43:02.580Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start",
+      "otthon start program"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "3468a9465b2d9bfec9f7ccd98ea7987263c511cba844d36784aea16f425e1ca9",
+    "sourceId": "bankmonitor",
+    "sourceName": "Bankmonitor",
+    "tier": "press",
+    "title": "Wekerle+ hitel – minden, amit eddig tudni lehet a feltételekről és a törlesztőkről",
+    "url": "https://bankmonitor.hu/mediatar/cikk/wekerle-hitel-minden-amit-eddig-tudni-lehet-a-feltetelekrol-es-a-torlesztokrol/",
+    "publishedAt": "2026-10-20T12:15:48.000Z",
+    "fetchedAt": "2026-10-20T15:43:02.580Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "97bc1087cc6cd3e403a289d39f5ba48dfc29f5730319dbf13696df18cda16c89",
     "sourceId": "index",
     "sourceName": "Index",
