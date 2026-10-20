@@ -1,5 +1,39 @@
 [
   {
+    "id": "97bc1087cc6cd3e403a289d39f5ba48dfc29f5730319dbf13696df18cda16c89",
+    "sourceId": "index",
+    "sourceName": "Index",
+    "tier": "press",
+    "title": "Beindulhat a lakáspiac az Otthon Start utódjától, de drágább lehet a hitel a használt lakásokra",
+    "url": "https://index.hu/gazdasag/2026/10/20/otthon-start-wekerle-plusz-lakastamogatas/",
+    "publishedAt": "2026-10-20T09:46:00.000Z",
+    "fetchedAt": "2026-10-20T10:12:34.470Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "f3fcb1bbb84b9edd5f6b2896a232d83a7fbdfbbddd9a9b3c246dc375bef2ecfe",
+    "sourceId": "vg",
+    "sourceName": "Világgazdaság",
+    "tier": "press",
+    "title": "Ízekre szedték Magyar Péter adóterveit: ennyit vesznek el a legnagyobb hazai cégektől – a Molt nagyon megsarcolják, az OTP-nek az Otthon Start szigorítása fájhat majd igazán",
+    "url": "https://www.vg.hu/penz-es-tokepiac/2026/10/magyar-peter-adotervek-koltsegvetes-tozsde-otp-mol",
+    "publishedAt": "2026-10-20T09:03:01.000Z",
+    "fetchedAt": "2026-10-20T10:12:34.470Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "b6de4ea1aafc86ebc49db15892cf2494fceec5f47a2d57254efa21b5706a78d2",
     "sourceId": "bankmonitor",
     "sourceName": "Bankmonitor",
