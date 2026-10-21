@@ -1,5 +1,56 @@
 [
   {
+    "id": "42d2d3fdcb8e1eac08019a70fa950becc1c43a859d68bf0f39978e5d9f7a3a29",
+    "sourceId": "portfolio",
+    "sourceName": "Portfolio",
+    "tier": "press",
+    "title": "Komoly átrendezés jön a költségvetésben - Ezekre az intézkedésekre figyelnek a legtöbben",
+    "url": "https://www.portfolio.hu/gazdasag/20261021/komoly-atrendezes-jon-a-koltsegvetesben-ezekre-az-intezkedesekre-figyelnek-a-legtobben-871016",
+    "publishedAt": "2026-10-21T10:00:00.000Z",
+    "fetchedAt": "2026-10-21T10:21:08.870Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "f42737612988e0f755625eb125ba56886938cb6977331282be323bb9e3ef7aed",
+    "sourceId": "vg",
+    "sourceName": "Világgazdaság",
+    "tier": "press",
+    "title": "Kapitány István most jelentette be az otthonfelújítási program részleteit: ezekre a korszerűsítésekre ad pénzt az állam – óriási a különbség a lakások és a házak között",
+    "url": "https://www.vg.hu/vilaggazdasag-magyar-gazdasag/2026/10/otthonfelujitas-energetikai-korszerusites-tamogatas",
+    "publishedAt": "2026-10-21T07:26:01.000Z",
+    "fetchedAt": "2026-10-21T10:21:08.870Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthonfelujitasi program"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "f16b540371f52787ffd41eea1c7a490ff409276d3d37e30faa2d2bc1dd1ef670",
+    "sourceId": "vg",
+    "sourceName": "Világgazdaság",
+    "tier": "press",
+    "title": "Sürgősen lépniük kell: ők járnak a legrosszabbul az Otthon Start kivégzésével és a Wekerle Plusz elindulásával – még utoljára megrohanhatják a magyarok a bankokat",
+    "url": "https://www.vg.hu/vilaggazdasag-magyar-gazdasag/2026/10/lakaspiac-otthon-start-koltsegvetes-2027-wekerle-plusz",
+    "publishedAt": "2026-10-21T06:00:00.000Z",
+    "fetchedAt": "2026-10-21T10:21:08.870Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "0919f94fb4b826c6b83bdb17b1518ea8a69ebbb0a830c5ff0fe7908b58f7285e",
     "sourceId": "allamkincstar",
     "sourceName": "Magyar Államkincstár",
