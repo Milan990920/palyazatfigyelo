@@ -1,5 +1,88 @@
 [
   {
+    "id": "abd3d5efd7c28dfa320c355b3c9ebaee4cb6d3a665790f00a8e1b55b7baf6881",
+    "sourceId": "allamkincstar",
+    "sourceName": "Magyar Államkincstár",
+    "tier": "official",
+    "title": "Magyar Államkincstár: tartalom módosult",
+    "url": "https://www.allamkincstar.gov.hu/",
+    "publishedAt": "2026-10-21T16:01:23.601Z",
+    "fetchedAt": "2026-10-21T16:01:12.996Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [],
+    "kind": "page-change"
+  },
+  {
+    "id": "d036e9f5274c03a16025ce27cebb91280d856e80dd7c2896423aff1f8066c870",
+    "sourceId": "vg",
+    "sourceName": "Világgazdaság",
+    "tier": "press",
+    "title": "Kapitány István nagyon meglepett 15 ezer családot, még több energiatárolót akar, és azt mondja: lesz pénz",
+    "url": "https://www.vg.hu/vilaggazdasag-magyar-gazdasag/2026/10/kapitany-istvan-tisza-lakossagi-energiatarolo-program",
+    "publishedAt": "2026-10-21T15:09:22.000Z",
+    "fetchedAt": "2026-10-21T16:01:12.996Z",
+    "programs": [
+      "energiatarolo"
+    ],
+    "matched": [
+      "energiatarolo program"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "e0b27afb607b002e2839d8d32ca8e1086b81e43ab9f17d599a304b5a4b57d855",
+    "sourceId": "portfolio",
+    "sourceName": "Portfolio",
+    "tier": "press",
+    "title": "Wekerle Plusz: mutatunk három számítást, amit muszáj látniuk az élelmes lakásvásárlóknak",
+    "url": "https://www.portfolio.hu/bank/20261021/wekerle-plusz-mutatunk-harom-szamitast-amit-muszaj-latniuk-az-elelmes-lakasvasarloknak-871296",
+    "publishedAt": "2026-10-21T15:00:00.000Z",
+    "fetchedAt": "2026-10-21T16:01:12.996Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "bcaadf01a56366b67016e5afe98b3a0248f663f07d76d617b4e8af80610528d4",
+    "sourceId": "portfolio",
+    "sourceName": "Portfolio",
+    "tier": "press",
+    "title": "Megszólalt a szakértő az állami otthonfelújítási programról: akár félmillió forintos önerő is elég lehet",
+    "url": "https://www.portfolio.hu/ingatlan/20261021/megszolalt-a-szakerto-az-allami-otthonfelujitasi-programrol-akar-felmillio-forintos-onero-is-eleg-lehet-871298",
+    "publishedAt": "2026-10-21T14:45:00.000Z",
+    "fetchedAt": "2026-10-21T16:01:12.996Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthonfelujitasi program"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "2ad589ab46e3e4f73abb23f5034fa7fd848cb379f69a55168fdaec347eaa253e",
+    "sourceId": "penzcentrum",
+    "sourceName": "Pénzcentrum",
+    "tier": "press",
+    "title": "Otthon Start kontra Wekerle Plusz: milliókat bukhat, aki nem lép időben - itt vannak a részletek az új lakáshitelről",
+    "url": "https://www.penzcentrum.hu/otthon/20261021/otthon-start-kontra-wekerle-plusz-milliokat-bukhat-aki-nem-lep-idoben-itt-vannak-a-reszletek-az-uj-lakashitelrol-1207639",
+    "publishedAt": "2026-10-21T12:30:00.000Z",
+    "fetchedAt": "2026-10-21T16:01:12.996Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "42d2d3fdcb8e1eac08019a70fa950becc1c43a859d68bf0f39978e5d9f7a3a29",
     "sourceId": "portfolio",
     "sourceName": "Portfolio",
