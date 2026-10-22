@@ -1,5 +1,37 @@
 [
   {
+    "id": "a21e2f6826224d700143a80325ff0aca2ccf97a2a80e226ad8cc67cc99b0a435",
+    "sourceId": "allamkincstar",
+    "sourceName": "Magyar Államkincstár",
+    "tier": "official",
+    "title": "Magyar Államkincstár: tartalom módosult",
+    "url": "https://www.allamkincstar.gov.hu/",
+    "publishedAt": "2026-10-22T15:56:38.783Z",
+    "fetchedAt": "2026-10-22T15:56:29.833Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [],
+    "kind": "page-change"
+  },
+  {
+    "id": "5b67ac8fcd382dd2b59a2606a75f7fe2bcb03f9d33bba6f3d4ae624506c50f49",
+    "sourceId": "hvg",
+    "sourceName": "HVG",
+    "tier": "press",
+    "title": "Ha utolsó pillanatban igényelne Otthon start hitelt, így érdemes belevágni",
+    "url": "https://hvg.hu/gazdasag/20261022_bankmonitor-lakas-otthon-start-hitel",
+    "publishedAt": "2026-10-22T12:19:20.000Z",
+    "fetchedAt": "2026-10-22T15:56:29.833Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "ca850ce92449cb1f13d87a0ede495f75b4454c38b56578f7fd17ba0f3481a2e0",
     "sourceId": "telex",
     "sourceName": "Telex",
