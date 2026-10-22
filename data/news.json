@@ -1,5 +1,39 @@
 [
   {
+    "id": "ca850ce92449cb1f13d87a0ede495f75b4454c38b56578f7fd17ba0f3481a2e0",
+    "sourceId": "telex",
+    "sourceName": "Telex",
+    "tier": "press",
+    "title": "Alkotmánybírósághoz fordul a Fidesz–KDNP az otthoni energiatárolók támogatásának csökkentése miatt",
+    "url": "https://telex.hu/belfold/2026/10/22/alkotmanybirosag-fidesz-kdnp-otthoni-energiatarolok-tamogatas-csokkentes",
+    "publishedAt": "2026-10-22T06:42:24.000Z",
+    "fetchedAt": "2026-10-22T10:20:23.407Z",
+    "programs": [
+      "energiatarolo"
+    ],
+    "matched": [
+      "otthoni energiatarolo"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "e96db24c231f61ecd00d4e54caf71bef244ec92740a76803054aa3f42e788b62",
+    "sourceId": "vg",
+    "sourceName": "Világgazdaság",
+    "tier": "press",
+    "title": "Megszűnik az Otthon Start, erre számítsunk a lakáspiacon – megszólalt a szakértő",
+    "url": "https://www.vg.hu/ingatlan/2026/10/otthon-start-megszunik-ingatlan-hitel",
+    "publishedAt": "2026-10-21T16:30:03.000Z",
+    "fetchedAt": "2026-10-22T10:20:23.407Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "abd3d5efd7c28dfa320c355b3c9ebaee4cb6d3a665790f00a8e1b55b7baf6881",
     "sourceId": "allamkincstar",
     "sourceName": "Magyar Államkincstár",
@@ -242,6 +276,23 @@
     "url": "https://bankmonitor.hu/mediatar/cikk/wekerle-hitel-minden-amit-eddig-tudni-lehet-a-feltetelekrol-es-a-torlesztokrol/",
     "publishedAt": "2026-10-20T12:15:48.000Z",
     "fetchedAt": "2026-10-20T15:43:02.580Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "18147db8631d6b852cb216661d4f65a33872bf6e48a22c3e16f004ccf974af6f",
+    "sourceId": "bankmonitor",
+    "sourceName": "Bankmonitor",
+    "tier": "press",
+    "title": "Wekerle Plusz hitel – minden, amit eddig tudni lehet a feltételekről és a törlesztőkről",
+    "url": "https://bankmonitor.hu/mediatar/cikk/wekerle-plusz-hitel-minden-amit-eddig-tudni-lehet-a-feltetelekrol-es-a-torlesztokrol/",
+    "publishedAt": "2026-10-20T12:15:48.000Z",
+    "fetchedAt": "2026-10-22T10:20:23.407Z",
     "programs": [
       "videki-otthonfelujitas"
     ],
