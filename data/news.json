@@ -1,5 +1,22 @@
 [
   {
+    "id": "a1ce33ec2135f70cc82f775bad9fb292c037e18710ffe8e46f5aa2960dc4235a",
+    "sourceId": "vg",
+    "sourceName": "Világgazdaság",
+    "tier": "press",
+    "title": "Megkondult a lélekharang az Otthon Start felett, most még elérhető, de mindenre oda kell figyelni",
+    "url": "https://www.vg.hu/ingatlan/2026/10/otthon-start-most-meg-elerheto-de-oda-kell-figyelni",
+    "publishedAt": "2026-10-24T14:35:52.000Z",
+    "fetchedAt": "2026-10-24T14:42:38.581Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "5074f6b4a1536dc783854314acb354b038aec4c409c38c3a620c817a3d21ac94",
     "sourceId": "bankmonitor",
     "sourceName": "Bankmonitor",
