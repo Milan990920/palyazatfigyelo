@@ -1,5 +1,23 @@
 [
   {
+    "id": "5074f6b4a1536dc783854314acb354b038aec4c409c38c3a620c817a3d21ac94",
+    "sourceId": "bankmonitor",
+    "sourceName": "Bankmonitor",
+    "tier": "press",
+    "title": "Ha utolsó pillanatban igényelne Otthon Startot – így érdemes belevágni",
+    "url": "https://bankmonitor.hu/mediatar/cikk/ha-utolso-pillanatban-igenyelne-otthon-startot-igy-erdemes-belevagni/",
+    "publishedAt": "2026-10-24T06:04:16.000Z",
+    "fetchedAt": "2026-10-24T09:38:28.356Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start",
+      "otthon start program"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "a21e2f6826224d700143a80325ff0aca2ccf97a2a80e226ad8cc67cc99b0a435",
     "sourceId": "allamkincstar",
     "sourceName": "Magyar Államkincstár",
