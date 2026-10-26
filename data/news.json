@@ -1,5 +1,40 @@
 [
   {
+    "id": "16d0cbed86cf7244343ca98c19b04298823e00a3c5c3ff769fff36c1d45353ef",
+    "sourceId": "bankmonitor",
+    "sourceName": "Bankmonitor",
+    "tier": "press",
+    "title": "Megtorpant a lakásdrágulás – de a kivárásnak is lehet ára",
+    "url": "https://bankmonitor.hu/mediatar/cikk/megtorpant-a-lakasdragulas-de-a-kivarasnak-is-lehet-ara/",
+    "publishedAt": "2026-10-26T10:32:05.000Z",
+    "fetchedAt": "2026-10-26T11:18:37.888Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start",
+      "otthon start program"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "844e73ec6912c7ff909f42ad2e1c0a3e3830d94ce8ffc2f9ca83b857f54322fd",
+    "sourceId": "penzcentrum",
+    "sourceName": "Pénzcentrum",
+    "tier": "press",
+    "title": "Nagyot drágultak a lakások az Otthon Start miatt, most a lengyel példa figyelmeztet",
+    "url": "https://www.penzcentrum.hu/otthon/20261026/nagyot-dragultak-a-lakasok-az-otthon-start-miatt-most-a-lengyel-pelda-figyelmeztet-1207887",
+    "publishedAt": "2026-10-26T09:10:00.000Z",
+    "fetchedAt": "2026-10-26T11:18:37.888Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "a1ce33ec2135f70cc82f775bad9fb292c037e18710ffe8e46f5aa2960dc4235a",
     "sourceId": "vg",
     "sourceName": "Világgazdaság",
