@@ -1,5 +1,176 @@
 [
   {
+    "id": "680c7b59b73865e6a350fed9164c2cf61abf8fe6eca416f1fce415f5e431aab9",
+    "sourceId": "vg",
+    "sourceName": "Világgazdaság",
+    "tier": "press",
+    "title": "Kitört a káosz: mégse vezeti ki a Tisza-kormány az Otthon Startot úgy, ahogy Kármán András órákkal ezelőtt közölte - itt vannak az új dátumok, Magyar Péter most árulta el",
+    "url": "https://www.vg.hu/vilaggazdasag-magyar-gazdasag/2026/10/wekerle-plusz-otthonteremtes-hitel-kamat-otthon-start",
+    "publishedAt": "2026-10-27T16:08:46.000Z",
+    "fetchedAt": "2026-10-27T16:46:09.913Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "0300d2b8a456739818377fd5626fb77aaece5f945034b736b62d612bef909201",
+    "sourceId": "portfolio",
+    "sourceName": "Portfolio",
+    "tier": "press",
+    "title": "Lakossági pénzeső: megérkeztek a kormány bejelentései a 3%-os hitelről, a felújítási programról és a lakástakarékról",
+    "url": "https://www.portfolio.hu/ingatlan/20261027/lakossagi-penzeso-megerkeztek-a-kormany-bejelentesei-a-3-os-hitelrol-a-felujitasi-programrol-es-a-lakastakarekrol-872230",
+    "publishedAt": "2026-10-27T15:54:00.000Z",
+    "fetchedAt": "2026-10-27T16:46:09.913Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "2e5063dc488cc2836b1262ab24aaaa3c4433c9865f8f87004e79f5fcded2a048",
+    "sourceId": "portfolio",
+    "sourceName": "Portfolio",
+    "tier": "press",
+    "title": "Pontosított Magyar Péter: még négy napig lehet Otthon Startra lakást vásárolni",
+    "url": "https://www.portfolio.hu/bank/20261027/pontositott-magyar-peter-meg-negy-napig-lehet-otthon-startra-lakast-vasarolni-872314",
+    "publishedAt": "2026-10-27T15:54:00.000Z",
+    "fetchedAt": "2026-10-27T16:46:09.913Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start",
+      "otthon start program"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "4e32cb986a8bbbaed966c5aed62b8bdac1ecdde36fb1ea8ef29208d54100bd86",
+    "sourceId": "bankmonitor",
+    "sourceName": "Bankmonitor",
+    "tier": "press",
+    "title": "Kik járnak jól a Wekerle Plusz hitellel az Otthon Starthoz képest?",
+    "url": "https://bankmonitor.hu/mediatar/cikk/kik-jarnak-jol-a-wekerle-plusz-hitellel-az-otthon-starthoz-kepest/",
+    "publishedAt": "2026-10-27T15:18:41.000Z",
+    "fetchedAt": "2026-10-27T16:46:09.913Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "6688e3ff1510e256db997bc4d7a04d7acdf7900c600c0566c175b7924ba481eb",
+    "sourceId": "bankmonitor",
+    "sourceName": "Bankmonitor",
+    "tier": "press",
+    "title": "Mit tegyél, hogy megkapd az Otthon Startot, ha van október 31-ig megkötött adásvételi szerződésed?",
+    "url": "https://bankmonitor.hu/mediatar/cikk/mit-tegyel-hogy-megkapd-az-otthon-startot-ha-van-oktober-31-ig-megkotott-adasveteli-szerzodesed/",
+    "publishedAt": "2026-10-27T15:14:02.000Z",
+    "fetchedAt": "2026-10-27T16:46:09.913Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "0ad165e288f0504faed9536ab2cef71dba1668bd42137929a8b2c04a152b44d9",
+    "sourceId": "index",
+    "sourceName": "Index",
+    "tier": "press",
+    "title": "Kiváltja az Otthon Startot a Wekerle Plusz, a babaváró hitelhez is hozzányúl a kormány: itt a 10 legfontosabb bejelentés",
+    "url": "https://index.hu/gazdasag/2026/10/27/wekerle-plusz-csaladtamogatas-magyar-peter-karman-andras-hitelprogram-otthonstart/",
+    "publishedAt": "2026-10-27T14:24:00.000Z",
+    "fetchedAt": "2026-10-27T16:46:09.913Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "ce34cb97964454dde0e2d5dc7a4eaf8d2a0cbd43d59d9c650343ece916153e59",
+    "sourceId": "penzcentrum",
+    "sourceName": "Pénzcentrum",
+    "tier": "press",
+    "title": "Wekerle Plusz: 25 kérdés és válasz az új lakáshitelről, a felújítási támogatásról és a Babaváró hitel módosításáról",
+    "url": "https://www.penzcentrum.hu/otthon/20261027/wekerle-plusz-25-kerdes-es-valasz-az-uj-lakashitelrol-a-felujitasi-tamogatasrol-es-a-babavaro-hitel-modositasarol-1207979",
+    "publishedAt": "2026-10-27T13:16:00.000Z",
+    "fetchedAt": "2026-10-27T16:46:09.913Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "a5b84617a075f4e92cb8bf4134e7b6a6361314de9262558840f583e41c7a1265",
+    "sourceId": "penzcentrum",
+    "sourceName": "Pénzcentrum",
+    "tier": "press",
+    "title": "Roham már nem lesz az Otthon Startért, ez az árfelhajtó hatást is kizárja: mi jön a lakáspiacon a Wekerle Plusz hitellel?",
+    "url": "https://www.penzcentrum.hu/otthon/20261027/roham-mar-nem-lesz-az-otthon-startert-ez-az-arfelhajto-hatast-is-kizarja-mi-jon-a-lakaspiacon-a-wekerle-plusz-hitellel-1207980",
+    "publishedAt": "2026-10-27T12:50:00.000Z",
+    "fetchedAt": "2026-10-27T16:46:09.913Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "1060708aaca66579786f0ffdeb7c932b360bdcc06ce03675aa9362080a79c207",
+    "sourceId": "vg",
+    "sourceName": "Világgazdaság",
+    "tier": "press",
+    "title": "Magyar Péter bejelentette: egyetlen nap alatt szüntetik meg az Otthon Startot; már holnaptól minden megváltozik",
+    "url": "https://www.vg.hu/vilaggazdasag-magyar-gazdasag/2026/10/otthon-start-program-kivezetes-reszletek-wekerle-plusz",
+    "publishedAt": "2026-10-27T11:37:24.000Z",
+    "fetchedAt": "2026-10-27T16:46:09.913Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "88b7d459d66390eec8d2c378e8402dd7497c6e3ba7992053dec2af8d30e5ecdb",
+    "sourceId": "bankmonitor",
+    "sourceName": "Bankmonitor",
+    "tier": "press",
+    "title": "Október végétől megszűnik az Otthon Start – kik igényelhetik még a hitelt?",
+    "url": "https://bankmonitor.hu/mediatar/cikk/matol-megszunik-az-otthon-start-kik-igenyelhetik-meg-a-hitelt/",
+    "publishedAt": "2026-10-27T10:55:34.000Z",
+    "fetchedAt": "2026-10-27T16:46:09.913Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "f68d0ad5abdedf23bafec683c02e4df377413a1f85bef2ea1882e76b0bd07aaf",
     "sourceId": "neuzrt-oetp",
     "sourceName": "Nemzeti Energetikai Ügynökség – Otthoni Energiatároló Program aloldal",
