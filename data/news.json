@@ -1,5 +1,71 @@
 [
   {
+    "id": "f68d0ad5abdedf23bafec683c02e4df377413a1f85bef2ea1882e76b0bd07aaf",
+    "sourceId": "neuzrt-oetp",
+    "sourceName": "Nemzeti Energetikai Ügynökség – Otthoni Energiatároló Program aloldal",
+    "tier": "official",
+    "title": "Nemzeti Energetikai Ügynökség – Otthoni Energiatároló Program aloldal: tartalom módosult",
+    "url": "https://otthonienergiatarolo.neuzrt.hu/",
+    "publishedAt": "2026-10-27T10:43:10.977Z",
+    "fetchedAt": "2026-10-27T10:42:58.441Z",
+    "programs": [
+      "energiatarolo"
+    ],
+    "matched": [],
+    "kind": "page-change"
+  },
+  {
+    "id": "841f4108672e7de3a0887f52c6e688658f325a5f30a277f8065160c252cd700f",
+    "sourceId": "index",
+    "sourceName": "Index",
+    "tier": "press",
+    "title": "Magyar Péter bejelentette, hogy indul a program, amely az Otthon Startot váltja",
+    "url": "https://index.hu/belfold/2026/10/27/magyar-peter-karman-andras-2027-koltsegvetes-ado-szja-kata-tisza-kormany-kapitany-istvan/magyar-peter-bejelentette-hogy-indul-a-program-ami-az-otthon-startot-valtja/",
+    "publishedAt": "2026-10-27T10:32:15.000Z",
+    "fetchedAt": "2026-10-27T10:42:58.441Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "4cba628219f80c6d0f93f10a479d4817f74e25463c6a13542059f74beeff0436",
+    "sourceId": "penzcentrum",
+    "sourceName": "Pénzcentrum",
+    "tier": "press",
+    "title": "Magyar Péter: már holnaptól elindul a Wekerle Plusz hitel, ezzel megszűnik az Otthon Start",
+    "url": "https://www.penzcentrum.hu/otthon/20261027/magyar-peter-mar-holnaptol-elindul-a-wekerle-plusz-hitel-ezzel-megszunik-az-otthon-start-1207968",
+    "publishedAt": "2026-10-27T10:31:00.000Z",
+    "fetchedAt": "2026-10-27T10:42:58.441Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "bcce89bc5ebffc27a86167304924e423b3d9ca6f9327292510eecccad7f02668",
+    "sourceId": "portfolio",
+    "sourceName": "Portfolio",
+    "tier": "press",
+    "title": "Lakossági pénzeső: jönnek a kormány bejelentései a 3%-os hitelről, a felújítási programról és a lakástakarékról",
+    "url": "https://www.portfolio.hu/ingatlan/20261027/lakossagi-penzeso-jonnek-a-kormany-bejelentesei-a-3-os-hitelrol-a-felujitasi-programrol-es-a-lakastakarekrol-872230",
+    "publishedAt": "2026-10-27T10:28:00.000Z",
+    "fetchedAt": "2026-10-27T10:42:58.441Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "16d0cbed86cf7244343ca98c19b04298823e00a3c5c3ff769fff36c1d45353ef",
     "sourceId": "bankmonitor",
     "sourceName": "Bankmonitor",
