@@ -1,5 +1,22 @@
 [
   {
+    "id": "dd1174731ffcf50dc8c0329ea8d69b7372d725b07b64ce4e0f05d0ae68732049",
+    "sourceId": "index",
+    "sourceName": "Index",
+    "tier": "press",
+    "title": "A Fidesz reagált az Otthon Start kivezetésére, szerintük a Tisza a „brüsszeli ajánlásoknak megfelelően” döntött így",
+    "url": "https://index.hu/belfold/2026/10/28/wekerle-plusz-program-tisza-kormany-fidesz-reakcio-otthonstart-program/",
+    "publishedAt": "2026-10-28T10:15:00.000Z",
+    "fetchedAt": "2026-10-28T11:26:55.598Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "680c7b59b73865e6a350fed9164c2cf61abf8fe6eca416f1fce415f5e431aab9",
     "sourceId": "vg",
     "sourceName": "Világgazdaság",
