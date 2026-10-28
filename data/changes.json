@@ -1,5 +1,5 @@
 {
-  "runAt": "2026-10-28T11:26:55.598Z",
+  "runAt": "2026-10-28T17:14:14.190Z",
   "results": [
     {
       "id": "magyar-kozlony",
@@ -14,7 +14,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-28T11:26:55.602Z"
+      "checkedAt": "2026-10-28T17:14:14.192Z"
     },
     {
       "id": "palyazat-gov",
@@ -28,8 +28,8 @@
       "matchedKeywords": [],
       "newItemCount": 0,
       "error": "fetch failed (indoka: UNABLE_TO_GET_ISSUER_CERT_LOCALLY)",
-      "consecutiveFailures": 51,
-      "checkedAt": "2026-10-28T11:26:57.999Z"
+      "consecutiveFailures": 52,
+      "checkedAt": "2026-10-28T17:14:16.418Z"
     },
     {
       "id": "mfb-pontok-plusz",
@@ -38,13 +38,13 @@
       "method": "page",
       "url": "https://www.mfb.hu/mfb-pontok-plusz",
       "status": "ok",
-      "changed": true,
+      "changed": false,
       "keywordHit": false,
       "matchedKeywords": [],
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-28T11:26:59.548Z"
+      "checkedAt": "2026-10-28T17:14:17.097Z"
     },
     {
       "id": "neuzrt-oetp",
@@ -59,7 +59,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-28T11:27:00.791Z"
+      "checkedAt": "2026-10-28T17:14:18.427Z"
     },
     {
       "id": "kormany-energiaugyi",
@@ -74,7 +74,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-28T11:27:02.205Z"
+      "checkedAt": "2026-10-28T17:14:19.852Z"
     },
     {
       "id": "allamkincstar",
@@ -89,7 +89,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-28T11:27:05.660Z"
+      "checkedAt": "2026-10-28T17:14:23.303Z"
     },
     {
       "id": "otthon-start-program",
@@ -104,7 +104,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-28T11:27:10.792Z"
+      "checkedAt": "2026-10-28T17:14:28.362Z"
     },
     {
       "id": "mehi",
@@ -119,7 +119,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-28T11:27:13.600Z"
+      "checkedAt": "2026-10-28T17:14:31.612Z"
     },
     {
       "id": "energiaklub",
@@ -134,7 +134,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-28T11:27:14.584Z"
+      "checkedAt": "2026-10-28T17:14:32.787Z"
     },
     {
       "id": "portfolio",
@@ -143,13 +143,15 @@
       "method": "rss",
       "url": "https://www.portfolio.hu/",
       "status": "ok",
-      "changed": false,
-      "keywordHit": false,
-      "matchedKeywords": [],
-      "newItemCount": 0,
+      "changed": true,
+      "keywordHit": true,
+      "matchedKeywords": [
+        "otthon start"
+      ],
+      "newItemCount": 1,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-28T11:27:15.493Z"
+      "checkedAt": "2026-10-28T17:14:33.515Z"
     },
     {
       "id": "vg",
@@ -163,10 +165,10 @@
       "matchedKeywords": [
         "otthon start"
       ],
-      "newItemCount": 1,
+      "newItemCount": 2,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-28T11:27:16.175Z"
+      "checkedAt": "2026-10-28T17:14:34.500Z"
     },
     {
       "id": "hvg",
@@ -181,7 +183,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-28T11:27:17.197Z"
+      "checkedAt": "2026-10-28T17:14:35.241Z"
     },
     {
       "id": "telex",
@@ -195,8 +197,8 @@
       "matchedKeywords": [],
       "newItemCount": 0,
       "error": "HTTP 403",
-      "consecutiveFailures": 5,
-      "checkedAt": "2026-10-28T11:27:17.529Z"
+      "consecutiveFailures": 6,
+      "checkedAt": "2026-10-28T17:14:35.604Z"
     },
     {
       "id": "index",
@@ -205,15 +207,13 @@
       "method": "rss",
       "url": "https://index.hu/",
       "status": "ok",
-      "changed": true,
-      "keywordHit": true,
-      "matchedKeywords": [
-        "otthon start"
-      ],
-      "newItemCount": 1,
+      "changed": false,
+      "keywordHit": false,
+      "matchedKeywords": [],
+      "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-28T11:27:17.706Z"
+      "checkedAt": "2026-10-28T17:14:35.826Z"
     },
     {
       "id": "bankmonitor",
@@ -225,13 +225,12 @@
       "changed": true,
       "keywordHit": true,
       "matchedKeywords": [
-        "otthon start",
-        "otthon start program"
+        "otthon start"
       ],
-      "newItemCount": 4,
+      "newItemCount": 3,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-28T11:27:19.145Z"
+      "checkedAt": "2026-10-28T17:14:37.087Z"
     },
     {
       "id": "penzcentrum",
@@ -246,7 +245,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-28T11:27:19.579Z"
+      "checkedAt": "2026-10-28T17:14:37.708Z"
     },
     {
       "id": "google-news-search",
@@ -261,7 +260,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-28T11:26:55.598Z"
+      "checkedAt": "2026-10-28T17:14:14.190Z"
     },
     {
       "id": "palyaz",
@@ -276,7 +275,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-28T11:27:20.401Z"
+      "checkedAt": "2026-10-28T17:14:38.511Z"
     },
     {
       "id": "palyazatok-org",
@@ -291,16 +290,16 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-10-28T11:27:22.763Z"
+      "checkedAt": "2026-10-28T17:14:40.648Z"
     }
   ],
   "summary": {
     "total": 18,
-    "changedCount": 4,
+    "changedCount": 3,
     "keywordHitCount": 3,
     "errorCount": 2,
     "staleCount": 2,
-    "newsItemCount": 1
+    "newsItemCount": 3
   },
   "staleAlerts": [
     {
@@ -308,19 +307,19 @@
       "name": "Pályázat.gov.hu",
       "url": "https://www.palyazat.gov.hu/",
       "tier": "official",
-      "consecutiveFailures": 51
+      "consecutiveFailures": 52
     },
     {
       "id": "telex",
       "name": "Telex",
       "url": "https://telex.hu/",
       "tier": "press",
-      "consecutiveFailures": 5
+      "consecutiveFailures": 6
     }
   ],
   "newsByTier": {
     "official": 0,
-    "press": 1,
+    "press": 3,
     "aggregator": 0
   },
   "shouldCommit": true

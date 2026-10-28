@@ -1,5 +1,56 @@
 [
   {
+    "id": "06e8769d5c5c3c0c67a34edc73f45222d51951cf4e90dc012d6a4189a7336448",
+    "sourceId": "portfolio",
+    "sourceName": "Portfolio",
+    "tier": "press",
+    "title": "Hidegzuhany a Wekerle Pluszban és a különadókban: öt célcsoport, amely nem örülhet felhőtlenül a kormány bejelentéseinek",
+    "url": "https://www.portfolio.hu/bank/20261028/hidegzuhany-a-wekerle-pluszban-es-a-kulonadokban-ot-celcsoport-amely-nem-orulhet-felhotlenul-a-kormany-bejelenteseinek-872582",
+    "publishedAt": "2026-10-28T16:00:00.000Z",
+    "fetchedAt": "2026-10-28T17:14:14.190Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "48baa2b589aac3aee94842ec794220972cc1b2deacb62e839aaae819ddc31e15",
+    "sourceId": "vg",
+    "sourceName": "Világgazdaság",
+    "tier": "press",
+    "title": "Otthon Start helyett Wekerle Plusz: hiába az új támogatás, a lakáshitel továbbra is a tehetősek kiváltsága?",
+    "url": "https://www.vg.hu/negyzetmeter/2026/10/wekerle-plusz-tamogatas-lakashitel",
+    "publishedAt": "2026-10-28T15:35:14.000Z",
+    "fetchedAt": "2026-10-28T17:14:14.190Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "7b411c1ae2c83ffc60a7c1f4f6ab6bc8fa414b941db6b2a9bb0e78e33bb09ad1",
+    "sourceId": "vg",
+    "sourceName": "Világgazdaság",
+    "tier": "press",
+    "title": "Az Otthon Start után itt az újabb kellemetlen meglepetés: köszönőviszonyban sincs a most bejelentett adó mértéke ahhoz, amiről korábban Magyar Péterék beszéltek – ekkora lesz valójában a sarc januártól",
+    "url": "https://www.vg.hu/vilaggazdasag-magyar-gazdasag/2026/10/reklamado-meta-google-magyar-mediapiac-reklamszovetseg",
+    "publishedAt": "2026-10-28T13:10:27.000Z",
+    "fetchedAt": "2026-10-28T17:14:14.190Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "dd1174731ffcf50dc8c0329ea8d69b7372d725b07b64ce4e0f05d0ae68732049",
     "sourceId": "index",
     "sourceName": "Index",
