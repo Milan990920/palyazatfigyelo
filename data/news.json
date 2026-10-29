@@ -1,5 +1,143 @@
 [
   {
+    "id": "89eff59064155a1ecf314d862781f07e9ac67ba34b53a11c488bed2d910de7f6",
+    "sourceId": "penzcentrum",
+    "sourceName": "Pénzcentrum",
+    "tier": "press",
+    "title": "Lakáshitelt vennél fel? Már elindult a Wekerle Plusz, közben az Otthon Start határideje is közeleg",
+    "url": "https://www.penzcentrum.hu/hitel/20261029/lakashitelt-vennel-fel-mar-elindult-a-wekerle-plusz-kozben-az-otthon-start-hatarideje-is-kozeleg-1208098",
+    "publishedAt": "2026-10-29T11:27:00.000Z",
+    "fetchedAt": "2026-10-29T11:37:24.728Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "f384be5e586fe8a62ebdb537b1d418710c607aaa26de13a4f6e73f9c24c353fb",
+    "sourceId": "penzcentrum",
+    "sourceName": "Pénzcentrum",
+    "tier": "press",
+    "title": "Súlyos buktatóra figyelmeztet a szakértő: a foglalójukat is elbukhatják a kapkodó lakásvásárlók",
+    "url": "https://www.penzcentrum.hu/otthon/20261029/sulyos-buktatora-figyelmeztet-a-szakerto-a-foglalojukat-is-elbukhatjak-a-kapkodo-lakasvasarlok-1208095",
+    "publishedAt": "2026-10-29T10:59:00.000Z",
+    "fetchedAt": "2026-10-29T11:37:24.728Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "e417afcea962a5e4bf2bf833515d67d630e95ab0a7e5506d2cd4b52f72dd1fae",
+    "sourceId": "hvg",
+    "sourceName": "HVG",
+    "tier": "press",
+    "title": "Megrohamozták az ingatlanosokat a kormány bejelentése után",
+    "url": "https://hvg.hu/gazdasag/20261029_otthon-start-lakas-hitel-bejelentes",
+    "publishedAt": "2026-10-29T10:42:23.000Z",
+    "fetchedAt": "2026-10-29T11:37:24.728Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "b72008232f128038cfc41bfd5e9ef1fbf884f7eda0a10e7271372bdb3cf4d81b",
+    "sourceId": "vg",
+    "sourceName": "Világgazdaság",
+    "tier": "press",
+    "title": "Három nap maradt az Otthon Startból: megrohamozták az ingatlanirodákat, kétezer lakás sorsa dőlhet el",
+    "url": "https://www.vg.hu/vilaggazdasag-magyar-gazdasag/2026/10/otthon-start-megrohamoztak-az-ingatlanirodakat",
+    "publishedAt": "2026-10-29T10:25:16.000Z",
+    "fetchedAt": "2026-10-29T11:37:24.728Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "b26489618c86d2b395f52b868a14a6accb13d570a7d3f9cadd9d7d29a509c8ed",
+    "sourceId": "portfolio",
+    "sourceName": "Portfolio",
+    "tier": "press",
+    "title": "Van olyan bank, ahol már befogadják a Wekerle Plusz-hitelkérelmeket",
+    "url": "https://www.portfolio.hu/bank/20261029/van-olyan-bank-ahol-mar-befogadjak-a-wekerle-plusz-hitelkerelmeket-872790",
+    "publishedAt": "2026-10-29T10:03:00.000Z",
+    "fetchedAt": "2026-10-29T11:37:24.728Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start",
+      "otthon start program",
+      "határidő"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "841d10aeb3eb32f0a0807bcba17ad094d12f81ea9ef9f8746bca47c35907bbb9",
+    "sourceId": "vg",
+    "sourceName": "Világgazdaság",
+    "tier": "press",
+    "title": "Teljes sokkban az ingatlanpiac: milliókat bukhatnak a vásárlók az Otthon Start megszüntetésével – ezt a kört viszont helyzetbe hozza a kormány a Wekerle Plusszal",
+    "url": "https://www.vg.hu/vilaggazdasag-magyar-gazdasag/2026/10/otthon-start-kivezetes-wekerle-plusz-hatasok",
+    "publishedAt": "2026-10-29T09:09:41.000Z",
+    "fetchedAt": "2026-10-29T11:37:24.728Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "45a693ff9466c79be73a42653a45e7fe4341f4f061a335917599dcae51ea859b",
+    "sourceId": "bankmonitor",
+    "sourceName": "Bankmonitor",
+    "tier": "press",
+    "title": "Wekerle Plusz: az Erste után a Raiffeisen is lépett",
+    "url": "https://bankmonitor.hu/mediatar/cikk/lepett-az-erste-mar-lehet-regisztralni-a-wekerle-plusz-lakashitelre/",
+    "publishedAt": "2026-10-29T07:24:46.000Z",
+    "fetchedAt": "2026-10-29T11:37:24.728Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "b8aa602e9b0a0bcf2f9a21d8dc014c0992df99d5b893253ab7321aa582653639",
+    "sourceId": "vg",
+    "sourceName": "Világgazdaság",
+    "tier": "press",
+    "title": "Ezermilliárdos lakásfelújítási programmal állt elő Kapitány István: minden, amit a Wekerle Pluszról tudni kell – mutatjuk a részleteket!",
+    "url": "https://www.vg.hu/vilaggazdasag-magyar-gazdasag/2026/10/korszerusites-vissza-nem-teritendo-tamogatas-wekerle",
+    "publishedAt": "2026-10-28T17:30:05.000Z",
+    "fetchedAt": "2026-10-29T11:37:24.728Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthonfelujitasi program"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "06e8769d5c5c3c0c67a34edc73f45222d51951cf4e90dc012d6a4189a7336448",
     "sourceId": "portfolio",
     "sourceName": "Portfolio",
