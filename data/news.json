@@ -1,5 +1,22 @@
 [
   {
+    "id": "946e60847d5897bb81f041df6cd662e05b4ea67346813bdf60778d3a21a332c7",
+    "sourceId": "vg",
+    "sourceName": "Világgazdaság",
+    "tier": "press",
+    "title": "Még a kormánypárti lap is elismeri az Otthon Start eredményeit: alapjaiban alakította át a lakáshitelezést a program",
+    "url": "https://www.vg.hu/vilaggazdasag-magyar-gazdasag/2026/10/otthon-start-program-eredmenyei-lakashitel",
+    "publishedAt": "2026-10-30T13:13:34.000Z",
+    "fetchedAt": "2026-10-30T17:04:46.717Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "e54b185c0b3e65fc63fd297fc8f3a723f1604e3ca4b1b3a9d4c7f430e1803216",
     "sourceId": "index",
     "sourceName": "Index",
