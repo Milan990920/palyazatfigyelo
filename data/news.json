@@ -1,5 +1,22 @@
 [
   {
+    "id": "e1f3752cbd13a0e5513e39dfdee133d528b64b2d540ae16be943aeea2da9559e",
+    "sourceId": "hvg",
+    "sourceName": "HVG",
+    "tier": "press",
+    "title": "És akkor Orbán fürkészei és portyázói is felsorakoztak Matolcsyék mellé",
+    "url": "https://hvg.hu/gazdasag/20261101_es-akkor-orban-furkeszei-es-portyazoi-is-felsorakoztak-matolcsyek-melle",
+    "publishedAt": "2026-11-01T06:00:00.000Z",
+    "fetchedAt": "2026-11-01T11:55:21.542Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "946e60847d5897bb81f041df6cd662e05b4ea67346813bdf60778d3a21a332c7",
     "sourceId": "vg",
     "sourceName": "Világgazdaság",
