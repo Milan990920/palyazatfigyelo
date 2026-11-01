@@ -1,5 +1,39 @@
 [
   {
+    "id": "403fee6f66b987923766caea67c134510970245158c5fe2367ec87dff4541a82",
+    "sourceId": "vg",
+    "sourceName": "Világgazdaság",
+    "tier": "press",
+    "title": "Brutális beismerés, nincs több vita: kiderült, miért végezte ki a Tisza-kormány az Otthon startot – ezért vezették be igazából a Wekerle Pluszt",
+    "url": "https://www.vg.hu/vilaggazdasag-magyar-gazdasag/2026/11/otthon-start-veget-er-lakastamogatas-jon-a-wekerle",
+    "publishedAt": "2026-11-01T14:29:34.000Z",
+    "fetchedAt": "2026-11-01T17:11:44.302Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "8423fe208deabd2b53d8242d293705d943404a0ceaa311a0bb200d647dca13b2",
+    "sourceId": "portfolio",
+    "sourceName": "Portfolio",
+    "tier": "press",
+    "title": "15 meglepetés a Wekerle Plusz lakáshitelben: nem is gondolnád, milyen sok könnyítést rejtettek el a szabályok között",
+    "url": "https://www.portfolio.hu/bank/20261101/15-meglepetes-a-wekerle-plusz-lakashitelben-nem-is-gondolnad-milyen-sok-konnyitest-rejtettek-el-a-szabalyok-kozott-872842",
+    "publishedAt": "2026-11-01T14:00:00.000Z",
+    "fetchedAt": "2026-11-01T17:11:44.302Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "e1f3752cbd13a0e5513e39dfdee133d528b64b2d540ae16be943aeea2da9559e",
     "sourceId": "hvg",
     "sourceName": "HVG",
