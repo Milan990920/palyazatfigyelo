@@ -1,5 +1,107 @@
 [
   {
+    "id": "d4b52203718d5db6960f78bec8802a2cb28e339e2540fc8688e7be8753eac2f6",
+    "sourceId": "allamkincstar",
+    "sourceName": "Magyar Államkincstár",
+    "tier": "official",
+    "title": "Magyar Államkincstár: tartalom módosult",
+    "url": "https://www.allamkincstar.gov.hu/",
+    "publishedAt": "2026-11-02T13:41:01.118Z",
+    "fetchedAt": "2026-11-02T13:40:52.353Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [],
+    "kind": "page-change"
+  },
+  {
+    "id": "c35afb9a5f02e62171851341f319bea336c6cda925b8e0c8058cda2b1ee77c1c",
+    "sourceId": "penzcentrum",
+    "sourceName": "Pénzcentrum",
+    "tier": "press",
+    "title": "Vége az ingatlanhirdetők alkupozíciójának: már messze ők vannak többségben – most járhatnak jól a vevők?",
+    "url": "https://www.penzcentrum.hu/otthon/20261102/vege-az-ingatlanhirdetok-alkupoziciojanak-mar-messze-ok-vannak-tobbsegben-most-jarhatnak-jol-a-vevok-1208312",
+    "publishedAt": "2026-11-02T13:28:00.000Z",
+    "fetchedAt": "2026-11-02T13:40:52.353Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start",
+      "otthon start program"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "e6771fa1f879801675f67e319e1ef86edf5a16789ada7844b573b7c5a748c057",
+    "sourceId": "index",
+    "sourceName": "Index",
+    "tier": "press",
+    "title": "Véghajrában kapcsoltak rá a lakásvásárlók, megrohanták a piacot az Otthon Start utolsó napjaiban",
+    "url": "https://index.hu/gazdasag/2026/11/02/otthon-start-program-kivezetes-utolso-napok-ingatlanok-erdeklodes/",
+    "publishedAt": "2026-11-02T11:19:00.000Z",
+    "fetchedAt": "2026-11-02T13:40:52.353Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "85e3494b78c5b5526654c927d00c93f5964bbb61b24cc43dcc879e8a877e94ab",
+    "sourceId": "telex",
+    "sourceName": "Telex",
+    "tier": "press",
+    "title": "Volt pár őrült nap a hazai ingatlanpiacon, de immár minden lecsendesült",
+    "url": "https://telex.hu/gazdasag/2026/11/02/lakas-ingatlan-otthon-start-wekerle-plusz",
+    "publishedAt": "2026-11-02T09:50:49.000Z",
+    "fetchedAt": "2026-11-02T13:40:52.353Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start",
+      "otthon start program"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "25422f9b92111812ac32034755015ea964ad4e7e1c128f9d2a2b8b347ef4aaaf",
+    "sourceId": "hvg",
+    "sourceName": "HVG",
+    "tier": "press",
+    "title": "41 százalékkal több érdeklődő – óriási tülekedést hoztak a lakáspiacon az Otthon Start végnapjai",
+    "url": "https://hvg.hu/gazdasag/20261102_otthon-start-hajra-lakaspiac-erdeklodesek-ingatlan-com",
+    "publishedAt": "2026-11-02T08:39:38.000Z",
+    "fetchedAt": "2026-11-02T13:40:52.353Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "684be5aaf7a99220e45abf3bfb53be53fb9779a791c014e1dac08a855ecca0eb",
+    "sourceId": "vg",
+    "sourceName": "Világgazdaság",
+    "tier": "press",
+    "title": "Ennyit Vitézy Dávid bejelentéséről: szabályosan lerohanták a magyarok a lakáspiacot az Otthon Start kivégzésének hírére – három éve nem volt ekkora a kínálat",
+    "url": "https://www.vg.hu/vilaggazdasag-magyar-gazdasag/2026/11/lakaspiac-otthon-start-ingatlan-vasarlas-wekerle-plusz",
+    "publishedAt": "2026-11-02T08:29:44.000Z",
+    "fetchedAt": "2026-11-02T13:40:52.353Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "403fee6f66b987923766caea67c134510970245158c5fe2367ec87dff4541a82",
     "sourceId": "vg",
     "sourceName": "Világgazdaság",
