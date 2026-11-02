@@ -1,5 +1,22 @@
 [
   {
+    "id": "bb6dac138ce3fe95fad44ac8678c5058d3265ab380093848b95083d1317d3823",
+    "sourceId": "vg",
+    "sourceName": "Világgazdaság",
+    "tier": "press",
+    "title": "OTP: ügyfeleink egy része a Wekerle Plusz helyett inkább a piaci kölcsönt választhatja",
+    "url": "https://www.vg.hu/penz-es-tokepiac/2026/11/otp-a-wekerle-helyett-inkabb-a-piaci-hitel",
+    "publishedAt": "2026-11-02T14:02:15.000Z",
+    "fetchedAt": "2026-11-02T20:51:10.548Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "d4b52203718d5db6960f78bec8802a2cb28e339e2540fc8688e7be8753eac2f6",
     "sourceId": "allamkincstar",
     "sourceName": "Magyar Államkincstár",
