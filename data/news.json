@@ -1,5 +1,22 @@
 [
   {
+    "id": "d601df0452528150861215ddefddbf26a921b2834313a557ad99c1d80cdbcf84",
+    "sourceId": "hvg",
+    "sourceName": "HVG",
+    "tier": "press",
+    "title": "Meghalt a király, éljen a király: Mit kell tudni a lakáshitelek változásairól?",
+    "url": "https://hvg.hu/ingatlan/20261103_wekerle-plusz-lakas-otthon-start-kulonbsegek-mi-valtozott-bankmonitor-webinar",
+    "publishedAt": "2026-11-03T04:30:00.000Z",
+    "fetchedAt": "2026-11-03T12:54:00.774Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "bb6dac138ce3fe95fad44ac8678c5058d3265ab380093848b95083d1317d3823",
     "sourceId": "vg",
     "sourceName": "Világgazdaság",

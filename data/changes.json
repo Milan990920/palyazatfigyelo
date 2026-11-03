@@ -1,5 +1,5 @@
 {
-  "runAt": "2026-11-02T20:51:10.548Z",
+  "runAt": "2026-11-03T12:54:00.774Z",
   "results": [
     {
       "id": "magyar-kozlony",
@@ -14,7 +14,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-11-02T20:51:10.551Z"
+      "checkedAt": "2026-11-03T12:54:00.778Z"
     },
     {
       "id": "palyazat-gov",
@@ -28,8 +28,8 @@
       "matchedKeywords": [],
       "newItemCount": 0,
       "error": "fetch failed (indoka: ECONNREFUSED)",
-      "consecutiveFailures": 7,
-      "checkedAt": "2026-11-02T20:51:12.630Z"
+      "consecutiveFailures": 8,
+      "checkedAt": "2026-11-03T12:54:02.915Z"
     },
     {
       "id": "mfb-pontok-plusz",
@@ -43,8 +43,8 @@
       "matchedKeywords": [],
       "newItemCount": 0,
       "error": "fetch failed (indoka: UNABLE_TO_VERIFY_LEAF_SIGNATURE)",
-      "consecutiveFailures": 1,
-      "checkedAt": "2026-11-02T20:51:13.161Z"
+      "consecutiveFailures": 2,
+      "checkedAt": "2026-11-03T12:54:03.353Z"
     },
     {
       "id": "neuzrt-oetp",
@@ -59,7 +59,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-11-02T20:51:13.798Z"
+      "checkedAt": "2026-11-03T12:54:03.995Z"
     },
     {
       "id": "kormany-energiaugyi",
@@ -74,7 +74,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-11-02T20:51:15.433Z"
+      "checkedAt": "2026-11-03T12:54:05.362Z"
     },
     {
       "id": "allamkincstar",
@@ -89,7 +89,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-11-02T20:51:18.498Z"
+      "checkedAt": "2026-11-03T12:54:08.471Z"
     },
     {
       "id": "otthon-start-program",
@@ -104,7 +104,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-11-02T20:51:26.029Z"
+      "checkedAt": "2026-11-03T12:54:16.368Z"
     },
     {
       "id": "mehi",
@@ -119,7 +119,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-11-02T20:51:28.073Z"
+      "checkedAt": "2026-11-03T12:54:19.228Z"
     },
     {
       "id": "energiaklub",
@@ -134,7 +134,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-11-02T20:51:28.999Z"
+      "checkedAt": "2026-11-03T12:54:20.294Z"
     },
     {
       "id": "portfolio",
@@ -149,7 +149,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-11-02T20:51:29.599Z"
+      "checkedAt": "2026-11-03T12:54:21.287Z"
     },
     {
       "id": "vg",
@@ -157,6 +157,21 @@
       "tier": "press",
       "method": "rss",
       "url": "https://www.vg.hu/",
+      "status": "ok",
+      "changed": false,
+      "keywordHit": false,
+      "matchedKeywords": [],
+      "newItemCount": 0,
+      "error": null,
+      "consecutiveFailures": 0,
+      "checkedAt": "2026-11-03T12:54:21.924Z"
+    },
+    {
+      "id": "hvg",
+      "name": "HVG",
+      "tier": "press",
+      "method": "rss",
+      "url": "https://hvg.hu/",
       "status": "ok",
       "changed": true,
       "keywordHit": true,
@@ -166,22 +181,7 @@
       "newItemCount": 1,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-11-02T20:51:30.227Z"
-    },
-    {
-      "id": "hvg",
-      "name": "HVG",
-      "tier": "press",
-      "method": "rss",
-      "url": "https://hvg.hu/",
-      "status": "ok",
-      "changed": false,
-      "keywordHit": false,
-      "matchedKeywords": [],
-      "newItemCount": 0,
-      "error": null,
-      "consecutiveFailures": 0,
-      "checkedAt": "2026-11-02T20:51:30.648Z"
+      "checkedAt": "2026-11-03T12:54:22.325Z"
     },
     {
       "id": "telex",
@@ -189,14 +189,14 @@
       "tier": "press",
       "method": "rss",
       "url": "https://telex.hu/",
-      "status": "error",
+      "status": "ok",
       "changed": false,
       "keywordHit": false,
       "matchedKeywords": [],
       "newItemCount": 0,
-      "error": "HTTP 403",
-      "consecutiveFailures": 1,
-      "checkedAt": "2026-11-02T20:51:30.803Z"
+      "error": null,
+      "consecutiveFailures": 0,
+      "checkedAt": "2026-11-03T12:54:22.475Z"
     },
     {
       "id": "index",
@@ -211,7 +211,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-11-02T20:51:30.939Z"
+      "checkedAt": "2026-11-03T12:54:22.723Z"
     },
     {
       "id": "bankmonitor",
@@ -226,7 +226,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-11-02T20:51:32.067Z"
+      "checkedAt": "2026-11-03T12:54:23.913Z"
     },
     {
       "id": "penzcentrum",
@@ -241,7 +241,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-11-02T20:51:32.218Z"
+      "checkedAt": "2026-11-03T12:54:24.057Z"
     },
     {
       "id": "google-news-search",
@@ -256,7 +256,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-11-02T20:51:10.548Z"
+      "checkedAt": "2026-11-03T12:54:00.774Z"
     },
     {
       "id": "palyaz",
@@ -271,7 +271,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-11-02T20:51:32.898Z"
+      "checkedAt": "2026-11-03T12:54:24.704Z"
     },
     {
       "id": "palyazatok-org",
@@ -286,14 +286,14 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-11-02T20:51:34.691Z"
+      "checkedAt": "2026-11-03T12:54:26.487Z"
     }
   ],
   "summary": {
     "total": 18,
     "changedCount": 1,
     "keywordHitCount": 1,
-    "errorCount": 3,
+    "errorCount": 2,
     "staleCount": 1,
     "newsItemCount": 1
   },
@@ -303,7 +303,7 @@
       "name": "Pályázat.gov.hu",
       "url": "https://www.palyazat.gov.hu/",
       "tier": "official",
-      "consecutiveFailures": 7
+      "consecutiveFailures": 8
     }
   ],
   "newsByTier": {
