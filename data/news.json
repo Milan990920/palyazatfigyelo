@@ -1,5 +1,22 @@
 [
   {
+    "id": "3b8a02a76cdc8501f9091d3f683a30097af9386ed85b4745b24dd5bf9ca32c12",
+    "sourceId": "telex",
+    "sourceName": "Telex",
+    "tier": "press",
+    "title": "Jellemzően 36 millió forintos hitellel keresik a Wekerle Pluszt a Bankmonitor adatai szerint",
+    "url": "https://telex.hu/nevertek/2026/11/04/wekerle-plusz-bankmonitor",
+    "publishedAt": "2026-11-04T11:39:44.000Z",
+    "fetchedAt": "2026-11-04T18:44:26.951Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "d601df0452528150861215ddefddbf26a921b2834313a557ad99c1d80cdbcf84",
     "sourceId": "hvg",
     "sourceName": "HVG",
