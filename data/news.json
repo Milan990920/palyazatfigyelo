@@ -1,5 +1,22 @@
 [
   {
+    "id": "9411cc9204396c6554b0a9cdb2233872bf26d721d316c8827fb20cff74c1621b",
+    "sourceId": "bankmonitor",
+    "sourceName": "Bankmonitor",
+    "tier": "press",
+    "title": "Elfogytak a befektetők, csökken a vásárlóerő: a lakáspiacon most a vevő diktál",
+    "url": "https://bankmonitor.hu/mediatar/cikk/elfogytak-a-befektetok-csokken-a-vasarloero-a-lakaspiacon-most-a-vevo-diktal/",
+    "publishedAt": "2026-11-05T16:49:19.000Z",
+    "fetchedAt": "2026-11-05T18:53:14.808Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "a722b238051ab68e6f9f35d8a190edb6ac847823e4e9c0e238a11fd18d404e89",
     "sourceId": "hvg",
     "sourceName": "HVG",
