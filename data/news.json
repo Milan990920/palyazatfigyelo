@@ -1,5 +1,22 @@
 [
   {
+    "id": "a722b238051ab68e6f9f35d8a190edb6ac847823e4e9c0e238a11fd18d404e89",
+    "sourceId": "hvg",
+    "sourceName": "HVG",
+    "tier": "press",
+    "title": "Sokan jól járhatnak a Wekerle Plusszal, de van néhány akna, amire figyelni kell",
+    "url": "https://hvg.hu/ingatlan/20261105_wekerle-plusz-otthon-start-lakas-ingatlan-bankmonitor-webinar",
+    "publishedAt": "2026-11-05T12:24:50.000Z",
+    "fetchedAt": "2026-11-05T13:20:59.968Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "3b8a02a76cdc8501f9091d3f683a30097af9386ed85b4745b24dd5bf9ca32c12",
     "sourceId": "telex",
     "sourceName": "Telex",
