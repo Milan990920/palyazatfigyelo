@@ -1,5 +1,39 @@
 [
   {
+    "id": "3dbfa5495e59ffc42d58745c30036b910693700bf302b0f3cf202f32d1d182e2",
+    "sourceId": "portfolio",
+    "sourceName": "Portfolio",
+    "tier": "press",
+    "title": "Szinte hihetetlen, pedig igaz: ezután is lesz 3%-os hitel a használt lakásokra, így tudod felvenni",
+    "url": "https://www.portfolio.hu/bank/20261107/szinte-hihetetlen-pedig-igaz-ezutan-is-lesz-3-os-hitel-a-hasznalt-lakasokra-igy-tudod-felvenni-874758",
+    "publishedAt": "2026-11-07T09:00:00.000Z",
+    "fetchedAt": "2026-11-07T11:49:31.704Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "c90b9aaf3e4f3670fd7c495895903fd8dbf626e1d1f7b55c8836050f4d21251b",
+    "sourceId": "vg",
+    "sourceName": "Világgazdaság",
+    "tier": "press",
+    "title": "Ha ez igaz, az bombahír: máris megváltozott a Wekerle Plusz, kiszedték a legnagyobb szigorítást az Otthon Starthoz képest? A kormányszóvivő ezt jelentette be",
+    "url": "https://www.vg.hu/vilaggazdasag-magyar-gazdasag/2026/11/wekerle-plusz-otthon-start-kormanyszovivo-ingatlan",
+    "publishedAt": "2026-11-06T20:03:32.000Z",
+    "fetchedAt": "2026-11-07T11:49:31.704Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "9411cc9204396c6554b0a9cdb2233872bf26d721d316c8827fb20cff74c1621b",
     "sourceId": "bankmonitor",
     "sourceName": "Bankmonitor",
