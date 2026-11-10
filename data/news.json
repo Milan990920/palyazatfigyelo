@@ -1,5 +1,39 @@
 [
   {
+    "id": "5baf013d6036d331a3d44d780e41c947a6728783315334729c014975600c6c50",
+    "sourceId": "vg",
+    "sourceName": "Világgazdaság",
+    "tier": "press",
+    "title": "Megjött a feketeleves Vitézy Dávidnak: ahogy kivégezte az Otthon Startot, azonnal földbe állt a lakáspiac – se híre, se hamva a Wekerle Plusznak",
+    "url": "https://www.vg.hu/vilaggazdasag-magyar-gazdasag/2026/11/wekerle-plusz-otthon-start-lakashitel-ingatlan-vasarlas",
+    "publishedAt": "2026-11-10T17:44:44.000Z",
+    "fetchedAt": "2026-11-10T18:44:22.773Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "dea9ecdbf8666288f6b7d8bfc7e8295b92dfb4c45c69625011d3890c9bd8b4c3",
+    "sourceId": "penzcentrum",
+    "sourceName": "Pénzcentrum",
+    "tier": "press",
+    "title": "Megtorpant a lakáspiac az Otthon Start után: drasztikusan visszaesett a vevők aktivitása",
+    "url": "https://www.penzcentrum.hu/otthon/20261110/megtorpant-a-lakaspiac-az-otthon-start-utan-drasztikusan-visszaesett-a-vevok-aktivitasa-1208812",
+    "publishedAt": "2026-11-10T17:44:00.000Z",
+    "fetchedAt": "2026-11-10T18:44:22.773Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "835963dd2509a867102f54442fddb1b73359135f9374f497795f5d32d5e7f312",
     "sourceId": "allamkincstar",
     "sourceName": "Magyar Államkincstár",
