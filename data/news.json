@@ -1,5 +1,22 @@
 [
   {
+    "id": "f85586a1ed0f98d0ee2b442be38d63db3e10eba73c557f927f37dbe4b8450271",
+    "sourceId": "telex",
+    "sourceName": "Telex",
+    "tier": "press",
+    "title": "Új? Felújítandó? 20 millióval drágább új lakás is megérheti a Wekerle Plusszal",
+    "url": "https://telex.hu/biztos-dontes/2026/11/11/uj-vagy-felujitando-lakas-akar-20-millioval-dragabb-uj-lakas-is-megerheti-a-wekerle-plusszal",
+    "publishedAt": "2026-11-11T10:56:51.000Z",
+    "fetchedAt": "2026-11-11T12:50:30.250Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "5baf013d6036d331a3d44d780e41c947a6728783315334729c014975600c6c50",
     "sourceId": "vg",
     "sourceName": "Világgazdaság",
