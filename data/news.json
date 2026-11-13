@@ -1,5 +1,23 @@
 [
   {
+    "id": "f36ca5ddfa229435557b5086e3e34111334da47e93523c7dfc0f0b147f133009",
+    "sourceId": "index",
+    "sourceName": "Index",
+    "tier": "press",
+    "title": "Újabb 16 beruházás kiemelt státuszát vonta vissza a kormány",
+    "url": "https://index.hu/belfold/2026/11/13/kiemelt-beruhazas-visszavonas-gubacsi-lakopark-avico-park/",
+    "publishedAt": "2026-11-13T07:15:00.000Z",
+    "fetchedAt": "2026-11-13T13:15:28.734Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start",
+      "otthon start program"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "857a8f9892d78f19b11eb7c1b74f606b15fd69b62e63fb56c5e3b545896028f1",
     "sourceId": "index",
     "sourceName": "Index",
