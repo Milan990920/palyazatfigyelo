@@ -1,5 +1,39 @@
 [
   {
+    "id": "0bcc0a9c10435d4bf762086e698b928ce367bb0a64f6fb96de97b6b5e6dc9856",
+    "sourceId": "portfolio",
+    "sourceName": "Portfolio",
+    "tier": "press",
+    "title": "Beindult a kamatverseny a Wekerle Plusznál: itt az első 3% alatti lakáshitel",
+    "url": "https://www.portfolio.hu/bank/20261114/beindult-a-kamatverseny-a-wekerle-plusznal-itt-az-elso-3-alatti-lakashitel-876460",
+    "publishedAt": "2026-11-14T09:56:00.000Z",
+    "fetchedAt": "2026-11-14T12:20:34.990Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "b66cbb5ad12038f0f8e428bf380ec8443f67dd32fdd8321618464a51826ab1a6",
+    "sourceId": "bankmonitor",
+    "sourceName": "Bankmonitor",
+    "tier": "press",
+    "title": "Megjelent az első Wekerle+ ajánlat kamatkedvezménnyel és extra jóváírással",
+    "url": "https://bankmonitor.hu/mediatar/cikk/megjelent-az-elso-wekerle-ajanlat-kamatkedvezmennyel-es-extra-jovairassal/",
+    "publishedAt": "2026-11-14T09:04:20.000Z",
+    "fetchedAt": "2026-11-14T12:20:34.990Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "f36ca5ddfa229435557b5086e3e34111334da47e93523c7dfc0f0b147f133009",
     "sourceId": "index",
     "sourceName": "Index",
