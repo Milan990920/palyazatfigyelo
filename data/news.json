@@ -1,5 +1,22 @@
 [
   {
+    "id": "9353b79030ccd6e248f7b806647fb8f11a925a5408bfcfb931aba168afc66b3a",
+    "sourceId": "vg",
+    "sourceName": "Világgazdaság",
+    "tier": "press",
+    "title": "Rendkívüli lépést jelentett be a Fidesz politikusa: nem hagyják annyiban az Otthon Start kivéreztetését, Alkotmánybírósághoz fordulnak",
+    "url": "https://www.vg.hu/vilaggazdasag-magyar-gazdasag/2026/11/otthon-start-kivezetese-alkotmanybirosaghoz-fordulnak",
+    "publishedAt": "2026-11-15T12:42:08.000Z",
+    "fetchedAt": "2026-11-15T12:51:39.946Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "0bcc0a9c10435d4bf762086e698b928ce367bb0a64f6fb96de97b6b5e6dc9856",
     "sourceId": "portfolio",
     "sourceName": "Portfolio",
