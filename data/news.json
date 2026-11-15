@@ -1,5 +1,58 @@
 [
   {
+    "id": "8f593a1ef6a06c4e27813051ed5543f8fe3db6f4c263ef814419442698eeafe7",
+    "sourceId": "index",
+    "sourceName": "Index",
+    "tier": "press",
+    "title": "Alkotmánybírósághoz fordul a Fidesz az Otthon Start Program kivezetése miatt",
+    "url": "https://index.hu/belfold/2026/11/15/alkotmanybirosag-fidesz-otthon-start-program-wekerle-plusz-program-panyi-miklos/",
+    "publishedAt": "2026-11-15T14:36:00.000Z",
+    "fetchedAt": "2026-11-15T17:53:56.429Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start",
+      "otthon start program"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "21b9c3483674d0bb67c10ffb2a4330dfe3395fb98def96f726d5472b7dd13ad0",
+    "sourceId": "telex",
+    "sourceName": "Telex",
+    "tier": "press",
+    "title": "Az Alkotmánybírósághoz fordult a Fidesz az Otthon Start kivezetése miatt",
+    "url": "https://telex.hu/gazdasag/2026/11/15/fidesz-alkotmanybirosag-beadvany-otthon-start-kivezetes",
+    "publishedAt": "2026-11-15T14:16:44.000Z",
+    "fetchedAt": "2026-11-15T17:53:56.429Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "35313013b08111e9aa078ad8003c6a27451f5fa0082c71716cfdea5c206fddc9",
+    "sourceId": "hvg",
+    "sourceName": "HVG",
+    "tier": "press",
+    "title": "Alkotmánybírósághoz fordult a Fidesz az Otthon Start Program kivezetése miatt",
+    "url": "https://hvg.hu/itthon/20261115_alkotmanybirosag-fidesz-otthon-start-program-wekerle-plusz",
+    "publishedAt": "2026-11-15T13:55:54.000Z",
+    "fetchedAt": "2026-11-15T17:53:56.429Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start",
+      "otthon start program"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "9353b79030ccd6e248f7b806647fb8f11a925a5408bfcfb931aba168afc66b3a",
     "sourceId": "vg",
     "sourceName": "Világgazdaság",
