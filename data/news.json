@@ -1,5 +1,22 @@
 [
   {
+    "id": "d688279b0e6d155e46df88194200eeb7be12f42c73a806acdd068eee1c1ce0fe",
+    "sourceId": "penzcentrum",
+    "sourceName": "Pénzcentrum",
+    "tier": "press",
+    "title": "Beindult a harc a lakásvásárlókért: 6 százalék alá vágták a kamatokat a hagyományos hiteleknél a hazai bankok",
+    "url": "https://www.penzcentrum.hu/hitel/20261116/beindult-a-harc-a-lakasvasarlokert-6-szazalek-ala-vagtak-a-kamatokat-a-hagyomanyos-hiteleknel-a-hazai-bankok-1209126",
+    "publishedAt": "2026-11-16T17:44:00.000Z",
+    "fetchedAt": "2026-11-16T21:08:22.080Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "7673460437e2bc2fb301bf3af717220f6a478386f7881333eab220996c2b68fc",
     "sourceId": "bankmonitor",
     "sourceName": "Bankmonitor",
