@@ -1,5 +1,56 @@
 [
   {
+    "id": "7673460437e2bc2fb301bf3af717220f6a478386f7881333eab220996c2b68fc",
+    "sourceId": "bankmonitor",
+    "sourceName": "Bankmonitor",
+    "tier": "press",
+    "title": "Felpörög a verseny a lakáshitelpiacon, már 6 százalék alatt is kínálnak piaci hitelt a bankok",
+    "url": "https://bankmonitor.hu/mediatar/cikk/mar-6-szazalek-alatt-is-kinalnak-hitelt-a-bankok/",
+    "publishedAt": "2026-11-16T12:20:46.000Z",
+    "fetchedAt": "2026-11-16T13:50:48.627Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "bce749d941e1f247a61411a000effd90b369c3d7ad694c07658f9b654f1c26ff",
+    "sourceId": "vg",
+    "sourceName": "Világgazdaság",
+    "tier": "press",
+    "title": "Wekerle Plusz: hat banknál már igényelhető, de a pénzintézetek már nem osztogatnak úgy, mint az Otthon Startnál – ezeket a kedvezményeket ne is keresse",
+    "url": "https://www.vg.hu/vilaggazdasag-magyar-gazdasag/2026/11/wekerle-plusz-hat-banknal-mar-igenyelheto-feltetelek",
+    "publishedAt": "2026-11-16T10:19:12.000Z",
+    "fetchedAt": "2026-11-16T13:50:48.627Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "f0411f9a3bd81ac5c8c7b0fad517e0403caa0d8c9a1c588bd9261a844f6c326a",
+    "sourceId": "hvg",
+    "sourceName": "HVG",
+    "tier": "press",
+    "title": "Hétfőtől az OTP-nél és az MBH-nál is indul a Wekerle Plusz",
+    "url": "https://hvg.hu/gazdasag/20261116_otp-mbh-wekerle-plusz",
+    "publishedAt": "2026-11-16T08:41:08.000Z",
+    "fetchedAt": "2026-11-16T13:50:48.627Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "8f593a1ef6a06c4e27813051ed5543f8fe3db6f4c263ef814419442698eeafe7",
     "sourceId": "index",
     "sourceName": "Index",
