@@ -1,5 +1,39 @@
 [
   {
+    "id": "9633c6516d9e13d411d0a55d11b2109c2c2a3cbaf1b74182084e0fa2b1cea178",
+    "sourceId": "vg",
+    "sourceName": "Világgazdaság",
+    "tier": "press",
+    "title": "Az Otthon Start kivezetése után nagyot fékezhet a lakáshitelezés 2027-ben – a bankok már látják, mekkora visszaesés jöhet",
+    "url": "https://www.vg.hu/vilaggazdasag-magyar-gazdasag/2026/11/otthon-start-wekerle-plusz-otp-mbh",
+    "publishedAt": "2026-11-17T19:35:53.000Z",
+    "fetchedAt": "2026-11-17T19:57:18.568Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "0df29defa71daf35ee589cce5fdce0b81577611f036c67105647ce0695a810da",
+    "sourceId": "hvg",
+    "sourceName": "HVG",
+    "tier": "press",
+    "title": "Döntött a kőbányai testület, nem adják át a telkeiket az otthon startos építkezésre",
+    "url": "https://hvg.hu/gazdasag/20261117_kobanyai-testulet-dontes-otthon-startos-epitkezes",
+    "publishedAt": "2026-11-17T15:29:08.000Z",
+    "fetchedAt": "2026-11-17T19:57:18.568Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "d688279b0e6d155e46df88194200eeb7be12f42c73a806acdd068eee1c1ce0fe",
     "sourceId": "penzcentrum",
     "sourceName": "Pénzcentrum",
