@@ -1,5 +1,22 @@
 [
   {
+    "id": "5527bb18fae6f13cd3479a807b420845e4a0dcb4c5f43a704ae10040208da3e8",
+    "sourceId": "telex",
+    "sourceName": "Telex",
+    "tier": "press",
+    "title": "2008 óta először vettek fel több hitelt a magyarok, mint amennyi pénzt félretettek",
+    "url": "https://telex.hu/gazdasag/2026/11/18/magyarorszag-lakossag-hitelek-megtakaritasok",
+    "publishedAt": "2026-11-18T18:30:22.000Z",
+    "fetchedAt": "2026-11-18T19:28:28.855Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "fad796ce78841f1334603e286949a14225913d7e984a53b40815a1441f0746ca",
     "sourceId": "neuzrt-oetp",
     "sourceName": "Nemzeti Energetikai Ügynökség – Otthoni Energiatároló Program aloldal",
