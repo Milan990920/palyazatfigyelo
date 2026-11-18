@@ -1,5 +1,37 @@
 [
   {
+    "id": "fad796ce78841f1334603e286949a14225913d7e984a53b40815a1441f0746ca",
+    "sourceId": "neuzrt-oetp",
+    "sourceName": "Nemzeti Energetikai Ügynökség – Otthoni Energiatároló Program aloldal",
+    "tier": "official",
+    "title": "Nemzeti Energetikai Ügynökség – Otthoni Energiatároló Program aloldal: tartalom módosult",
+    "url": "https://otthonienergiatarolo.neuzrt.hu/",
+    "publishedAt": "2026-11-18T14:21:49.715Z",
+    "fetchedAt": "2026-11-18T14:21:29.160Z",
+    "programs": [
+      "energiatarolo"
+    ],
+    "matched": [],
+    "kind": "page-change"
+  },
+  {
+    "id": "b4290b30ab41eaedc3dcf63cbc3461faa3a6020f694afb6cefa7734fda4147b6",
+    "sourceId": "hvg",
+    "sourceName": "HVG",
+    "tier": "press",
+    "title": "2008 óta nem volt ilyen: több hitelt vettek fel a magyar háztartások, mint amennyit megtakarítottak",
+    "url": "https://hvg.hu/gazdasag/20261118_bankmonitor-hitel-otthon-start-megtakaritas-haztartasok",
+    "publishedAt": "2026-11-18T13:49:31.000Z",
+    "fetchedAt": "2026-11-18T14:21:29.160Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "9633c6516d9e13d411d0a55d11b2109c2c2a3cbaf1b74182084e0fa2b1cea178",
     "sourceId": "vg",
     "sourceName": "Világgazdaság",
