@@ -1,5 +1,37 @@
 [
   {
+    "id": "040ad62b4b5b04e574594aeb836d802abe400473fdab4f3835bcfd45c988a650",
+    "sourceId": "allamkincstar",
+    "sourceName": "Magyar Államkincstár",
+    "tier": "official",
+    "title": "Magyar Államkincstár: tartalom módosult",
+    "url": "https://www.allamkincstar.gov.hu/",
+    "publishedAt": "2026-11-19T14:33:24.357Z",
+    "fetchedAt": "2026-11-19T14:33:16.011Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [],
+    "kind": "page-change"
+  },
+  {
+    "id": "5b5a0110fe9653a5e81404e90439356248df99ba2fe8a9ec35026981a006f735",
+    "sourceId": "telex",
+    "sourceName": "Telex",
+    "tier": "press",
+    "title": "A Fidesz több módosítót is benyújt a költségvetéshez, megtartaná a 40 év feletti anyák szja-mentességét",
+    "url": "https://telex.hu/gazdasag/2026/11/19/boka-janos-bejelentes-2027-es-koltsegvetes-modositasi-javaslatok",
+    "publishedAt": "2026-11-19T09:02:22.000Z",
+    "fetchedAt": "2026-11-19T14:33:16.011Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "5527bb18fae6f13cd3479a807b420845e4a0dcb4c5f43a704ae10040208da3e8",
     "sourceId": "telex",
     "sourceName": "Telex",
