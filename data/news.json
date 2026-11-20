@@ -1,5 +1,20 @@
 [
   {
+    "id": "9fc7cb23c10b8b331da43109a783b97258e6b4f4ad0dee95c9a00c1acad664c9",
+    "sourceId": "allamkincstar",
+    "sourceName": "Magyar Államkincstár",
+    "tier": "official",
+    "title": "Magyar Államkincstár: tartalom módosult",
+    "url": "https://www.allamkincstar.gov.hu/",
+    "publishedAt": "2026-11-20T19:11:29.481Z",
+    "fetchedAt": "2026-11-20T19:11:21.755Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [],
+    "kind": "page-change"
+  },
+  {
     "id": "040ad62b4b5b04e574594aeb836d802abe400473fdab4f3835bcfd45c988a650",
     "sourceId": "allamkincstar",
     "sourceName": "Magyar Államkincstár",
