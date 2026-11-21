@@ -1,5 +1,5 @@
 {
-  "runAt": "2026-11-20T19:11:21.755Z",
+  "runAt": "2026-11-21T13:36:19.696Z",
   "results": [
     {
       "id": "magyar-kozlony",
@@ -14,7 +14,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-11-20T19:11:21.759Z"
+      "checkedAt": "2026-11-21T13:36:19.699Z"
     },
     {
       "id": "palyazat-gov",
@@ -28,8 +28,8 @@
       "matchedKeywords": [],
       "newItemCount": 0,
       "error": "fetch failed (indoka: ECONNREFUSED)",
-      "consecutiveFailures": 8,
-      "checkedAt": "2026-11-20T19:11:23.825Z"
+      "consecutiveFailures": 9,
+      "checkedAt": "2026-11-21T13:36:21.937Z"
     },
     {
       "id": "mfb-pontok-plusz",
@@ -43,8 +43,8 @@
       "matchedKeywords": [],
       "newItemCount": 0,
       "error": "fetch failed (indoka: UNABLE_TO_VERIFY_LEAF_SIGNATURE)",
-      "consecutiveFailures": 37,
-      "checkedAt": "2026-11-20T19:11:24.596Z"
+      "consecutiveFailures": 38,
+      "checkedAt": "2026-11-21T13:36:22.874Z"
     },
     {
       "id": "neuzrt-oetp",
@@ -59,7 +59,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-11-20T19:11:25.327Z"
+      "checkedAt": "2026-11-21T13:36:23.654Z"
     },
     {
       "id": "kormany-energiaugyi",
@@ -74,7 +74,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-11-20T19:11:26.325Z"
+      "checkedAt": "2026-11-21T13:36:24.645Z"
     },
     {
       "id": "allamkincstar",
@@ -83,13 +83,13 @@
       "method": "page",
       "url": "https://www.allamkincstar.gov.hu/",
       "status": "ok",
-      "changed": true,
-      "keywordHit": true,
+      "changed": false,
+      "keywordHit": false,
       "matchedKeywords": [],
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-11-20T19:11:29.481Z"
+      "checkedAt": "2026-11-21T13:36:28.043Z"
     },
     {
       "id": "otthon-start-program",
@@ -104,7 +104,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-11-20T19:11:37.080Z"
+      "checkedAt": "2026-11-21T13:36:33.310Z"
     },
     {
       "id": "mehi",
@@ -119,7 +119,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-11-20T19:11:42.289Z"
+      "checkedAt": "2026-11-21T13:36:35.588Z"
     },
     {
       "id": "energiaklub",
@@ -134,7 +134,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-11-20T19:11:43.362Z"
+      "checkedAt": "2026-11-21T13:36:36.514Z"
     },
     {
       "id": "portfolio",
@@ -149,7 +149,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-11-20T19:11:44.398Z"
+      "checkedAt": "2026-11-21T13:36:37.250Z"
     },
     {
       "id": "vg",
@@ -164,7 +164,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-11-20T19:11:45.039Z"
+      "checkedAt": "2026-11-21T13:36:38.030Z"
     },
     {
       "id": "hvg",
@@ -179,7 +179,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-11-20T19:11:45.431Z"
+      "checkedAt": "2026-11-21T13:36:38.748Z"
     },
     {
       "id": "telex",
@@ -187,14 +187,14 @@
       "tier": "press",
       "method": "rss",
       "url": "https://telex.hu/",
-      "status": "error",
+      "status": "ok",
       "changed": false,
       "keywordHit": false,
       "matchedKeywords": [],
       "newItemCount": 0,
-      "error": "HTTP 403",
-      "consecutiveFailures": 1,
-      "checkedAt": "2026-11-20T19:11:45.601Z"
+      "error": null,
+      "consecutiveFailures": 0,
+      "checkedAt": "2026-11-21T13:36:38.964Z"
     },
     {
       "id": "index",
@@ -209,7 +209,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-11-20T19:11:45.730Z"
+      "checkedAt": "2026-11-21T13:36:39.156Z"
     },
     {
       "id": "bankmonitor",
@@ -224,7 +224,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-11-20T19:11:46.801Z"
+      "checkedAt": "2026-11-21T13:36:40.340Z"
     },
     {
       "id": "penzcentrum",
@@ -239,7 +239,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-11-20T19:11:47.087Z"
+      "checkedAt": "2026-11-21T13:36:40.805Z"
     },
     {
       "id": "google-news-search",
@@ -254,7 +254,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-11-20T19:11:21.755Z"
+      "checkedAt": "2026-11-21T13:36:19.696Z"
     },
     {
       "id": "palyaz",
@@ -269,7 +269,7 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-11-20T19:11:47.748Z"
+      "checkedAt": "2026-11-21T13:36:41.655Z"
     },
     {
       "id": "palyazatok-org",
@@ -284,16 +284,16 @@
       "newItemCount": 0,
       "error": null,
       "consecutiveFailures": 0,
-      "checkedAt": "2026-11-20T19:11:49.762Z"
+      "checkedAt": "2026-11-21T13:36:43.675Z"
     }
   ],
   "summary": {
     "total": 18,
-    "changedCount": 1,
-    "keywordHitCount": 1,
-    "errorCount": 3,
+    "changedCount": 0,
+    "keywordHitCount": 0,
+    "errorCount": 2,
     "staleCount": 2,
-    "newsItemCount": 1
+    "newsItemCount": 0
   },
   "staleAlerts": [
     {
@@ -301,18 +301,18 @@
       "name": "Pályázat.gov.hu",
       "url": "https://www.palyazat.gov.hu/",
       "tier": "official",
-      "consecutiveFailures": 8
+      "consecutiveFailures": 9
     },
     {
       "id": "mfb-pontok-plusz",
       "name": "MFB Pont Plusz",
       "url": "https://www.mfb.hu/mfb-pontok-plusz",
       "tier": "official",
-      "consecutiveFailures": 37
+      "consecutiveFailures": 38
     }
   ],
   "newsByTier": {
-    "official": 1,
+    "official": 0,
     "press": 0,
     "aggregator": 0
   },
