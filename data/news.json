@@ -1,5 +1,22 @@
 [
   {
+    "id": "fef1c3f4f6db9e898ee6e61705d385b113e7c1fdf6f9da59ee1f678037548d9f",
+    "sourceId": "penzcentrum",
+    "sourceName": "Pénzcentrum",
+    "tier": "press",
+    "title": "Wekerle Plusz: kiderült, kik járhatnak igazán rosszul az új lakástámogatással 2027-ben",
+    "url": "https://www.penzcentrum.hu/otthon/20261123/wekerle-plusz-kiderult-kik-jarhatnak-igazan-rosszul-az-uj-lakastamogatassal-2027-ben-1209514",
+    "publishedAt": "2026-11-23T18:01:00.000Z",
+    "fetchedAt": "2026-11-23T22:47:25.362Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "f1e4c4720a6c013809b14c630e0f436b54213c0bb0f6620d45f071ede2895a89",
     "sourceId": "neuzrt-oetp",
     "sourceName": "Nemzeti Energetikai Ügynökség – Otthoni Energiatároló Program aloldal",
