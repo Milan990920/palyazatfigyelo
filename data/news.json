@@ -1,5 +1,37 @@
 [
   {
+    "id": "f1e4c4720a6c013809b14c630e0f436b54213c0bb0f6620d45f071ede2895a89",
+    "sourceId": "neuzrt-oetp",
+    "sourceName": "Nemzeti Energetikai Ügynökség – Otthoni Energiatároló Program aloldal",
+    "tier": "official",
+    "title": "Nemzeti Energetikai Ügynökség – Otthoni Energiatároló Program aloldal: tartalom módosult",
+    "url": "https://otthonienergiatarolo.neuzrt.hu/",
+    "publishedAt": "2026-11-23T16:14:25.105Z",
+    "fetchedAt": "2026-11-23T16:14:20.084Z",
+    "programs": [
+      "energiatarolo"
+    ],
+    "matched": [],
+    "kind": "page-change"
+  },
+  {
+    "id": "ca57c47ba5ced95ff843316526f7d0a265bff09abc955484e26c37562db5333d",
+    "sourceId": "bankmonitor",
+    "sourceName": "Bankmonitor",
+    "tier": "press",
+    "title": "Íme az Otthon Start hatása: 10,5 százalékkal drágább négyzetméter, 3,9 négyzetméterrel kisebb lakás",
+    "url": "https://bankmonitor.hu/mediatar/cikk/ime-az-otthon-start-hatasa-105-szazalekkal-dragabb-negyzetmeter-39-negyzetmeterrel-kisebb-lakas/",
+    "publishedAt": "2026-11-23T09:23:25.000Z",
+    "fetchedAt": "2026-11-23T16:14:20.084Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "9fc7cb23c10b8b331da43109a783b97258e6b4f4ad0dee95c9a00c1acad664c9",
     "sourceId": "allamkincstar",
     "sourceName": "Magyar Államkincstár",
