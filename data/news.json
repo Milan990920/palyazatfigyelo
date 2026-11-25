@@ -1,5 +1,38 @@
 [
   {
+    "id": "99b529c6ad41387e721e790b1972abf563d2ece59852d38a87fd7ec93d922335",
+    "sourceId": "neuzrt-oetp",
+    "sourceName": "Nemzeti Energetikai Ügynökség – Otthoni Energiatároló Program aloldal",
+    "tier": "official",
+    "title": "Nemzeti Energetikai Ügynökség – Otthoni Energiatároló Program aloldal: tartalom módosult",
+    "url": "https://otthonienergiatarolo.neuzrt.hu/",
+    "publishedAt": "2026-11-25T15:50:26.619Z",
+    "fetchedAt": "2026-11-25T15:50:22.328Z",
+    "programs": [
+      "energiatarolo"
+    ],
+    "matched": [],
+    "kind": "page-change"
+  },
+  {
+    "id": "6b4d67c2bfe0403774fb74c7bea7da2d712169ca9e9a7574f5a8195fefaf8aaa",
+    "sourceId": "vg",
+    "sourceName": "Világgazdaság",
+    "tier": "press",
+    "title": "A külföldi bővülés és az Otthon Start program hajtották a DH Group növekedését",
+    "url": "https://www.vg.hu/penz-es-tokepiac/2026/11/dh-group-kulfoldi-bovules-es-az-otthon-start-program",
+    "publishedAt": "2026-11-25T09:32:06.000Z",
+    "fetchedAt": "2026-11-25T15:50:22.328Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start",
+      "otthon start program"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "fef1c3f4f6db9e898ee6e61705d385b113e7c1fdf6f9da59ee1f678037548d9f",
     "sourceId": "penzcentrum",
     "sourceName": "Pénzcentrum",
