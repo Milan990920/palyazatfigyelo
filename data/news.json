@@ -1,5 +1,22 @@
 [
   {
+    "id": "711271d9b5b001b3a75e329fb342959efbc176b65cf988d5535eb6030bbae93d",
+    "sourceId": "vg",
+    "sourceName": "Világgazdaság",
+    "tier": "press",
+    "title": "Kíméletlenül elbántak a bankok a Wekerle Plusszal: az Otthon Starthoz járt a százezres ajándékpénz, a kormány új programja már ennyit se ér",
+    "url": "https://www.vg.hu/vilaggazdasag-magyar-gazdasag/2026/11/wekerle-plusz-nem-jar-a-szazezres-ajandekpenz",
+    "publishedAt": "2026-11-27T15:00:50.000Z",
+    "fetchedAt": "2026-11-27T15:22:41.761Z",
+    "programs": [
+      "videki-otthonfelujitas"
+    ],
+    "matched": [
+      "otthon start"
+    ],
+    "kind": "news"
+  },
+  {
     "id": "99b529c6ad41387e721e790b1972abf563d2ece59852d38a87fd7ec93d922335",
     "sourceId": "neuzrt-oetp",
     "sourceName": "Nemzeti Energetikai Ügynökség – Otthoni Energiatároló Program aloldal",
